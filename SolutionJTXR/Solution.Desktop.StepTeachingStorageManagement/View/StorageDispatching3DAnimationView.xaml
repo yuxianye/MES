@@ -1,0 +1,797 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.StepTeachingStorageManagement.View.StorageDispatching3DAnimationView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:Metro="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:dp="clr-namespace:Solution.Desktop.View.UserControls;assembly=Solution.Desktop.View"
+                      xmlns:cv="clr-namespace:Solution.Desktop.View.Converter;assembly=Solution.Desktop.View"
+                      xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                      xmlns:hx="http://helix-toolkit.org/wpf"
+                      mc:Ignorable="d"
+                      Margin="0,-10,0,-7">
+    <UserControl.Resources>
+        <cv:EnumConverter x:Key="enumConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource ViewButtonAreaHeight}" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <res:ImageButton Content="{DynamicResource Connect}"
+                             ToolTip="{DynamicResource Connect}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding ConnectCommand}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Play_32px.png" />
+            <res:ImageButton Content="{DynamicResource Disconnect}"
+                             ToolTip="{DynamicResource Disconnect}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding DisconnectCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Stop_32px.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_Init}"
+                             ToolTip="{DynamicResource StepAction_Init}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding InitCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/worklist_32x32.png" />
+            <res:ImageButton Content="{DynamicResource RefreshAll}"
+                             ToolTip="{DynamicResource RefreshAll}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding RefreshAllCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Refresh_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StorageDispatch_MaterialIn}"
+                             ToolTip="{DynamicResource StorageDispatch_MaterialIn}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding MaterialInCommand}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/sign_in_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StorageDispatch_MaterialInConfirm}"
+                             ToolTip="{DynamicResource StorageDispatch_MaterialInConfirm}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding MaterialInConfirmCommand}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Confirm_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StorageDispatch_EmptyPalletIn}"                             
+                             ToolTip="{DynamicResource StorageDispatch_EmptyPalletIn}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding EmptyPalletInCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/remove1_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StorageDispatch_Move}"
+                             ToolTip="{DynamicResource StorageDispatch_Move}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding StorageMoveCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/communication_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StorageDispatch_ProductOut}"
+                             ToolTip="{DynamicResource StorageDispatch_ProductOut}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding ProductOutCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/sign_out_32x32.png" />
+        </StackPanel>
+        <Grid Grid.Row="1"
+              Background="{DynamicResource WorkshopBackBrush1}"
+              ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="98*"></ColumnDefinition>
+                <ColumnDefinition Width="347*"/>
+                <ColumnDefinition Width="4"></ColumnDefinition>
+                <ColumnDefinition Width="272*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="4"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="4"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="4"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="4"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="4"></RowDefinition>
+                <RowDefinition Height="40*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--<ContentControl Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.RowSpan="3"
+                            Content="{Binding MainContent}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SizeChanged">
+                        <i:InvokeCommandAction Command="{Binding Path=SizeChangedCommand}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Loaded">
+                        <i:InvokeCommandAction Command="{Binding Path=SizeChangedCommand}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ContentControl>-->
+            <hx:HelixViewport3D x:Name="view1"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.RowSpan="11"
+                                ZoomExtentsWhenLoaded="True"
+                                Background="{DynamicResource V3DBackgroundBrush}"
+                                ShowCoordinateSystem="True"
+                                IsManipulationEnabled="True" 
+                                IsViewCubeEdgeClicksEnabled="True" Grid.ColumnSpan="2">
+                <!--<hx:HelixViewport3D.DefaultCamera>
+                    <PerspectiveCamera Position="100,100,100"
+                                       LookDirection="-100,-100,-100"
+                                       UpDirection="0,0,1"
+                                       NearPlaneDistance="0.001" />
+                </hx:HelixViewport3D.DefaultCamera>-->
+                <hx:SunLight />
+
+                <!--<hx:SortingVisual3D x:Name="sortingVisual1"
+                                    SortingFrequency="2">-->
+
+                <!--#region 坐标系相关 -->
+                <hx:SphereVisual3D Radius="0.5"></hx:SphereVisual3D>
+                <!--<hx:CoordinateSystemVisual3D ArrowLengths="50"  />-->
+                <hx:BillboardTextVisual3D Position="0 0 2"
+                                          Text="原点">
+                </hx:BillboardTextVisual3D>
+                <!--X轴箭头和方向文字-->
+                <hx:ArrowVisual3D Point1="0,0,0"
+                                  Point2="150,0,0"
+                                  Diameter="0.5"></hx:ArrowVisual3D>
+                <hx:BillboardTextVisual3D Position="150 -2 0"
+                                          Text="西">
+                </hx:BillboardTextVisual3D>
+                <!--Y轴箭头和方向文字-->
+                <hx:ArrowVisual3D Point1="0,0,0"
+                                  Point2="0,70,0"
+                                  Diameter="0.5"></hx:ArrowVisual3D>
+                <hx:BillboardTextVisual3D Position="-2 70 0"
+                                          Text="南">
+                </hx:BillboardTextVisual3D>
+                <!--Z轴箭头和方向文字-->
+                <hx:ArrowVisual3D Point1="0,0,0"
+                                  Point2="0,0,20"
+                                  Diameter="0.5"></hx:ArrowVisual3D>
+                <hx:BillboardTextVisual3D Position="0 0 22"
+                                          Text="上">
+                </hx:BillboardTextVisual3D>
+                <!--#endregion -->
+
+                <!--#region 堆垛机和出入库输送线 -->
+                <!--K1-->
+                <hx:BoxVisual3D Center="40 27.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="40 27.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K1" />
+                <!--K4-->
+                <hx:BoxVisual3D Center="20 27.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="20 27.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K4" />
+                <!--1#立库-->
+                <hx:BoxVisual3D Center="40 60 10"
+                                Fill="LightGray"
+                                Length="8"
+                                Height="20"
+                                Width="50"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="40 60 24"
+                                          Foreground="Blue"
+                                          FontSize="20"
+                                          Text="1#" />
+                <!--堆垛机-->
+                <hx:BoxVisual3D Center="{Binding  StackerPosition}"
+                                Length="4"
+                                Height="20"
+                                Width="4"
+                                Fill="Orange" />
+                <!--货叉-->
+                <hx:BoxVisual3D Center="{Binding  StackerPosition}"
+                                Length="11"
+                                Height="1"
+                                Width="11"
+                                Fill="Orange" />
+                <!--地轨-->
+                <hx:RectangleVisual3D Width="1"
+                                      Length="80"
+                                      Origin="30,60,0"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{hx:Material Gray}" />
+
+                <!--2#立库-->
+                <hx:BoxVisual3D Center="20 60 10"
+                                Fill="LightGray"
+                                Length="8"
+                                Height="20"
+                                Width="50"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="20 60 24"
+                                          Foreground="Blue"
+                                          FontSize="20"
+                                          Text="2#" />
+
+                <!--K2-->
+                <hx:BoxVisual3D Center="40 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="40 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K2" />
+                <!--K4-->
+                <hx:BoxVisual3D Center="20 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="20 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K3" />
+                <!--#endregion -->
+
+                <!--<hx:LinesVisual3D Points="11 11 11 "></hx:LinesVisual3D>-->
+                <!--<hx:TextVisual3D Position="2 20 20" TextDirection="0 1 1"
+                                          Foreground="Orange"
+                                          Text="1#立体库" />-->
+
+                <!--<hx:SphereVisual3D Radius="5" />-->
+                <!--<hx:SphereVisual3D Center="15,15,0"
+                                   Radius="1"
+                                   Fill="White" />-->
+                <!--#region AGV、线路、充电桩 -->
+                <!-- AGV路线 -->
+                <hx:RectangleVisual3D Width="1"
+                                      Length="265"
+                                      Origin="132.5,105,0"
+                                      LengthDirection="1,0,0"
+                                      Normal="0,0,1"
+                                      Material="{hx:Material Gray}" />
+                <!-- AGV车辆 -->
+                <hx:BoxVisual3D Center="{Binding AgvPosition}"
+                                Fill="Orange"
+                                Width="10"
+                                Length="20"
+                                Height="5"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="{Binding AgvNamePosition}"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="AGV" />
+                <!--<ModelVisual3D>
+                    <uc:AgvVisual3D Width="10"
+                                    Length="20"
+                                    Transform="{hx:Translate 40,0,0}"
+                                    Stories="1"></uc:AgvVisual3D>
+                </ModelVisual3D >-->
+
+                <!--<uc:AgvVisual3D  Center="{Binding AgvPosition}"
+                                DisplayName="ABC23"
+                                Fill="Orange"
+                                Width="10"
+                                Length="20"
+                                Height="5"></uc:AgvVisual3D>-->
+
+                <!--充电桩-->
+                <hx:BoxVisual3D Center="70 97 2.5"
+                                Fill="YellowGreen"
+                                Length="6"
+                                Height="3"
+                                Width="6"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="70 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="充电桩" />
+
+                <!--#endregion-->
+                <!--#region 加工岛1 -->
+                <!--D1-->
+                <hx:BoxVisual3D Center="100 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="100 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D1" />
+                <!--D2-->
+                <hx:BoxVisual3D Center="120 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+
+                <hx:BillboardTextVisual3D Position="120 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D2" />
+
+                <!--OP10-->
+                <hx:BoxVisual3D Center="85 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="85 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP10" />
+                <!--OP20-->
+                <hx:BoxVisual3D Center="110 55 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="110 55 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP20" />
+                <!--OP30-->
+                <hx:BoxVisual3D Center="135 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="135 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP30" />
+                <!--Robot1-->
+                <hx:BoxVisual3D Center="110 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="6"
+                                Height="10"
+                                Width="6"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="110 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="Robot1" />
+
+                <!--#endregion-->
+                <!--#region 加工岛1 -->
+
+                <!--D3-->
+                <hx:BoxVisual3D Center="190 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="190 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D3" />
+                <!--D4-->
+                <hx:BoxVisual3D Center="210 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="210 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D4" />
+                <!--OP40-->
+                <hx:BoxVisual3D Center="175 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="175 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP40" />
+                <!--OP50-->
+                <hx:BoxVisual3D Center="200 55 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="200 55 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP50" />
+                <!--OP60-->
+                <hx:BoxVisual3D Center="225 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="225 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP60" />
+                <!--Robot2-->
+                <hx:BoxVisual3D Center="200 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="6"
+                                Height="10"
+                                Width="6"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="200 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="Robot2" />
+                <!--地面网格线-->
+                <hx:GridLinesVisual3D  LengthDirection="0,1,0"
+                                       Center="132.5,85,0"
+                                       Width="265"
+                                       Length="170" />
+                <!--</hx:SortingVisual3D>-->
+
+            </hx:HelixViewport3D>
+            <GridSplitter Grid.Column="2"
+                          Grid.Row="0"
+                          Grid.RowSpan="11"
+                          HorizontalAlignment="Stretch"
+                          Width="2"
+                          Background="{DynamicResource AccentColorBrush3}" Margin="1,0"></GridSplitter>
+            <DataGrid Grid.Row="0"
+                      Grid.Column="3"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                      ItemsSource="{Binding Path=MaterialInStorageInfoList}"
+                      HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding InStorageBillCode}"
+                                        Header="{DynamicResource MaterialInStorageInStorageBillCode}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding InStorageType,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MaterialInStorageInStorageType}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialName}"
+                                        Header="{DynamicResource MaterialName}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialCode}"
+                                    Header="{DynamicResource MaterialCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Quantity}"
+                                        Header="{DynamicResource MaterialOutStorageQuantity}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding PalletQuantity}"
+                                        Header="{DynamicResource MaterialOutStoragePalletQuantity}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding InStorageStatus,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MaterialInStorageInStorageStatus}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                        Header="{DynamicResource CreatedTime}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+
+            <GridSplitter Grid.Row="1"
+                          Grid.Column="3"
+                          HorizontalAlignment="Stretch"
+                          Height="2"
+                          Background="{DynamicResource AccentColorBrush3}" Margin="0,1"></GridSplitter>
+            <DataGrid Grid.Row="2"
+                      Grid.Column="3"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                      ItemsSource="{Binding Path=MatWareHouseLocationInfoList}"
+                      HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Visibility="Hidden"
+                                    Header="Id"
+                                    ScrollViewer.CanContentScroll="True"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding WareHouseLocationCode}"
+                                    Header="{DynamicResource StepAction_MaterialLocationCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding WareHouseLocationStatus, Converter={StaticResource enumConverter} }"
+                                    Header="{DynamicResource WareHouseLocationStatus}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding PalletName }"
+                                    Header="{DynamicResource PalletName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialName}"
+                                    Header="{DynamicResource MaterialName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialCode}"
+                                    Header="{DynamicResource MaterialCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding BatchCode}"
+                                    Header="{DynamicResource MaterialBatchBatchCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+
+                    <DataGridTextColumn Binding="{Binding Quantity}"
+                                    Header="{DynamicResource MaterialBatchQuantity}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                       TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                            Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                            Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                            Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+
+            <GridSplitter Grid.Row="3"
+                          Grid.Column="3"
+                          HorizontalAlignment="Stretch"
+                          Height="2"
+                          Background="{DynamicResource AccentColorBrush3}" Margin="0,1"></GridSplitter>
+            <DataGrid Grid.Row="4"
+                      Grid.Column="3"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                      ItemsSource="{Binding Path=MaterialOutStorageInfoList}"
+                      HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OutStorageBillCode}"
+                                        Header="{DynamicResource MaterialOutStorageOutStorageBillCode}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OutStorageType,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MaterialOutStorageOutStorageType}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialName}"
+                                        Header="{DynamicResource MaterialName}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialCode}"
+                                    Header="{DynamicResource MaterialCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Quantity}"
+                                        Header="{DynamicResource MaterialOutStorageQuantity}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding PalletQuantity}"
+                                        Header="{DynamicResource MaterialOutStoragePalletQuantity}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OutStorageStatus,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MaterialOutStorageOutStorageStatus}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                        Header="{DynamicResource CreatedTime}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+            <GridSplitter Grid.Row="5"
+                          Grid.Column="3"
+                          HorizontalAlignment="Stretch"
+                          Height="2"
+                          Background="{DynamicResource AccentColorBrush3}" Margin="0,1"></GridSplitter>
+            <DataGrid Grid.Row="6"
+                      Grid.Column="3"
+                   AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                  ItemsSource="{Binding Path= MaterialBatchInfoList }"
+                  SelectedItem="{Binding MaterialBatchInfoModel }"
+                  HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Visibility="Hidden"
+                                    Header="Id"
+                                    ScrollViewer.CanContentScroll="True"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding WareHouseLocationCode}"
+                                    Header="{DynamicResource StepAction_ProductLocationCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding WareHouseLocationStatus, Converter={StaticResource enumConverter} }"
+                                    Header="{DynamicResource WareHouseLocationStatus}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding PalletName }"
+                                    Header="{DynamicResource PalletName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialName}"
+                                    Header="{DynamicResource MaterialName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialCode}"
+                                    Header="{DynamicResource MaterialCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding BatchCode}"
+                                    Header="{DynamicResource MaterialBatchBatchCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+
+                    <DataGridTextColumn Binding="{Binding Quantity}"
+                                    Header="{DynamicResource MaterialBatchQuantity}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                       TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                            Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                            Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                            Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+            <GridSplitter Grid.Row="7"
+                          Grid.Column="3"
+                          HorizontalAlignment="Stretch"
+                          Height="2"
+                          Background="{DynamicResource AccentColorBrush3}" Margin="0,1"></GridSplitter>
+            <DataGrid Grid.Row="8"
+                      Grid.Column="3"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                      ItemsSource="{Binding Path=MatStorageMoveInfoList}"
+                      HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding StorageMoveCode}"
+                                        Header="{DynamicResource MatStorageMoveInfoStorageMoveCode}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding FromWareHouseLocationName,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MatStorageMoveInfoFromLocationID}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding ToWareHouseLocationName}"
+                                        Header="{DynamicResource MatStorageMoveInfoToLocationID}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding StorageMoveReason}"
+                                    Header="{DynamicResource MatStorageMoveInfoStorageMoveReason}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding StorageMoveState,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MatStorageMoveInfoStorageMoveState}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Operator}"
+                                        Header="{DynamicResource MatStorageMoveInfoOperator}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                    Header="{DynamicResource CreatedTime}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+            <GridSplitter Grid.Row="9"
+                          Grid.Column="3"
+                          HorizontalAlignment="Stretch"
+                          Height="2"
+                          Background="{DynamicResource AccentColorBrush3}" Margin="0,1"></GridSplitter>
+            <DataGrid  Grid.Row="10"
+                       Grid.Column="3"
+                       AutoGenerateColumns="False"
+                       IsReadOnly="True"
+                       SelectionMode="Single"
+                       HeadersVisibility="All"
+                       GridLinesVisibility="All"
+                       RowHeaderWidth="20"
+                       ItemsSource="{Binding Path=ClientDataEntities}"
+                       SelectedItem="{Binding AlarmInfo}"
+                       HorizontalContentAlignment="Center"
+                       SelectionUnit="FullRow"
+                       VirtualizingStackPanel.IsVirtualizing="True"
+                       mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Description}"
+                                        Header="{DynamicResource DisStepActionInfoViewDescription}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding BusinessName}"
+                                        Header="{DynamicResource BusinessName}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Value}"
+                                        Header="{DynamicResource OpcUaHistoryValue}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OldVaule}"
+                                        Header="{DynamicResource OpcUaHistoryOldValue}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding StatusCode}"
+                                        Header="{DynamicResource ValueQuality}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding ValueType}"
+                                        Header="{DynamicResource DeviceNodeDataType}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</core:UserControlBase>

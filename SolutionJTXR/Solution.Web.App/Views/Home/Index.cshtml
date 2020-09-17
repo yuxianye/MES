@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "沈阳慧远 - 智能制造系统 V1.0";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var data = ViewBag.Data;
+    DateTime now = DateTime.Now;
+}
+<style>
+    body, p, div, ul, li, h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #E9E9E9;
+    }
+
+    #login {
+        width: 400px;
+        height: 250px;
+        background: #FFF;
+        margin: 200px auto;
+        position: relative;
+    }
+
+        #login h1 {
+            text-align: center;
+            position: absolute;
+            left: 120px;
+            top: -40px;
+            font-size: 21px;
+        }
+
+
+        #login img {
+            text-align: center;
+            position: absolute;
+            left: 120px;
+            top: 0px;
+            font-size: 21px;
+        }
+        #login form p {
+            text-align: center;
+        }
+
+    #user {
+        background: url(../../Content/images/user.png) rgba(0,0,0,.1) no-repeat;
+        width: 200px;
+        height: 30px;
+        border: solid #ccc 1px;
+        border-radius: 3px;
+        padding-left: 32px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    #pwd {
+        background: url(../../Content/images/pwd.png) rgba(0,0,0,.1) no-repeat;
+        width: 200px;
+        height: 30px;
+        border: solid #ccc 1px;
+        border-radius: 3px;
+        padding-left: 32px;
+        margin-bottom: 30px;
+    }
+
+    #submit {
+        width: 232px;
+        height: 30px;
+        background: rgba(0,0,0,.1);
+        border: solid #ccc 1px;
+        border-radius: 3px;
+    }
+
+        #submit:hover {
+            cursor: pointer;
+            background: #D8D8D8;
+        }
+</style>
+<script language="javascript" type="text/javascript">
+    function submit_login() {
+
+        location.hre = "~/Admin"
+
+    }
+</script>
+<body>
+    <div id="login">
+        @*<h1>智能制造系统</h1>*@
+        <img src="../../Content/images/logo.png " />
+        <form action="" method="post">
+            <p><input type="text" name="user" id="user" placeholder="用户名"></p>
+            <p><input type="password" name="passw0rd" id="pwd" placeholder="密码"></p>
+            <p><input type="submit" id="submit" value="登录" onclick="submit_login"></p>
+            <p>@Html.ActionLink("测试登陆", "Index", "Home", new { area = "Admin" }, null)</p>
+        </form>
+    </div>
+    <div style="text-align:center;">
+        <p>更多信息请访问：<a href="http://www.huiyuanrobot.com/" target="_blank">沈阳慧远自动化</a></p>
+    </div>
+
+</body>

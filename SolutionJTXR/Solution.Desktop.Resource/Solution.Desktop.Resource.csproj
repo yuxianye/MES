@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80BEC418-31AB-43BF-8207-8FF41643D7A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solution.Desktop.Resource</RootNamespace>
+    <AssemblyName>Solution.Desktop.Resource</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.2\lib\net46\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=2.2.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.2.2.0\lib\net46\MahApps.Metro.IconPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImageButton.cs" />
+    <Compile Include="PagingComboBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ColorBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DefaultResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlResource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShapeBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleValue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="String.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add_32x32.png" />
+    <Resource Include="Images\calendar_year.png" />
+    <Resource Include="Images\Del_32x32.png" />
+    <Resource Include="Images\Detailed_32x32.png" />
+    <Resource Include="Images\Download3_32x32.png" />
+    <Resource Include="Images\Edit_32x32.png" />
+    <Resource Include="Images\Event_32x32.png" />
+    <Resource Include="Images\Folder_32x32.png" />
+    <Resource Include="Images\Help_32x32.png" />
+    <Resource Include="Images\Language_32x32.png" />
+    <Resource Include="Images\List_32x32.png" />
+    <Resource Include="Images\Logo-cn.png" />
+    <Resource Include="Images\Logo.png" />
+    <Resource Include="Images\Logo_White.png" />
+    <Resource Include="Images\Microphone_32x32.png" />
+    <Resource Include="Images\Next_32x32.png" />
+    <Resource Include="Images\Previous_32x32.png" />
+    <Resource Include="Images\Refresh_32x32.png" />
+    <Resource Include="Images\Report_32x32.png" />
+    <Resource Include="Images\Search_32x32.png" />
+    <Resource Include="Images\Settings2_32x32.png" />
+    <Resource Include="Images\Settings3_32x32.png" />
+    <Resource Include="Images\Statistics_32x32.png" />
+    <Resource Include="Images\Summary_32x32.png" />
+    <Resource Include="Images\ZoomIn_32x32.png" />
+    <Resource Include="Images\ZoomOut_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Images.cdr" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo_48X48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo_32X32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo_16X16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo_128X128.ico" />
+    <Resource Include="Images\logo_64X64.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LoginBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LoginBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Import_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Export_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cancel_32x32.png" />
+    <Resource Include="Images\Confirm_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Agv_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Map_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings_32x32.png" />
+    <Resource Include="Images\user_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\billing_32x32.png" />
+    <Resource Include="Images\communication_32x32.png" />
+    <Resource Include="Images\document_library_32x32.png" />
+    <Resource Include="Images\gur-project-28_32x32.png" />
+    <Resource Include="Images\gur-project-29_32x32.png" />
+    <Resource Include="Images\order_159_32x32.png" />
+    <Resource Include="Images\process_32x32.png" />
+    <Resource Include="Images\server_32x32.png" />
+    <Resource Include="Images\suppliers_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\administrative_docs_32x32.png" />
+    <Resource Include="Images\attibutes_32x32.png" />
+    <Resource Include="Images\base_32x32.png" />
+    <Resource Include="Images\coherence_32x32.png" />
+    <Resource Include="Images\config_32x32.png" />
+    <Resource Include="Images\database_32x32.png" />
+    <Resource Include="Images\gur-project_32x32.png" />
+    <Resource Include="Images\invoice_32x32.png" />
+    <Resource Include="Images\networking_32x32.png" />
+    <Resource Include="Images\network_32x32.png" />
+    <Resource Include="Images\sign_in_32x32.png" />
+    <Resource Include="Images\sign_out_32x32.png" />
+    <Resource Include="Images\upcoming_work_32x32.png" />
+    <Resource Include="Images\worklist_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\brainstorming_32x32.png" />
+    <Resource Include="Images\ekisho_deep_ocean_hd1_32x32.png" />
+    <Resource Include="Images\finder_32x32.png" />
+    <Resource Include="Images\gur-project-10_32x32.png" />
+    <Resource Include="Images\illustration_32x32.png" />
+    <Resource Include="Images\product_169_32x32.png" />
+    <Resource Include="Images\product_design_32x32.png" />
+    <Resource Include="Images\remove1_32x32.png" />
+    <Resource Include="Images\sitemap_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Play_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Stop_32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>mkdir $(OutDir)\Images
+xcopy /e /r /y $(ProjectDir)Images $(OutDir)Images
+copy $(ProjectDir)*.xaml $(OutDir)</PreBuildEvent>
+  </PropertyGroup>
+</Project>

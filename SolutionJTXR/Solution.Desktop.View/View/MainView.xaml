@@ -1,0 +1,192 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.View.MainView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      mc:Ignorable="d"
+                      MouseDown="UserControlBase_MouseDown"
+                      DataContext="{Binding Source={StaticResource   ResourceKey=Locator},Path=MainViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="{DynamicResource ViewButtonAreaHeight}" />-->
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!--顶部Header-->
+        <Grid Grid.Row="0"
+              Visibility="Collapsed"
+              Height="0"
+              Background="{DynamicResource HeaderColorBrush}">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Top"
+                        Margin=" 5 0 0 5">
+                <Image Source="pack://application:,,,/Solution.Desktop.Resource;component/Images/logo.png"></Image>
+                <TextBlock VerticalAlignment="Top"
+                           Text="{DynamicResource AppName}"
+                           FontSize="32"
+                           x:Name="titleTextBlock"
+                           Margin="10 0 0 0"
+                           FontWeight="Bold">
+
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="{DynamicResource  Gray5}"
+                                          BlurRadius="1"
+                                          ShadowDepth="5"
+                                          Opacity="1" />
+                    </TextBlock.Effect>
+                    <TextBlock.Foreground>
+                        <!--<LinearGradientBrush StartPoint="0.5,0"
+                                             EndPoint="0.5,1">
+                            <LinearGradientBrush.GradientStops>
+                                -->
+                        <!--<GradientStop Offset="0.0"
+                                              Color="{DynamicResource WhiteColor}" />
+                                <GradientStop Offset="1.0"
+                                              Color="{DynamicResource WhiteColor}" />-->
+                        <!--<GradientStop Offset="1"
+                                              Color="#339933" />
+                                <GradientStop Offset="0"
+                                              Color="Orange" />-->
+                        <!--<GradientStop Offset="1"
+                                              Color="#339933" />-->
+                        <!--
+
+
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>-->
+                        <LinearGradientBrush StartPoint="0.5,0"
+                                             EndPoint="0.5,1">
+                            <LinearGradientBrush.GradientStops>
+                                <!--<GradientStop Color="#7D5801"
+                                              Offset="0.1" />-->
+                                <!--<GradientStop Color="#C0A34F"
+                                              Offset="0.7" />-->
+                                <!--<GradientStop Color="#8F6A12"
+                                              Offset="0.3" />
+                                <GradientStop Color="#F7ED9F"
+                                              Offset="0.4" />-->
+                                <!--<GradientStop Offset="0.75"
+                                              Color="#CCB161" />-->
+                                <!--<GradientStop Offset="1.0"
+                                              Color="#7D5801" />-->
+                                <GradientStop Offset="0.0"
+                                              Color="{DynamicResource WhiteColor}" />
+                                <GradientStop Offset="1.0"
+                                              Color="{DynamicResource WhiteColor}" />
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right">
+                <!--<Button Style="{StaticResource MetroWindowButtonStyle}">口</Button>-->
+                <!--<Button Style="{StaticResource MetroWindowButtonStyle}">-</Button>
+                <Button Style="{StaticResource MetroWindowButtonStyle}">口</Button>
+                <Button Style="{StaticResource MetroWindowButtonStyle}"
+                        Command="{Binding CloseCommand}">X</Button>-->
+                <!--<Metro:WindowButtonCommands></Metro:WindowButtonCommands>-->
+                <ContentControl Width="300"
+                                Content="{Binding WindowButtonCommands}"></ContentControl>
+                <!--<Metro:WindowButtonCommands></Metro:WindowButtonCommands>
+                <Metro:WindowButtonCommands></Metro:WindowButtonCommands>-->
+            </StackPanel >
+            <!--圆形修改密码按钮等-->
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        Visibility="Collapsed"
+                        HorizontalAlignment="Right">
+
+                <TextBlock Text="{DynamicResource CurrentUser}"
+                           Foreground="{DynamicResource WhiteBrush}"
+                           VerticalAlignment="Center"></TextBlock>
+                <TextBlock Text="{Binding  CurrentLoginUser.UserName}"
+                           Foreground="{DynamicResource WhiteBrush}"
+                           VerticalAlignment="Center"></TextBlock>
+                <Button Style="{DynamicResource CircleButtonStyle}"
+                        Command="{Binding ModifyPasswordCommand}"
+                        ToolTip="{DynamicResource ModifyPassword}">
+                    <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                                Height="{DynamicResource CircleButtonIconHeight}"
+                                                Kind="Lock" />
+                </Button>
+                <Button Style="{DynamicResource CircleButtonStyle}"
+                        Command="{Binding LogoutCommand}"
+                        ToolTip="{DynamicResource Logout}">
+                    <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                                Height="{DynamicResource CircleButtonIconHeight}"
+                                                Kind="ExitToApp" />
+                </Button>
+
+                <Button Style="{DynamicResource CircleButtonStyle}"
+                        Command="{Binding CloseCommand}"
+                        ToolTip="{DynamicResource CloseApp}">
+                    <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                                Height="{DynamicResource CircleButtonIconHeight}"
+                                                Kind="Power" />
+
+                </Button>
+
+                <Button Style="{DynamicResource CircleButtonStyle}"
+                        ToolTip="{DynamicResource Setting}"
+                        Command="{Binding SettingCommand }">
+                    <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                                Height="{DynamicResource CircleButtonIconHeight}"
+                                                Kind="Settings" />
+
+                </Button>
+
+                <Button Style="{DynamicResource CircleButtonStyle}"
+                        ToolTip="{DynamicResource HelpTooltip}"
+                        Command="{Binding HelpCommand }">
+                    <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                                Height="{DynamicResource CircleButtonIconHeight}"
+                                                Kind="Help" />
+
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <!--主显示区域，包含左部树形导航和展示区-->
+        <ContentControl Grid.Row="1"
+                        x:Name="mainTabControl"
+                        Content="{Binding MianContentControl}"></ContentControl>
+        <StatusBar Grid.Row="2">
+            <!--<StatusBarItem Content="{DynamicResource  CurrentUser}"></StatusBarItem>
+            <StatusBarItem Content="{Binding  CurrentLoginUser.UserName}"></StatusBarItem>
+            <Separator Style="{DynamicResource MetroStatusBarSeparator}" />-->
+            <!--<StatusBarItem>Selected Tab:</StatusBarItem>
+            <StatusBarItem Content="{Binding MianContentControl, Path=, Mode=OneWay}" />-->
+            <!--<StatusBarItem Content="{DynamicResource UiMessage}"
+                           Foreground="Red" />-->
+            <StatusBarItem>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource AppName}"
+                               Foreground="{DynamicResource WhiteBrush}"
+                               VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Text="{Binding Version}"
+                               Foreground="{DynamicResource WhiteBrush}"
+                               VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </StatusBarItem>
+            <Separator Style="{StaticResource MetroStatusBarSeparator}" />
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource CurrentUser}"
+                               Foreground="{DynamicResource WhiteBrush}"
+                               VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Text="{Binding  CurrentLoginUser.UserName}"
+                               Foreground="{DynamicResource WhiteBrush}"
+                               VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+
+</core:UserControlBase>

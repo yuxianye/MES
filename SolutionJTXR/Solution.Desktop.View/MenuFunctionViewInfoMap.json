@@ -1,0 +1,3326 @@
+﻿[
+  {
+    "Controller": "EnterpriseInfo",
+    "Action": null,
+    "ViewInfo": {
+      "CanClose": "false",
+      "DisplayName": "企业信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EnterpriseInfo",
+      "ViewName": "Solution.Desktop.EnterpriseInfo.View.EnterpriseInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EnterpriseInfo",
+      "ViewModelName": "Solution.Desktop.EnterpriseInfo.ViewModel.EnterpriseInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-28_32x32.png"
+    }
+  },
+  {
+    "Controller": "EnterpriseInfo",
+    "Action": "AddEnterprises",
+    "ViewInfo": {
+      "DisplayName": "新建企业信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EnterpriseInfo",
+      "ViewName": "Solution.Desktop.EnterpriseInfo.View.EnterpriseInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EnterpriseInfo",
+      "ViewModelName": "Solution.Desktop.EnterpriseInfo.ViewModel.EnterpriseInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EnterpriseInfo",
+    "Action": "EditEnterprises",
+    "ViewInfo": {
+      "DisplayName": "编辑企业信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EnterpriseInfo",
+      "ViewName": "Solution.Desktop.EnterpriseInfo.View.EnterpriseInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EnterpriseInfo",
+      "ViewModelName": "Solution.Desktop.EnterpriseInfo.ViewModel.EnterpriseInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntSiteInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "厂区信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EntSiteInfo",
+      "ViewName": "Solution.Desktop.EntSiteInfo.View.EntSiteInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntSiteInfo",
+      "ViewModelName": "Solution.Desktop.EntSiteInfo.ViewModel.EntSiteInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-29_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntSiteInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建厂区信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntSiteInfo",
+      "ViewName": "Solution.Desktop.EntSiteInfo.View.EntSiteInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntSiteInfo",
+      "ViewModelName": "Solution.Desktop.EntSiteInfo.ViewModel.EntSiteInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntSiteInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑厂区信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntSiteInfo",
+      "ViewName": "Solution.Desktop.EntSiteInfo.View.EntSiteInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntSiteInfo",
+      "ViewModelName": "Solution.Desktop.EntSiteInfo.ViewModel.EntSiteInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntAreaInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "车间信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EntAreaInfo",
+      "ViewName": "Solution.Desktop.EntAreaInfo.View.EntAreaInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntAreaInfo",
+      "ViewModelName": "Solution.Desktop.EntAreaInfo.ViewModel.EntAreaInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntAreaInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建车间信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntAreaInfo",
+      "ViewName": "Solution.Desktop.EntAreaInfo.View.EntAreaInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntAreaInfo",
+      "ViewModelName": "Solution.Desktop.EntAreaInfo.ViewModel.EntAreaInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntAreaInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑车间信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntAreaInfo",
+      "ViewName": "Solution.Desktop.EntAreaInfo.View.EntAreaInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntAreaInfo",
+      "ViewModelName": "Solution.Desktop.EntAreaInfo.ViewModel.EntAreaInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntProductionLineInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "生产线信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EntProductionLineInfo",
+      "ViewName": "Solution.Desktop.EntProductionLineInfo.View.EntProductionLineInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntProductionLineInfo",
+      "ViewModelName": "Solution.Desktop.EntProductionLineInfo.ViewModel.EntProductionLineInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/sitemap_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntProductionLineInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建生产线信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntProductionLineInfo",
+      "ViewName": "Solution.Desktop.EntProductionLineInfo.View.EntProductionLineInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntProductionLineInfo",
+      "ViewModelName": "Solution.Desktop.EntProductionLineInfo.ViewModel.EntProductionLineInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntProductionLineInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑生产线信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntProductionLineInfo",
+      "ViewName": "Solution.Desktop.EntProductionLineInfo.View.EntProductionLineInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntProductionLineInfo",
+      "ViewModelName": "Solution.Desktop.EntProductionLineInfo.ViewModel.EntProductionLineInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductTypeInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "产品类别管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.ProductTypeInfo",
+      "ViewName": "Solution.Desktop.ProductTypeInfo.View.ProductTypeInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductTypeInfo",
+      "ViewModelName": "Solution.Desktop.ProductTypeInfo.ViewModel.ProductTypeInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductTypeInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建产品类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductTypeInfo",
+      "ViewName": "Solution.Desktop.ProductTypeInfo.View.ProductTypeInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductTypeInfo",
+      "ViewModelName": "Solution.Desktop.ProductTypeInfo.ViewModel.ProductTypeInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductTypeInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑产品类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductTypeInfo",
+      "ViewName": "Solution.Desktop.ProductTypeInfo.View.ProductTypeInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductTypeInfo",
+      "ViewModelName": "Solution.Desktop.ProductTypeInfo.ViewModel.ProductTypeInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleStatusInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "工艺状态信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleStatusInfo",
+      "ViewName": "Solution.Desktop.ProductionRuleStatusInfo.View.ProductionRuleStatusInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleStatusInfo",
+      "ViewModelName": "Solution.Desktop.ProductionRuleStatusInfo.ViewModel.ProductionRuleStatusInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleStatusInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建工艺状态信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleStatusInfo",
+      "ViewName": "Solution.Desktop.ProductionRuleStatusInfo.View.ProductionRuleStatusInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleStatusInfo",
+      "ViewModelName": "Solution.Desktop.ProductionRuleStatusInfo.ViewModel.ProductionRuleStatusInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleStatusInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑工艺状态信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleStatusInfo",
+      "ViewName": "Solution.Desktop.ProductionRuleStatusInfo.View.ProductionRuleStatusInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleStatusInfo",
+      "ViewModelName": "Solution.Desktop.ProductionRuleStatusInfo.ViewModel.ProductionRuleStatusInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "产品信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.ProductInfo",
+      "ViewName": "Solution.Desktop.ProductInfo.View.ProductInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductInfo",
+      "ViewModelName": "Solution.Desktop.ProductInfo.ViewModel.ProductInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/invoice_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建产品信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductInfo",
+      "ViewName": "Solution.Desktop.ProductInfo.View.ProductInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductInfo",
+      "ViewModelName": "Solution.Desktop.ProductInfo.ViewModel.ProductInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑产品信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductInfo",
+      "ViewName": "Solution.Desktop.ProductInfo.View.ProductInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductInfo",
+      "ViewModelName": "Solution.Desktop.ProductInfo.ViewModel.ProductInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionProcessInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "工序信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.ProductionProcessInfo",
+      "ViewName": "Solution.Desktop.ProductionProcessInfo.View.ProductionProcessInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionProcessInfo",
+      "ViewModelName": "Solution.Desktop.ProductionProcessInfo.ViewModel.ProductionProcessInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/process_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionProcessInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建工序信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionProcessInfo",
+      "ViewName": "Solution.Desktop.ProductionProcessInfo.View.ProductionProcessInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionProcessInfo",
+      "ViewModelName": "Solution.Desktop.ProductionProcessInfo.ViewModel.ProductionProcessInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionProcessInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑工序信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionProcessInfo",
+      "ViewName": "Solution.Desktop.ProductionProcessInfo.View.ProductionProcessInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionProcessInfo",
+      "ViewModelName": "Solution.Desktop.ProductionProcessInfo.ViewModel.ProductionProcessInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "工艺信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewName": "Solution.Desktop.ProductionRuleManage.View.ProductionRuleInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewModelName": "Solution.Desktop.ProductionRuleManage.ViewModel.ProductionRuleInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/coherence_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建工艺信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewName": "Solution.Desktop.ProductionRuleManage.View.ProductionRuleInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewModelName": "Solution.Desktop.ProductionRuleManage.ViewModel.ProductionRuleInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑工艺信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewName": "Solution.Desktop.ProductionRuleManage.View.ProductionRuleInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewModelName": "Solution.Desktop.ProductionRuleManage.ViewModel.ProductionRuleInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "GetProductionRuleItemInfoListByRuleID",
+    "ViewInfo": {
+      "DisplayName": "工艺明细信息管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewName": "Solution.Desktop.ProductionRuleManage.View.ProductionRuleItemInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewModelName": "Solution.Desktop.ProductionRuleManage.ViewModel.ProductionRuleItemInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "AddRuleItem",
+    "ViewInfo": {
+      "DisplayName": "新建工艺明细信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewName": "Solution.Desktop.ProductionRuleManage.View.ProductionRuleItemInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewModelName": "Solution.Desktop.ProductionRuleManage.ViewModel.ProductionRuleItemInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "UpdateRuleItem",
+    "ViewInfo": {
+      "DisplayName": "编辑工艺明细信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewName": "Solution.Desktop.ProductionRuleManage.View.ProductionRuleItemInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewModelName": "Solution.Desktop.ProductionRuleManage.ViewModel.ProductionRuleItemInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "Audit",
+    "ViewInfo": {
+      "DisplayName": "工艺审核管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewName": "Solution.Desktop.ProductionRuleManage.View.ProductionRuleInfoAuditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProductionRuleManage",
+      "ViewModelName": "Solution.Desktop.ProductionRuleManage.ViewModel.ProductionRuleInfoAuditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "GetBillInfoListByRuleID",
+    "ViewInfo": {
+      "DisplayName": "制造清单信息管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBillInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBillInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "AddBill",
+    "ViewInfo": {
+      "DisplayName": "新建制造清单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBillInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBillInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "UpdateBill",
+    "ViewInfo": {
+      "DisplayName": "编辑制造清单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBillInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBillInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "GetProManufacturingBOMBillItemInfoListByBillID",
+    "ViewInfo": {
+      "DisplayName": "BOM清单信息管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBOMBillItemInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBOMBillItemInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "AddBOMItem",
+    "ViewInfo": {
+      "DisplayName": "新建BOM清单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBOMBillItemInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBOMBillItemInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "UpdateBOMItem",
+    "ViewInfo": {
+      "DisplayName": "编辑BOM清单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBOMBillItemInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBOMBillItemInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "GetProManufacturingBORBillItemInfoListByBillID",
+    "ViewInfo": {
+      "DisplayName": "BOR清单信息管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBORBillItemInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBORBillItemInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "AddBORItem",
+    "ViewInfo": {
+      "DisplayName": "新建BOR清单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBORBillItemInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBORBillItemInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "ProductionRuleInfo",
+    "Action": "UpdateBORItem",
+    "ViewInfo": {
+      "DisplayName": "编辑BOR清单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBORBillItemInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+      "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBORBillItemInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": null,
+  //  "ViewInfo": {
+  //    "DisplayName": "制造清单信息管理",
+  //    "ViewType": 1,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBillInfoView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBillInfoViewModel",
+  //    "Parameter": null,
+  //    "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "Add",
+  //  "ViewInfo": {
+  //    "DisplayName": "新建制造清单信息",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBillInfoAddView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBillInfoAddViewModel",
+  //    "Parameter": null,
+  //    "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "Update",
+  //  "ViewInfo": {
+  //    "DisplayName": "编辑制造清单信息",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBillInfoEditView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBillInfoEditViewModel",
+  //    "Parameter": null,
+  //    "Icon": "Images\\Edit_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "GetProManufacturingBOMBillItemInfoListByBillID",
+  //  "ViewInfo": {
+  //    "DisplayName": "BOM清单信息管理",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBOMBillItemInfoView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBOMBillItemInfoViewModel",
+  //    "Parameter": null,
+  //    "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "AddBOMItem",
+  //  "ViewInfo": {
+  //    "DisplayName": "新建BOM清单信息",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBOMBillItemInfoAddView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBOMBillItemInfoAddViewModel",
+  //    "Parameter": null,
+  //    "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "UpdateBOMItem",
+  //  "ViewInfo": {
+  //    "DisplayName": "编辑BOM清单信息",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBOMBillItemInfoEditView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBOMBillItemInfoEditViewModel",
+  //    "Parameter": null,
+  //    "Icon": "Images\\Edit_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "GetProManufacturingBORBillItemInfoListByBillID",
+  //  "ViewInfo": {
+  //    "DisplayName": "BOR清单信息管理",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBORBillItemInfoView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBORBillItemInfoViewModel",
+  //    "Parameter": null,
+  //    "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "AddBORItem",
+  //  "ViewInfo": {
+  //    "DisplayName": "新建BOR清单信息",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBORBillItemInfoAddView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBORBillItemInfoAddViewModel",
+  //    "Parameter": null,
+  //    "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+  //  }
+  //},
+  //{
+  //  "Controller": "ProManufacturingBillInfo",
+  //  "Action": "UpdateBORItem",
+  //  "ViewInfo": {
+  //    "DisplayName": "编辑BOR清单信息",
+  //    "ViewType": 2,
+  //    "ViewAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewName": "Solution.Desktop.ProManufacturingBillManage.View.ProManufacturingBORBillItemInfoEditView",
+  //    "ViewModelAssemblyName": "Solution.Desktop.ProManufacturingBillManage",
+  //    "ViewModelName": "Solution.Desktop.ProManufacturingBillManage.ViewModel.ProManufacturingBORBillItemInfoEditViewModel",
+  //    "Parameter": null,
+  //    "Icon": "Images\\Edit_32x32.png"
+  //  }
+  //},
+  {
+    "Controller": "PlanOrderInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "订单信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewName": "Solution.Desktop.PlanOrderManage.View.PlanOrderInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewModelName": "Solution.Desktop.PlanOrderManage.ViewModel.PlanOrderInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/order_159_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建订单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewName": "Solution.Desktop.PlanOrderManage.View.PlanOrderInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewModelName": "Solution.Desktop.PlanOrderManage.ViewModel.PlanOrderInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑订单信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewName": "Solution.Desktop.PlanOrderManage.View.PlanOrderInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewModelName": "Solution.Desktop.PlanOrderManage.ViewModel.PlanOrderInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderInfo",
+    "Action": "GetPlanOrderItemInfoListByOrderID",
+    "ViewInfo": {
+      "DisplayName": "订单明细信息管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewName": "Solution.Desktop.PlanOrderManage.View.PlanOrderItemInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewModelName": "Solution.Desktop.PlanOrderManage.ViewModel.PlanOrderItemInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderInfo",
+    "Action": "AddOrderItem",
+    "ViewInfo": {
+      "DisplayName": "新建订单明细信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewName": "Solution.Desktop.PlanOrderManage.View.PlanOrderItemInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewModelName": "Solution.Desktop.PlanOrderManage.ViewModel.PlanOrderItemInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderInfo",
+    "Action": "UpdateOrderItem",
+    "ViewInfo": {
+      "DisplayName": "编辑订单明细信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewName": "Solution.Desktop.PlanOrderManage.View.PlanOrderItemInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanOrderManage",
+      "ViewModelName": "Solution.Desktop.PlanOrderManage.ViewModel.PlanOrderItemInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderItemInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "工单信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewName": "Solution.Desktop.PlanWorkListManage.View.PlanOrderItemInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewModelName": "Solution.Desktop.PlanWorkListManage.ViewModel.PlanOrderItemInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/worklist_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderItemInfo",
+    "Action": "GetScheduleInfoListByOrderItemID",
+    "ViewInfo": {
+      "DisplayName": "子订单排产管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewName": "Solution.Desktop.PlanWorkListManage.View.PlanProductionScheduleInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewModelName": "Solution.Desktop.PlanWorkListManage.ViewModel.PlanProductionScheduleInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderItemInfo",
+    "Action": "AddScheduleInfo",
+    "ViewInfo": {
+      "DisplayName": "新建生产计划信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewName": "Solution.Desktop.PlanWorkListManage.View.PlanProductionScheduleInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewModelName": "Solution.Desktop.PlanWorkListManage.ViewModel.PlanProductionScheduleInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderItemInfo",
+    "Action": "UpdateScheduleInfo",
+    "ViewInfo": {
+      "DisplayName": "编辑生产计划信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewName": "Solution.Desktop.PlanWorkListManage.View.PlanProductionScheduleInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewModelName": "Solution.Desktop.PlanWorkListManage.ViewModel.PlanProductionScheduleInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanOrderItemInfo",
+    "Action": "GetProcessRequireInfoListByScheduleID",
+    "ViewInfo": {
+      "DisplayName": "工单信息查看",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewName": "Solution.Desktop.PlanWorkListManage.View.PlanWorkOrderInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanWorkListManage",
+      "ViewModelName": "Solution.Desktop.PlanWorkListManage.ViewModel.PlanWorkOrderInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "PlanProductionScheduleInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "计划执行管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.PlanExecutionManage",
+      "ViewName": "Solution.Desktop.PlanExecutionManage.View.PlanProductionScheduleExecutInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.PlanExecutionManage",
+      "ViewModelName": "Solution.Desktop.PlanExecutionManage.ViewModel.PlanProductionScheduleExecutInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/upcoming_work_32x32.png"
+    }
+  },
+  {
+    "Controller": "DeviceServerInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备服务管理器",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.DeviceServerInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.DeviceServerInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/server_32x32.png"
+    }
+  },
+  {
+    "Controller": "DeviceServerInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建设备服务器",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.DeviceServerInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.DeviceServerInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "DeviceServerInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备服务器",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.DeviceServerInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.DeviceServerInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "DeviceNode",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备数据点管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.DeviceNodeView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.DeviceNodeViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/attibutes_32x32.png"
+    }
+  },
+  {
+    "Controller": "DeviceNode",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建设备数据点",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.DeviceNodeAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.DeviceNodeAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "DeviceNode",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备数据点",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.DeviceNodeEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.DeviceNodeEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "BusinessNode",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "业务点表管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.BusinessNodeView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.BusinessNodeViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/billing_32x32.png"
+    }
+  },
+  {
+    "Controller": "BusinessNode",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建业务点表",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.BusinessNodeAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.BusinessNodeAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "BusinessNode",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑业务点表",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.BusinessNodeEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.BusinessNodeEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "BusinessNode",
+    "Action": "Setting",
+    "ViewInfo": {
+      "DisplayName": "业务点表设置",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.ProductionProcessEquipmentBusinessNodeMapView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.ProductionProcessEquipmentBusinessNodeMapViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "SocketServer",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "Socket服务器管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.SocketServerView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.SocketServerViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/base_32x32.png"
+    }
+  },
+  {
+    "Controller": "SocketServer",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建Socket服务器",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.SocketServerAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.SocketServerAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "SocketServer",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑Socket服务器",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.SocketServerEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.SocketServerEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "HistoryData",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "OPC历史数据管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Communication",
+      "ViewName": "Solution.Desktop.Communication.View.HistoryDataView",
+      "ViewModelAssemblyName": "Solution.Desktop.Communication",
+      "ViewModelName": "Solution.Desktop.Communication.ViewModel.HistoryDataViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/database_32x32.png"
+    }
+  },
+  {
+    "Controller": "CommOpcUaBusiness",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "OpcUa业务数据管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewName": "Solution.Desktop.CommOpcUaBusiness.View.CommOpcUaBusinessView",
+      "ViewModelAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewModelName": "Solution.Desktop.CommOpcUaBusiness.ViewModel.CommOpcUaBusinessViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "CommOpcUaBusiness",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建OpcUa业务数据",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewName": "Solution.Desktop.CommOpcUaBusiness.View.CommOpcUaBusinessAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewModelName": "Solution.Desktop.CommOpcUaBusiness.ViewModel.CommOpcUaBusinessAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "CommOpcUaBusiness",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑OpcUa业务数据",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewName": "Solution.Desktop.CommOpcUaBusiness.View.CommOpcUaBusinessEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewModelName": "Solution.Desktop.CommOpcUaBusiness.ViewModel.CommOpcUaBusinessEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "CommOpcUaBusiness",
+    "Action": "Setting",
+    "ViewInfo": {
+      "DisplayName": "设备业务数据点配置",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewName": "Solution.Desktop.CommOpcUaBusiness.View.CommOpcUaBusinessNodeMapSettingView",
+      "ViewModelAssemblyName": "Solution.Desktop.CommOpcUaBusiness",
+      "ViewModelName": "Solution.Desktop.CommOpcUaBusiness.ViewModel.CommOpcUaBusinessNodeMapSettingViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "CommOpcUaBusiness",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "AGV测试",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.AgvTest",
+      "ViewName": "Solution.Desktop.AgvTest.View.CommOpcUaBusinessView",
+      "ViewModelAssemblyName": "Solution.Desktop.AgvTest",
+      "ViewModelName": "Solution.Desktop.AgvTest.ViewModel.CommOpcUaBusinessViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "AgvInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "车辆管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.AgvInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.AgvInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Agv_32px.png"
+    }
+  },
+
+  {
+    "Controller": "AgvInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建车辆",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.AgvInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.AgvInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "AgvInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑车辆",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.AgvInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.AgvInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "AgvAnimation",
+    "Action": "Animation",
+    "ViewInfo": {
+      "DisplayName": "2D调度看板",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.AgvAnimationView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.AgvAnimationViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "AgvAnimation3D",
+    "Action": "Animation",
+    "ViewInfo": {
+      "DisplayName": "3D调度看板",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.Agv3DAnimationView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.Agv3DAnimationViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "AgvAnimationDalian",
+    "Action": "Animation",
+    "ViewInfo": {
+      "DisplayName": "大连调度看板",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.All3DView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.All3DViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "AlarmInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "报警管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.AlarmInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.AlarmInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "AlarmInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建报警",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.AlarmInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.AlarmInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "AlarmInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑报警",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.AlarmInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.AlarmInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "MarkPointInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "地标管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.MarkPointInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.MarkPointInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Map_32px.png"
+    }
+  },
+  {
+    "Controller": "MarkPointInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建地标",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.MarkPointInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.MarkPointInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MarkPointInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑地标",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.MarkPointInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.MarkPointInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "RoadInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "路段管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.RoadInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.RoadInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "RoadInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建路段",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.RoadInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.RoadInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "RoadInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑路段",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.RoadInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.RoadInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "RouteInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "路径管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.RouteInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.RouteInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "RouteInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建路径",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.RouteInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.RouteInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "RouteInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑路径",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.RouteInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.RouteInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "TaskInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "任务管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.TaskInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.TaskInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "TaskInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建任务",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.TaskInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.TaskInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "TaskInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑任务",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.Agv",
+      "ViewName": "Solution.Desktop.Agv.View.TaskInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.Agv",
+      "ViewModelName": "Solution.Desktop.Agv.ViewModel.TaskInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "UserManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "用户管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.UserManager",
+      "ViewName": "Solution.Desktop.UserManager.View.UserView",
+      "ViewModelAssemblyName": "Solution.Desktop.UserManager",
+      "ViewModelName": "Solution.Desktop.UserManager.ViewModel.UserViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/user_32x32.png"
+    }
+  },
+  {
+    "Controller": "UserManager",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建用户数据",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.UserManager",
+      "ViewName": "Solution.Desktop.UserManager.View.UserAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.UserManager",
+      "ViewModelName": "Solution.Desktop.UserManager.ViewModel.UserAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "UserManager",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑用户数据",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.UserManager",
+      "ViewName": "Solution.Desktop.UserManager.View.UserEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.UserManager",
+      "ViewModelName": "Solution.Desktop.UserManager.ViewModel.UserEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "RoleManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "角色管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.RoleManager",
+      "ViewName": "Solution.Desktop.RoleManager.View.RoleView",
+      "ViewModelAssemblyName": "Solution.Desktop.RoleManager",
+      "ViewModelName": "Solution.Desktop.RoleManager.ViewModel.RoleViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/administrative_docs_32x32.png"
+    }
+  },
+  {
+    "Controller": "RoleManager",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建角色数据",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.RoleManager",
+      "ViewName": "Solution.Desktop.RoleManager.View.RoleAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.RoleManager",
+      "ViewModelName": "Solution.Desktop.RoleManager.ViewModel.RoleAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "RoleManager",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑角色数据",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.RoleManager",
+      "ViewName": "Solution.Desktop.RoleManager.View.RoleEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.RoleManager",
+      "ViewModelName": "Solution.Desktop.RoleManager.ViewModel.RoleEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "FunctionManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "功能管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.FunctionManager",
+      "ViewName": "Solution.Desktop.FunctionManager.View.FunctionView",
+      "ViewModelAssemblyName": "Solution.Desktop.FunctionManager",
+      "ViewModelName": "Solution.Desktop.FunctionManager.ViewModel.FunctionViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/settings_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntityInfoManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "实体管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EntityInfoManager",
+      "ViewName": "Solution.Desktop.EntityInfoManager.View.EntityInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntityInfoManager",
+      "ViewModelName": "Solution.Desktop.EntityInfoManager.ViewModel.EntityInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/billing_32x32.png"
+    }
+  },
+  {
+    "Controller": "ModuleManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "模块管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.ModuleManager",
+      "ViewName": "Solution.Desktop.ModuleManager.View.ModuleManagerView",
+      "ViewModelAssemblyName": "Solution.Desktop.ModuleManager",
+      "ViewModelName": "Solution.Desktop.ModuleManager.ViewModel.ModuleManagerViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/attibutes_32x32.png"
+    }
+  },
+  {
+    "Controller": "ModuleManager",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建模块信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ModuleManager",
+      "ViewName": "Solution.Desktop.ModuleManager.View.ModuleManagerAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.ModuleManager",
+      "ViewModelName": "Solution.Desktop.ModuleManager.ViewModel.ModuleManagerAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "ModuleManager",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "修改模块信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.ModuleManager",
+      "ViewName": "Solution.Desktop.ModuleManager.View.ModuleManagerEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.ModuleManager",
+      "ViewModelName": "Solution.Desktop.ModuleManager.ViewModel.ModuleManagerEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "OperateLogManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "操作日志管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.OperateLogManager",
+      "ViewName": "Solution.Desktop.OperateLogManager.View.OperateLogView",
+      "ViewModelAssemblyName": "Solution.Desktop.OperateLogManager",
+      "ViewModelName": "Solution.Desktop.OperateLogManager.ViewModel.OperateLogViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/worklist_32x32.png"
+    }
+  },
+  {
+    "Controller": "DataLogManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "数据日志管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.DataLogManager",
+      "ViewName": "Solution.Desktop.DataLogManager.View.DataLogView",
+      "ViewModelAssemblyName": "Solution.Desktop.DataLogManager",
+      "ViewModelName": "Solution.Desktop.DataLogManager.ViewModel.DataLogViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/attibutes_32x32.png"
+    }
+  },
+  {
+    "Controller": "DataLogItemManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "操作日志明细管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.DataLogItemManager",
+      "ViewName": "Solution.Desktop.DataLogItemManager.View.DataLogItemView",
+      "ViewModelAssemblyName": "Solution.Desktop.DataLogItemManager",
+      "ViewModelName": "Solution.Desktop.DataLogItemManager.ViewModel.DataLogItemViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "OAuthClientManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "客户端管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.OAuthClientManager",
+      "ViewName": "Solution.Desktop.OAuthClientManager.View.OAuthClientView",
+      "ViewModelAssemblyName": "Solution.Desktop.OAuthClientManager",
+      "ViewModelName": "Solution.Desktop.OAuthClientManager.ViewModel.OAuthClientViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/network_32x32.png"
+    }
+  },
+  {
+    "Controller": "OAuthClientSecretManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "客户端密钥管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.OAuthClientSecretManager",
+      "ViewName": "Solution.Desktop.OAuthClientSecretManager.View.OAuthClientSecretView",
+      "ViewModelAssemblyName": "Solution.Desktop.OAuthClientSecretManager",
+      "ViewModelName": "Solution.Desktop.OAuthClientSecretManager.ViewModel.OAuthClientSecretViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/administrative_docs_32x32.png"
+    }
+  },
+  {
+    "Controller": "OAuthClientRefreshTokenManager",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "客户端Token管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.OAuthClientRefreshTokenManager",
+      "ViewName": "Solution.Desktop.OAuthClientRefreshTokenManager.View.OAuthClientRefreshTokenView",
+      "ViewModelAssemblyName": "Solution.Desktop.OAuthClientRefreshTokenManager",
+      "ViewModelName": "Solution.Desktop.OAuthClientRefreshTokenManager.ViewModel.OAuthClientRefreshTokenViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/config_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatWareHouseInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "仓库信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseInfo.View.MatWareHouseInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseInfo.ViewModel.MatWareHouseInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/administrative_docs_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建仓库信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseInfo.View.MatWareHouseInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseInfo.ViewModel.MatWareHouseInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑仓库信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseInfo.View.MatWareHouseInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseInfo.ViewModel.MatWareHouseInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatWareHouseTypeInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "仓库类型管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseTypeInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseTypeInfo.View.MatWareHouseTypeInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseTypeInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseTypeInfo.ViewModel.MatWareHouseTypeInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseTypeInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建仓库类型",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseTypeInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseTypeInfo.View.MatWareHouseTypeInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseTypeInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseTypeInfo.ViewModel.MatWareHouseTypeInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseTypeInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑仓库类型",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseTypeInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseTypeInfo.View.MatWareHouseTypeInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseTypeInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseTypeInfo.ViewModel.MatWareHouseTypeInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentTypeInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备类别信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentTypeInfo",
+      "ViewName": "Solution.Desktop.EquipmentTypeInfo.View.EquipmentTypeView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentTypeInfo.ViewModel.EquipmentTypeInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentTypeInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentTypeInfo",
+      "ViewName": "Solution.Desktop.EquipmentTypeInfo.View.EquipmentTypeInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentTypeInfo.ViewModel.EquipmentTypeInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentTypeInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentTypeInfo",
+      "ViewName": "Solution.Desktop.EquipmentTypeInfo.View.EquipmentTypeInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentTypeInfo.ViewModel.EquipmentTypeInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquSparePartTypeInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "备件类别信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquSparePartTypeInfo",
+      "ViewName": "Solution.Desktop.EquSparePartTypeInfo.View.EquSparePartTypeInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquSparePartTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquSparePartTypeInfo.ViewModel.EquSparePartTypeInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquSparePartTypeInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加备件类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquSparePartTypeInfo",
+      "ViewName": "Solution.Desktop.EquSparePartTypeInfo.View.EquSparePartTypeInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquSparePartTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquSparePartTypeInfo.ViewModel.EquSparePartTypeInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquSparePartTypeInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑备件类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquSparePartTypeInfo",
+      "ViewName": "Solution.Desktop.EquSparePartTypeInfo.View.EquSparePartTypeInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquSparePartTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquSparePartTypeInfo.ViewModel.EquSparePartTypeInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "物料信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInfo",
+      "ViewName": "Solution.Desktop.MaterialInfo.View.MaterialInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInfo.ViewModel.MaterialInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/invoice_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建物料信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInfo",
+      "ViewName": "Solution.Desktop.MaterialInfo.View.MaterialInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInfo.ViewModel.MaterialInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑物料信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInfo",
+      "ViewName": "Solution.Desktop.MaterialInfo.View.MaterialInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInfo.ViewModel.MaterialInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewName": "Solution.Desktop.EquipmentInfo.View.EquipmentInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentInfo.ViewModel.EquipmentInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/ekisho_deep_ocean_hd1_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewName": "Solution.Desktop.EquipmentInfo.View.EquipmentInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentInfo.ViewModel.EquipmentInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewName": "Solution.Desktop.EquipmentInfo.View.EquipmentInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentInfo.ViewModel.EquipmentInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquFactory",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备厂家",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquFactoryInfo",
+      "ViewName": "Solution.Desktop.EquFactoryInfo.View.EquFactoryView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquFactoryInfo",
+      "ViewModelName": "Solution.Desktop.EquFactoryInfo.ViewModel.EquFactoryViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/config_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquFactory",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备厂家",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquFactoryInfo",
+      "ViewName": "Solution.Desktop.EquFactoryInfo.View.EquFactoryAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquFactoryInfo",
+      "ViewModelName": "Solution.Desktop.EquFactoryInfo.ViewModel.EquFactoryAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquFactory",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备厂家",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquFactoryInfo",
+      "ViewName": "Solution.Desktop.EquFactoryInfo.View.EquFactoryEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquFactoryInfo",
+      "ViewModelName": "Solution.Desktop.EquFactoryInfo.ViewModel.EquFactoryEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentKnifeToolTypeMap",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备刀具映射",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewName": "Solution.Desktop.EquipmentInfo.View.EquipmentInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentInfo.ViewModel.EquipmentInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatPalletInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "托盘信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatPalletInfo",
+      "ViewName": "Solution.Desktop.MatPalletInfo.View.MatPalletInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatPalletInfo",
+      "ViewModelName": "Solution.Desktop.MatPalletInfo.ViewModel.MatPalletInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/billing_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatPalletInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建托盘信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatPalletInfo",
+      "ViewName": "Solution.Desktop.MatPalletInfo.View.MatPalletInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatPalletInfo",
+      "ViewModelName": "Solution.Desktop.MatPalletInfo.ViewModel.MatPalletInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatPalletInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑托盘信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatPalletInfo",
+      "ViewName": "Solution.Desktop.MatPalletInfo.View.MatPalletInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatPalletInfo",
+      "ViewModelName": "Solution.Desktop.MatPalletInfo.ViewModel.MatPalletInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquRepairsInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备维护",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquRepairsInfo",
+      "ViewName": "Solution.Desktop.EquRepairsInfo.View.EquRepairsInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquRepairsInfo",
+      "ViewModelName": "Solution.Desktop.EquRepairsInfo.ViewModel.EquRepairsInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/remove1_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquRepairsInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备维护",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquRepairsInfo",
+      "ViewName": "Solution.Desktop.EquRepairsInfo.View.EquRepairsInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquRepairsInfo",
+      "ViewModelName": "Solution.Desktop.EquRepairsInfo.ViewModel.EquRepairsInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquRepairsInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备维护",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquRepairsInfo",
+      "ViewName": "Solution.Desktop.EquRepairsInfo.View.EquRepairsInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquRepairsInfo",
+      "ViewModelName": "Solution.Desktop.EquRepairsInfo.ViewModel.EquRepairsInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquMaintenancePlanInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "维护计划",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquMaintenancePlanInfo",
+      "ViewName": "Solution.Desktop.EquMaintenancePlanInfo.View.EquMaintenancePlanInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquMaintenancePlanInfo",
+      "ViewModelName": "Solution.Desktop.EquMaintenancePlanInfo.ViewModel.EquMaintenancePlanInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/remove1_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquMaintenancePlanInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加维护计划",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquMaintenancePlanInfo",
+      "ViewName": "Solution.Desktop.EquMaintenancePlanInfo.View.EquMaintenancePlanInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquMaintenancePlanInfo",
+      "ViewModelName": "Solution.Desktop.EquMaintenancePlanInfo.ViewModel.EquMaintenancePlanInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquMaintenancePlanInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑维护计划",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquMaintenancePlanInfo",
+      "ViewName": "Solution.Desktop.EquMaintenancePlanInfo.View.EquMaintenancePlanInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquMaintenancePlanInfo",
+      "ViewModelName": "Solution.Desktop.EquMaintenancePlanInfo.ViewModel.EquMaintenancePlanInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatWareHouseAreaInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "仓库区域管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseAreaInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseAreaInfo.View.MatWareHouseAreaInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseAreaInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseAreaInfo.ViewModel.MatWareHouseAreaInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-10_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseAreaInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建仓库区域",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseAreaInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseAreaInfo.View.MatWareHouseAreaInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseAreaInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseAreaInfo.ViewModel.MatWareHouseAreaInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseAreaInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑仓库区域",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseAreaInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseAreaInfo.View.MatWareHouseAreaInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseAreaInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseAreaInfo.ViewModel.MatWareHouseAreaInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquRunningStateInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备运行状态信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquRunningStateInfo",
+      "ViewName": "Solution.Desktop.EquRunningStateInfo.View.EquRunningStateInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquRunningStateInfo",
+      "ViewModelName": "Solution.Desktop.EquRunningStateInfo.ViewModel.EquRunningStateInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/networking_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquRunningStateInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备运行状态信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquRunningStateInfo",
+      "ViewName": "Solution.Desktop.EquRunningStateInfo.View.EquRunningStateInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquRunningStateInfo",
+      "ViewModelName": "Solution.Desktop.EquRunningStateInfo.ViewModel.EquRunningStateInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquRunningStateInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备运行状态信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquRunningStateInfo",
+      "ViewName": "Solution.Desktop.EquRunningStateInfo.View.EquRunningStateInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquRunningStateInfo",
+      "ViewModelName": "Solution.Desktop.EquRunningStateInfo.ViewModel.EquRunningStateInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatWareHouseLocationInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "库位信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseLocationInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseLocationInfo.View.MatWareHouseLocationInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseLocationInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseLocationInfo.ViewModel.MatWareHouseLocationInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/attibutes_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseLocationInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建库位信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseLocationInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseLocationInfo.View.MatWareHouseLocationInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseLocationInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseLocationInfo.ViewModel.MatWareHouseLocationInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatWareHouseLocationInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑库位信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHouseLocationInfo",
+      "ViewName": "Solution.Desktop.MatWareHouseLocationInfo.View.MatWareHouseLocationInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHouseLocationInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHouseLocationInfo.ViewModel.MatWareHouseLocationInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquSparePartsInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "备件管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquSparePartsInfo",
+      "ViewName": "Solution.Desktop.EquSparePartsInfo.View.EquSparePartsInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquSparePartsInfo",
+      "ViewModelName": "Solution.Desktop.EquSparePartsInfo.ViewModel.EquSparePartsInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/brainstorming_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquSparePartsInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加备件管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquSparePartsInfo",
+      "ViewName": "Solution.Desktop.EquSparePartsInfo.View.EquSparePartsInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquSparePartsInfo",
+      "ViewModelName": "Solution.Desktop.EquSparePartsInfo.ViewModel.EquSparePartsInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquSparePartsInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑备件管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquSparePartsInfo",
+      "ViewName": "Solution.Desktop.EquSparePartsInfo.View.EquSparePartsInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquSparePartsInfo",
+      "ViewModelName": "Solution.Desktop.EquSparePartsInfo.ViewModel.EquSparePartsInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquKnifeToolTypeInfo", //EquKnifeToolTypeInfo
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "刀具类别信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquKnifeToolTypeInfo",
+      "ViewName": "Solution.Desktop.EquKnifeToolTypeInfo.View.EquKnifeToolTypeView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquKnifeToolTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquKnifeToolTypeInfo.ViewModel.EquKnifeToolTypeInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquKnifeToolTypeInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加刀具类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquKnifeToolTypeInfo",
+      "ViewName": "Solution.Desktop.EquKnifeToolTypeInfo.View.EquKnifeToolTypeInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquKnifeToolTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquKnifeToolTypeInfo.ViewModel.EquKnifeToolTypeInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquKnifeToolTypeInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑刀具类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquKnifeToolTypeInfo",
+      "ViewName": "Solution.Desktop.EquKnifeToolTypeInfo.View.EquKnifeToolTypeInfoEditView", //EquKnifeToolTypeInfoAddView
+      "ViewModelAssemblyName": "Solution.Desktop.EquKnifeToolTypeInfo",
+      "ViewModelName": "Solution.Desktop.EquKnifeToolTypeInfo.ViewModel.EquKnifeToolTypeInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquKnifeToolInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "刀具信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquKnifeToolInfo",
+      "ViewName": "Solution.Desktop.EquKnifeToolInfo.View.EquKnifeToolInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquKnifeToolInfo",
+      "ViewModelName": "Solution.Desktop.EquKnifeToolInfo.ViewModel.EquKnifeToolInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/suppliers_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquKnifeToolInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加刀具信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquKnifeToolInfo",
+      "ViewName": "Solution.Desktop.EquKnifeToolInfo.View.EquKnifeToolInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquKnifeToolInfo",
+      "ViewModelName": "Solution.Desktop.EquKnifeToolInfo.ViewModel.EquKnifeToolInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquKnifeToolInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑刀具信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquKnifeToolInfo",
+      "ViewName": "Solution.Desktop.EquKnifeToolInfo.View.EquKnifeToolInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquKnifeToolInfo",
+      "ViewModelName": "Solution.Desktop.EquKnifeToolInfo.ViewModel.EquKnifeToolInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "入库单据管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/sign_in_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": "Add1",
+    "ViewInfo": {
+      "DisplayName": "新建入库信息(空托盘入库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageInfoAddView1",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageInfoAddViewModel1",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": "Add2",
+    "ViewInfo": {
+      "DisplayName": "新建入库信息(原料手动入库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageInfoAddView2",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageInfoAddViewModel2",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": "Update1",
+    "ViewInfo": {
+      "DisplayName": "编辑入库信息(空托盘入库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageInfoEditView1",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": "Update2",
+    "ViewInfo": {
+      "DisplayName": "编辑入库信息(原料手动入库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageInfoEditView2",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": "Audit1",
+    "ViewInfo": {
+      "DisplayName": "审核入库信息(空托盘入库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageInfoAuditView1",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageInfoAuditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": "Audit2",
+    "ViewInfo": {
+      "DisplayName": "审核入库信息(原料手动入库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageInfoAuditView2",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageInfoAuditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialInStorageInfo",
+    "Action": "Distribute",
+    "ViewInfo": {
+      "DisplayName": "入库作业",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageTaskInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialInStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialInStorageInfo.ViewModel.MaterialInStorageTaskInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "出库单据管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/sign_out_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Add1",
+    "ViewInfo": {
+      "DisplayName": "新建出库信息(空托盘出库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoAddView1",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoAddViewModel1",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Add2",
+    "ViewInfo": {
+      "DisplayName": "新建出库信息(成品手动出库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoAddView2",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoAddViewModel2",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Add3",
+    "ViewInfo": {
+      "DisplayName": "新建出库信息(原料自动出库演示)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoAddView3",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoAddViewModel3",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Update1",
+    "ViewInfo": {
+      "DisplayName": "编辑出库信息(空托盘出库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoEditView1",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Update2",
+    "ViewInfo": {
+      "DisplayName": "编辑出库信息(成品手动出库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoEditView2",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Update3",
+    "ViewInfo": {
+      "DisplayName": "编辑出库信息(原料自动出库演示)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoEditView3",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Audit1",
+    "ViewInfo": {
+      "DisplayName": "审核出库信息(空托盘出库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoAuditView1",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoAuditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Audit2",
+    "ViewInfo": {
+      "DisplayName": "审核出库信息(成品手动出库)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoAuditView2",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoAuditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Audit3",
+    "ViewInfo": {
+      "DisplayName": "审核出库信息(原料自动出库演示)",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageInfoAuditView3",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageInfoAuditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "MaterialOutStorageInfo",
+    "Action": "Distribute",
+    "ViewInfo": {
+      "DisplayName": "出库作业",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewName": "Solution.Desktop.MaterialOutStorageInfo.View.MaterialOutStorageTaskInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialOutStorageInfo",
+      "ViewModelName": "Solution.Desktop.MaterialOutStorageInfo.ViewModel.MaterialOutStorageTaskInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "EquipmentKnifeToolTypeMap",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备-刀具类别信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentKnifeToolTypeMap",
+      "ViewName": "Solution.Desktop.EquipmentKnifeToolTypeMap.View.EquipmentKnifeToolTypeMapView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentKnifeToolTypeMap",
+      "ViewModelName": "Solution.Desktop.EquipmentKnifeToolTypeMap.ViewModel.EquipmentKnifeToolTypeMapViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentKnifeToolTypeMap",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备-刀具类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentKnifeToolTypeMap",
+      "ViewName": "Solution.Desktop.EquipmentKnifeToolTypeMap.View.EquipmentKnifeToolTypeMapAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentKnifeToolTypeMap",
+      "ViewModelName": "Solution.Desktop.EquipmentKnifeToolTypeMap.ViewModel.EquipmentKnifeToolTypeMapAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentKnifeToolTypeMap",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备-刀具类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentKnifeToolTypeMap",
+      "ViewName": "Solution.Desktop.EquipmentKnifeToolTypeMap.View.EquipmentKnifeToolTypeMapEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentKnifeToolTypeMap",
+      "ViewModelName": "Solution.Desktop.EquipmentKnifeToolTypeMap.ViewModel.EquipmentKnifeToolTypeMapEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialBatchInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "库存查看",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MaterialBatchInfo",
+      "ViewName": "Solution.Desktop.MaterialBatchInfo.View.MaterialBatchInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialBatchInfo",
+      "ViewModelName": "Solution.Desktop.MaterialBatchInfo.ViewModel.MaterialBatchInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/billing_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MaterialStorageLogInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "库存流水查看",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MaterialStorageLogInfo",
+      "ViewName": "Solution.Desktop.MaterialStorageLogInfo.View.MaterialStorageLogInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MaterialStorageLogInfo",
+      "ViewModelName": "Solution.Desktop.MaterialStorageLogInfo.ViewModel.MaterialStorageLogInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/invoice_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatInventoryInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "库存盘点管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewName": "Solution.Desktop.MatInventoryInfo.View.MatInventoryInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewModelName": "Solution.Desktop.MatInventoryInfo.ViewModel.MatInventoryInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/worklist_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatInventoryInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建库存盘点",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewName": "Solution.Desktop.MatInventoryInfo.View.MatInventoryInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewModelName": "Solution.Desktop.MatInventoryInfo.ViewModel.MatInventoryInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatInventoryInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑库存盘点",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewName": "Solution.Desktop.MatInventoryInfo.View.MatInventoryInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewModelName": "Solution.Desktop.MatInventoryInfo.ViewModel.MatInventoryInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatInventoryInfo",
+    "Action": "GetMatInventoryItemInfoListByInventoryID",
+    "ViewInfo": {
+      "DisplayName": "盘点明细信息管理",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewName": "Solution.Desktop.MatInventoryInfo.View.MatInventoryItemInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewModelName": "Solution.Desktop.MatInventoryInfo.ViewModel.MatInventoryItemInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatInventoryInfo",
+    "Action": "AddItem",
+    "ViewInfo": {
+      "DisplayName": "新建盘点明细信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewName": "Solution.Desktop.MatInventoryInfo.View.MatInventoryItemInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewModelName": "Solution.Desktop.MatInventoryInfo.ViewModel.MatInventoryItemInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatInventoryInfo",
+    "Action": "UpdateItem",
+    "ViewInfo": {
+      "DisplayName": "编辑盘点明细信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewName": "Solution.Desktop.MatInventoryInfo.View.MatInventoryItemInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatInventoryInfo",
+      "ViewModelName": "Solution.Desktop.MatInventoryInfo.ViewModel.MatInventoryItemInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatStorageMoveInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "库存移库管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatStorageMoveInfo",
+      "ViewName": "Solution.Desktop.MatStorageMoveInfo.View.MatStorageMoveInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatStorageMoveInfo",
+      "ViewModelName": "Solution.Desktop.MatStorageMoveInfo.ViewModel.MatStorageMoveInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/brainstorming_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatStorageMoveInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建库存移库",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatStorageMoveInfo",
+      "ViewName": "Solution.Desktop.MatStorageMoveInfo.View.MatStorageMoveInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatStorageMoveInfo",
+      "ViewModelName": "Solution.Desktop.MatStorageMoveInfo.ViewModel.MatStorageMoveInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatStorageMoveInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑库存移库",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatStorageMoveInfo",
+      "ViewName": "Solution.Desktop.MatStorageMoveInfo.View.MatStorageMoveInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatStorageMoveInfo",
+      "ViewModelName": "Solution.Desktop.MatStorageMoveInfo.ViewModel.MatStorageMoveInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatStorageModifyInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "库存调整管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatStorageModifyInfo",
+      "ViewName": "Solution.Desktop.MatStorageModifyInfo.View.MatStorageModifyInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatStorageModifyInfo",
+      "ViewModelName": "Solution.Desktop.MatStorageModifyInfo.ViewModel.MatStorageModifyInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/worklist_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatStorageModifyInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建库存调整",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatStorageModifyInfo",
+      "ViewName": "Solution.Desktop.MatStorageModifyInfo.View.MatStorageModifyInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatStorageModifyInfo",
+      "ViewModelName": "Solution.Desktop.MatStorageModifyInfo.ViewModel.MatStorageModifyInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatStorageModifyInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑库存调整",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatStorageModifyInfo",
+      "ViewName": "Solution.Desktop.MatStorageModifyInfo.View.MatStorageModifyInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatStorageModifyInfo",
+      "ViewModelName": "Solution.Desktop.MatStorageModifyInfo.ViewModel.MatStorageModifyInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "EquipmentBrandInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "设备品牌信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentBrandInfo",
+      "ViewName": "Solution.Desktop.EquipmentBrandInfo.View.EquipmentBrandInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentBrandInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentBrandInfo.ViewModel.EquipmentBrandInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-10_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentBrandInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加设备品牌信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentBrandInfo",
+      "ViewName": "Solution.Desktop.EquipmentBrandInfo.View.EquipmentBrandInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentBrandInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentBrandInfo.ViewModel.EquipmentBrandInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentBrandInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑设备品牌信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentBrandInfo",
+      "ViewName": "Solution.Desktop.EquipmentBrandInfo.View.EquipmentBrandInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentBrandInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentBrandInfo.ViewModel.EquipmentBrandInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentProgramInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "程序信息",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentProgramInfo",
+      "ViewName": "Solution.Desktop.EquipmentProgramInfo.View.EquipmentProgramInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentProgramInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentProgramInfo.ViewModel.EquipmentProgramInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/billing_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentProgramInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "添加程序信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentProgramInfo",
+      "ViewName": "Solution.Desktop.EquipmentProgramInfo.View.EquipmentProgramInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentProgramInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentProgramInfo.ViewModel.EquipmentProgramInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EquipmentProgramInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑程序信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EquipmentProgramInfo",
+      "ViewName": "Solution.Desktop.EquipmentProgramInfo.View.EquipmentProgramInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EquipmentProgramInfo",
+      "ViewModelName": "Solution.Desktop.EquipmentProgramInfo.ViewModel.EquipmentProgramInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatSupplierInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "供货商信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatSupplierInfo",
+      "ViewName": "Solution.Desktop.MatSupplierInfo.View.MatSupplierInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatSupplierInfo",
+      "ViewModelName": "Solution.Desktop.MatSupplierInfo.ViewModel.MatSupplierInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/suppliers_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatSupplierInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建供货商信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatSupplierInfo",
+      "ViewName": "Solution.Desktop.MatSupplierInfo.View.MatSupplierInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatSupplierInfo",
+      "ViewModelName": "Solution.Desktop.MatSupplierInfo.ViewModel.MatSupplierInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "MatSupplierInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑供货商信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatSupplierInfo",
+      "ViewName": "Solution.Desktop.MatSupplierInfo.View.MatSupplierInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatSupplierInfo",
+      "ViewModelName": "Solution.Desktop.MatSupplierInfo.ViewModel.MatSupplierInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatWareHousAreaLocationInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "仓位图信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHousAreaLocationInfo",
+      "ViewName": "Solution.Desktop.MatWareHousAreaLocationInfo.View.MatWareHousAreaLocationInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHousAreaLocationInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHousAreaLocationInfo.ViewModel.MatWareHousAreaLocationInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/illustration_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "MatWareHousAreaLocationInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "库位信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.MatWareHousAreaLocationInfo",
+      "ViewName": "Solution.Desktop.MatWareHousAreaLocationInfo.View.MatWareHousAreaLocationInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.MatWareHousAreaLocationInfo",
+      "ViewModelName": "Solution.Desktop.MatWareHousAreaLocationInfo.ViewModel.MatWareHousAreaLocationInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+
+  {
+    "Controller": "DisTaskTypeInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "分步教学任务类别信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.DisTaskTypeInfo",
+      "ViewName": "Solution.Desktop.DisTaskTypeInfo.View.DisTaskTypeInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisTaskTypeInfo",
+      "ViewModelName": "Solution.Desktop.DisTaskTypeInfo.ViewModel.DisTaskTypeInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "DisTaskTypeInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建分步教学任务类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.DisTaskTypeInfo",
+      "ViewName": "Solution.Desktop.DisTaskTypeInfo.View.DisTaskTypeInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisTaskTypeInfo",
+      "ViewModelName": "Solution.Desktop.DisTaskTypeInfo.ViewModel.DisTaskTypeInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "DisTaskTypeInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑分步教学任务类别信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.DisTaskTypeInfo",
+      "ViewName": "Solution.Desktop.DisTaskTypeInfo.View.DisTaskTypeInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisTaskTypeInfo",
+      "ViewModelName": "Solution.Desktop.DisTaskTypeInfo.ViewModel.DisTaskTypeInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+
+  {
+    "Controller": "DisTaskDispatchInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "分步教学调度主表",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.DisTaskDispatchInfo",
+      "ViewName": "Solution.Desktop.DisTaskDispatchInfo.View.DisTaskDispatchInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisTaskDispatchInfo",
+      "ViewModelName": "Solution.Desktop.DisTaskDispatchInfo.ViewModel.DisTaskDispatchInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "DisTaskDispatchInfo",
+    "Action": "GetDisTaskDispatchItemInfoListByInventoryID",
+    "ViewInfo": {
+      "DisplayName": "查询调度明细表信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.DisTaskDispatchInfo",
+      "ViewName": "Solution.Desktop.DisTaskDispatchInfo.View.DisTaskDispatchItemInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisTaskDispatchInfo",
+      "ViewModelName": "Solution.Desktop.DisTaskDispatchInfo.ViewModel.DisTaskDispatchItemInfoViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "LogisticsManagement",
+    "Action": "null",
+    "ViewInfo": {
+      "DisplayName": "物流看板",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.LogisticsManagement",
+      "ViewName": "Solution.Desktop.LogisticsManagement.View.Agv3DAnimationView",
+      "ViewModelAssemblyName": "Solution.Desktop.LogisticsManagement",
+      "ViewModelName": "Solution.Desktop.LogisticsManagement.ViewModel.Agv3DAnimationViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "LogisticsDispatching",
+    "Action": "null",
+    "ViewInfo": {
+      "DisplayName": "物流调度中心看板",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.LogisticsManagement",
+      "ViewName": "Solution.Desktop.LogisticsManagement.View.Dispatching3DAnimationView",
+      "ViewModelAssemblyName": "Solution.Desktop.LogisticsManagement",
+      "ViewModelName": "Solution.Desktop.LogisticsManagement.ViewModel.Dispatching3DAnimationViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "StorageDispatching",
+    "Action": "null",
+    "ViewInfo": {
+      "DisplayName": "智能仓储调度中心看板",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.StepTeachingStorageManagement",
+      "ViewName": "Solution.Desktop.StepTeachingStorageManagement.View.StorageDispatching3DAnimationView",
+      "ViewModelAssemblyName": "Solution.Desktop.StepTeachingStorageManagement",
+      "ViewModelName": "Solution.Desktop.StepTeachingStorageManagement.ViewModel.StorageDispatching3DAnimationViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png"
+    }
+  },
+  {
+    "Controller": "DisStepActionInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "分步操作管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewName": "Solution.Desktop.DisStepActionInfo.View.DisStepActionInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewModelName": "Solution.Desktop.DisStepActionInfo.ViewModel.DisStepActionInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/product_169_32x32.png"
+    }
+  },
+  {
+    "Controller": "DisStepActionInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新增分步操作信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewName": "Solution.Desktop.DisStepActionInfo.View.DisStepActionInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewModelName": "Solution.Desktop.DisStepActionInfo.ViewModel.DisStepActionInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "DisStepActionInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑分步操作信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewName": "Solution.Desktop.DisStepActionInfo.View.DisStepActionInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewModelName": "Solution.Desktop.DisStepActionInfo.ViewModel.DisStepActionInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "DisStepActionInfo",
+    "Action": "Setting",
+    "ViewInfo": {
+      "DisplayName": "配置工序信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewName": "Solution.Desktop.DisStepActionInfo.View.DisStepActionProcessMapView",
+      "ViewModelAssemblyName": "Solution.Desktop.DisStepActionInfo",
+      "ViewModelName": "Solution.Desktop.DisStepActionInfo.ViewModel.DisStepActionProcessMapViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntDepartmentInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "部门信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EntDepartmentInfo",
+      "ViewName": "Solution.Desktop.EntDepartmentInfo.View.EntDepartmentInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntDepartmentInfo",
+      "ViewModelName": "Solution.Desktop.EntDepartmentInfo.ViewModel.EntDepartmentInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-28_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntDepartmentInfo",
+    "Action": "AddEntDepartmentInfos",
+    "ViewInfo": {
+      "DisplayName": "新建部门信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntDepartmentInfo",
+      "ViewName": "Solution.Desktop.EntDepartmentInfo.View.EntDepartmentInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntDepartmentInfo",
+      "ViewModelName": "Solution.Desktop.EntDepartmentInfo.ViewModel.EntDepartmentInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntDepartmentInfo",
+    "Action": "UpdateEntDepartmentInfos",
+    "ViewInfo": {
+      "DisplayName": "编辑部门信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntDepartmentInfo",
+      "ViewName": "Solution.Desktop.EntDepartmentInfo.View.EntDepartmentInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntDepartmentInfo",
+      "ViewModelName": "Solution.Desktop.EntDepartmentInfo.ViewModel.EntDepartmentInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntEmployeeInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "员工信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EntEmployeeInfo",
+      "ViewName": "Solution.Desktop.EntEmployeeInfo.View.EntEmployeeInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntEmployeeInfo",
+      "ViewModelName": "Solution.Desktop.EntEmployeeInfo.ViewModel.EntEmployeeInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-28_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntEmployeeInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建员工信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntEmployeeInfo",
+      "ViewName": "Solution.Desktop.EntEmployeeInfo.View.EntEmployeeInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntEmployeeInfo",
+      "ViewModelName": "Solution.Desktop.EntEmployeeInfo.ViewModel.EntEmployeeInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntEmployeeInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑员工信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntEmployeeInfo",
+      "ViewName": "Solution.Desktop.EntEmployeeInfo.View.EntEmployeeInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntEmployeeInfo",
+      "ViewModelName": "Solution.Desktop.EntEmployeeInfo.ViewModel.EntEmployeeInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntWorkAttendanceRecordInfo",
+    "Action": null,
+    "ViewInfo": {
+      "DisplayName": "考勤信息管理",
+      "ViewType": 1,
+      "ViewAssemblyName": "Solution.Desktop.EntWorkAttendanceRecordInfo",
+      "ViewName": "Solution.Desktop.EntWorkAttendanceRecordInfo.View.EntWorkAttendanceRecordInfoView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntWorkAttendanceRecordInfo",
+      "ViewModelName": "Solution.Desktop.EntWorkAttendanceRecordInfo.ViewModel.EntWorkAttendanceRecordInfoViewModel",
+      "Parameter": null,
+      "Icon": "pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-28_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntWorkAttendanceRecordInfo",
+    "Action": "Add",
+    "ViewInfo": {
+      "DisplayName": "新建考勤信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntWorkAttendanceRecordInfo",
+      "ViewName": "Solution.Desktop.EntWorkAttendanceRecordInfo.View.EntWorkAttendanceRecordInfoAddView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntWorkAttendanceRecordInfo",
+      "ViewModelName": "Solution.Desktop.EntWorkAttendanceRecordInfo.ViewModel.EntWorkAttendanceRecordInfoAddViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Add_32x32.png"
+    }
+  },
+  {
+    "Controller": "EntWorkAttendanceRecordInfo",
+    "Action": "Update",
+    "ViewInfo": {
+      "DisplayName": "编辑考勤信息",
+      "ViewType": 2,
+      "ViewAssemblyName": "Solution.Desktop.EntWorkAttendanceRecordInfo",
+      "ViewName": "Solution.Desktop.EntWorkAttendanceRecordInfo.View.EntWorkAttendanceRecordInfoEditView",
+      "ViewModelAssemblyName": "Solution.Desktop.EntWorkAttendanceRecordInfo",
+      "ViewModelName": "Solution.Desktop.EntWorkAttendanceRecordInfo.ViewModel.EntWorkAttendanceRecordInfoEditViewModel",
+      "Parameter": null,
+      "Icon": "Images\\Edit_32x32.png"
+    }
+  }
+]

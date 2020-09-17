@@ -1,0 +1,928 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.LogisticsManagement.View.Agv3DAnimationView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:Metro="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:dp="clr-namespace:Solution.Desktop.View.UserControls;assembly=Solution.Desktop.View"
+                      xmlns:cv="clr-namespace:Solution.Desktop.View.Converter;assembly=Solution.Desktop.View"
+                      xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                      xmlns:hx="http://helix-toolkit.org/wpf"
+                      mc:Ignorable="d"
+                      Margin="0,-10,0,-7">
+    <UserControl.Resources>
+        <cv:EnumConverter x:Key="enumConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource ViewButtonAreaHeight}" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <res:ImageButton Content="{DynamicResource Connect}"
+                             ToolTip="{DynamicResource Connect}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding ConnectCommand}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png" />
+            <res:ImageButton Content="{DynamicResource Disconnect}"
+                             ToolTip="{DynamicResource Disconnect}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding DisconnectCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png" />
+            <res:ImageButton Content="{DynamicResource RefreshMap}"
+                             ToolTip="{DynamicResource RefreshMap}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding RefreshMapCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png" />
+            <res:ImageButton Content="{DynamicResource RefreshCar}"
+                             ToolTip="{DynamicResource RefreshCar}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding RefreshCarCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png" />
+            <res:ImageButton Content="{DynamicResource RefreshTask}"
+                             ToolTip="{DynamicResource RefreshTask}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding RefreshTaskCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png" />
+            <res:ImageButton Content="{DynamicResource RefreshAll}"
+                             ToolTip="{DynamicResource RefreshAll}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding RefreshAllCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png" />
+
+            <res:ImageButton Content="{DynamicResource StepAction_MaterialOut}"
+                             ToolTip="{DynamicResource StepAction_MaterialOut}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding MaterialOutCommand}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/sign_out_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_ToWorkIsland1}"                             
+                             ToolTip="{DynamicResource StepAction_ToWorkIsland1}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding ToWorkIsland1Command}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/communication_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_Island1On}"
+                             ToolTip="{DynamicResource StepAction_Island1On}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding Island1OnCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/remove1_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_Island1Working}"
+                             ToolTip="{DynamicResource StepAction_Island1Working}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding Island1WorkingCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-10_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_Island1Off}"
+                             ToolTip="{DynamicResource StepAction_Island1Off}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding Island1OffCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/upcoming_work_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_ToWorkIsland2}"
+                             ToolTip="{DynamicResource StepAction_ToWorkIsland2}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding ToWorkIsland2Command}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/communication_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_Island2On}"
+                             ToolTip="{DynamicResource StepAction_Island2On}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding Island2OnCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/remove1_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_Island2Working}"
+                             ToolTip="{DynamicResource StepAction_Island2Working}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding Island2WorkingCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/gur-project-10_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_Island2Off}"
+                             ToolTip="{DynamicResource StepAction_Island2Off}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding Island2OffCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/upcoming_work_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_ProductIn}"
+                             ToolTip="{DynamicResource StepAction_ProductIn}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding ProductInCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/sign_in_32x32.png" />
+            <res:ImageButton Content="{DynamicResource StepAction_All}"
+                             ToolTip="{DynamicResource StepAction_All}"
+                             Width="{DynamicResource ViewButtonWidth2}"
+                             Command="{Binding AllActionCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/sitemap_32x32.png" />
+        </StackPanel>
+        <Grid Grid.Row="1"
+              Background="{DynamicResource WorkshopBackBrush1}"
+              ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="78*"></ColumnDefinition>
+                <ColumnDefinition Width="2"></ColumnDefinition>
+                <ColumnDefinition Width="22*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="40*"></RowDefinition>
+                <RowDefinition Height="80*"></RowDefinition>
+                <RowDefinition Height="40*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--<ContentControl Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.RowSpan="3"
+                            Content="{Binding MainContent}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SizeChanged">
+                        <i:InvokeCommandAction Command="{Binding Path=SizeChangedCommand}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Loaded">
+                        <i:InvokeCommandAction Command="{Binding Path=SizeChangedCommand}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ContentControl>-->
+            <hx:HelixViewport3D x:Name="view1"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.RowSpan="5"
+                                ZoomExtentsWhenLoaded="True"
+                                Background="{DynamicResource V3DBackgroundBrush}"
+                                ShowCoordinateSystem="True"
+                                IsManipulationEnabled="True" 
+                                IsViewCubeEdgeClicksEnabled="True">
+                <!--<hx:HelixViewport3D.DefaultCamera>
+                    <PerspectiveCamera Position="100,100,100"
+                                       LookDirection="-100,-100,-100"
+                                       UpDirection="0,0,1"
+                                       NearPlaneDistance="0.001" />
+                </hx:HelixViewport3D.DefaultCamera>-->
+                <hx:SunLight />
+
+                <!--<hx:SortingVisual3D x:Name="sortingVisual1"
+                                    SortingFrequency="2">-->
+
+                <!--#region 坐标系相关 -->
+                <hx:SphereVisual3D Radius="0.5"></hx:SphereVisual3D>
+                <!--<hx:CoordinateSystemVisual3D ArrowLengths="50"  />-->
+                <hx:BillboardTextVisual3D Position="0 0 2"
+                                          Text="原点">
+                </hx:BillboardTextVisual3D>
+                <!--X轴箭头和方向文字-->
+                <hx:ArrowVisual3D Point1="0,0,0"
+                                  Point2="150,0,0"
+                                  Diameter="0.5"></hx:ArrowVisual3D>
+                <hx:BillboardTextVisual3D Position="150 -2 0"
+                                          Text="西">
+                </hx:BillboardTextVisual3D>
+                <!--Y轴箭头和方向文字-->
+                <hx:ArrowVisual3D Point1="0,0,0"
+                                  Point2="0,70,0"
+                                  Diameter="0.5"></hx:ArrowVisual3D>
+                <hx:BillboardTextVisual3D Position="-2 70 0"
+                                          Text="南">
+                </hx:BillboardTextVisual3D>
+                <!--Z轴箭头和方向文字-->
+                <hx:ArrowVisual3D Point1="0,0,0"
+                                  Point2="0,0,20"
+                                  Diameter="0.5"></hx:ArrowVisual3D>
+                <hx:BillboardTextVisual3D Position="0 0 22"
+                                          Text="上">
+                </hx:BillboardTextVisual3D>
+                <!--#endregion -->
+
+                <!--#region 堆垛机和出入库输送线 -->
+                <!--K1-->
+                <hx:BoxVisual3D Center="40 27.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="40 27.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K1" />
+                <!--K4-->
+                <hx:BoxVisual3D Center="20 27.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="20 27.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K4" />
+                <!--1#立库-->
+                <hx:BoxVisual3D Center="40 60 10"
+                                Fill="LightGray"
+                                Length="8"
+                                Height="20"
+                                Width="50"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="40 60 24"
+                                          Foreground="Blue"
+                                          FontSize="20"
+                                          Text="1#" />
+                <!--堆垛机-->
+                <hx:BoxVisual3D Center="{Binding  StackerPosition}"
+                                Length="4"
+                                Height="20"
+                                Width="4"
+                                Fill="Orange" />
+                <!--货叉-->
+                <hx:BoxVisual3D Center="{Binding  StackerPosition}"
+                                Length="11"
+                                Height="1"
+                                Width="11"
+                                Fill="Orange" />
+                <!--地轨-->
+                <hx:RectangleVisual3D Width="1"
+                                      Length="80"
+                                      Origin="30,60,0"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{hx:Material Gray}" />
+
+                <!--2#立库-->
+                <hx:BoxVisual3D Center="20 60 10"
+                                Fill="LightGray"
+                                Length="8"
+                                Height="20"
+                                Width="50"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="20 60 24"
+                                          Foreground="Blue"
+                                          FontSize="20"
+                                          Text="2#" />
+
+                <!--K2-->
+                <hx:BoxVisual3D Center="40 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="40 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K2" />
+                <!--K4-->
+                <hx:BoxVisual3D Center="20 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="20 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="K3" />
+                <!--#endregion -->
+
+                <!--<hx:LinesVisual3D Points="11 11 11 "></hx:LinesVisual3D>-->
+                <!--<hx:TextVisual3D Position="2 20 20" TextDirection="0 1 1"
+                                          Foreground="Orange"
+                                          Text="1#立体库" />-->
+
+                <!--<hx:SphereVisual3D Radius="5" />-->
+                <!--<hx:SphereVisual3D Center="15,15,0"
+                                   Radius="1"
+                                   Fill="White" />-->
+                <!--#region AGV、线路、充电桩 -->
+                <!-- AGV路线 -->
+                <hx:RectangleVisual3D Width="1"
+                                      Length="265"
+                                      Origin="132.5,105,0"
+                                      LengthDirection="1,0,0"
+                                      Normal="0,0,1"
+                                      Material="{hx:Material Gray}" />
+                <!-- AGV车辆 -->
+                <hx:BoxVisual3D Center="{Binding AgvPosition}"
+                                Fill="Orange"
+                                Width="10"
+                                Length="20"
+                                Height="5"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="{Binding AgvNamePosition}"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="AGV" />
+                <!--<ModelVisual3D>
+                    <uc:AgvVisual3D Width="10"
+                                    Length="20"
+                                    Transform="{hx:Translate 40,0,0}"
+                                    Stories="1"></uc:AgvVisual3D>
+                </ModelVisual3D >-->
+
+                <!--<uc:AgvVisual3D  Center="{Binding AgvPosition}"
+                                DisplayName="ABC23"
+                                Fill="Orange"
+                                Width="10"
+                                Length="20"
+                                Height="5"></uc:AgvVisual3D>-->
+
+                <!--充电桩-->
+                <hx:BoxVisual3D Center="70 97 2.5"
+                                Fill="YellowGreen"
+                                Length="6"
+                                Height="3"
+                                Width="6"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="70 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="充电桩" />
+
+                <!--#endregion-->
+                <!--#region 加工岛1 -->
+                <!--D1-->
+                <hx:BoxVisual3D Center="100 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="100 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D1" />
+                <!--D2-->
+                <hx:BoxVisual3D Center="120 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+
+                <hx:BillboardTextVisual3D Position="120 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D2" />
+
+                <!--OP10-->
+                <hx:BoxVisual3D Center="85 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="85 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP10" />
+                <!--OP20-->
+                <hx:BoxVisual3D Center="110 55 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="110 55 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP20" />
+                <!--OP30-->
+                <hx:BoxVisual3D Center="135 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="135 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP30" />
+                <!--Robot1-->
+                <hx:BoxVisual3D Center="110 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="6"
+                                Height="10"
+                                Width="6"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="110 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="Robot1" />
+
+                <!--#endregion-->
+                <!--#region 加工岛1 -->
+
+                <!--D3-->
+                <hx:BoxVisual3D Center="190 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="190 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D3" />
+                <!--D4-->
+                <hx:BoxVisual3D Center="210 92.5 2.5"
+                                Fill="Lime"
+                                Length="8"
+                                Height="5"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="210 92.5 8"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="D4" />
+                <!--OP40-->
+                <hx:BoxVisual3D Center="175 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="175 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP40" />
+                <!--OP50-->
+                <hx:BoxVisual3D Center="200 55 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="200 55 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP50" />
+                <!--OP60-->
+                <hx:BoxVisual3D Center="225 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="15"
+                                Height="10"
+                                Width="15"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="225 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="OP60" />
+                <!--Robot2-->
+                <hx:BoxVisual3D Center="200 75 5"
+                                Fill="LightGoldenrodYellow"
+                                Length="6"
+                                Height="10"
+                                Width="6"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="200 75 13"
+                                          Foreground="{DynamicResource AccentColorBrush}"
+                                          FontSize="20"
+                                          Text="Robot2" />
+                <!--#endregion-->
+
+                <!--<hx:BoxVisual3D Center="40 40 2"
+                                Fill="LightBlue"
+                                Width="5"
+                                Length="5"
+                                Height="4"></hx:BoxVisual3D>
+                <hx:BillboardTextVisual3D Position="40 40 4"
+                                          Foreground="YellowGreen"
+                                          FontSize="20"
+                                          Text="AGV" />-->
+                <!--<hx:BoundingBoxVisual3D></hx:BoundingBoxVisual3D>-->
+
+                <!-- Yellow lines -->
+                <!--<ht:RectangleVisual3D Width="0.1"
+                                      Length="60"
+                                      Origin="0.1,30,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material Yellow}" />
+                <ht:RectangleVisual3D Width="0.1"
+                                      Length="60"
+                                      Origin="-0.1,30,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material Yellow}" />-->
+
+                <!-- A Zebra crossing by copy/paste :) -->
+                <!--<ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="4.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="3.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="2.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="1.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="0.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="-0.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="-1.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="-2.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="-3.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+                <ht:RectangleVisual3D Width="0.5"
+                                      Length="5"
+                                      Origin="-4.5,50,0.01"
+                                      LengthDirection="0,1,0"
+                                      Normal="0,0,1"
+                                      Material="{ht:Material White}" />
+
+             -->
+                <!--地面网格线-->
+                <hx:GridLinesVisual3D  LengthDirection="0,1,0"
+                                       Center="132.5,85,0"
+                                       Width="265"
+                                       Length="170" />
+                <!--</hx:SortingVisual3D>-->
+
+            </hx:HelixViewport3D>
+            <!--<Separator Grid.Column="1" Grid.Row="0" Grid.RowSpan="6" Background="Red" />-->
+            <DataGrid Grid.Row="0"
+                      Grid.Column="2"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                      ItemsSource="{Binding Path=MaterialOutStorageInfoList}"
+                      HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OutStorageBillCode}"
+                                        Header="{DynamicResource MaterialOutStorageOutStorageBillCode}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OutStorageType,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MaterialOutStorageOutStorageType}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialName}"
+                                        Header="{DynamicResource MaterialName}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialCode}"
+                                    Header="{DynamicResource MaterialCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Quantity}"
+                                        Header="{DynamicResource MaterialOutStorageQuantity}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding PalletQuantity}"
+                                        Header="{DynamicResource MaterialOutStoragePalletQuantity}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OutStorageStatus,Converter={StaticResource enumConverter}}"
+                                    Header="{DynamicResource MaterialOutStorageOutStorageStatus}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                        Header="{DynamicResource CreatedTime}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+            <DataGrid Grid.Row="1"
+                      Grid.Column="2"
+                   AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                  ItemsSource="{Binding Path= MaterialBatchInfoList }"
+                  SelectedItem="{Binding MaterialBatchInfoModel }"
+                  HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="选择">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Visibility="Hidden"
+                                    Header="Id"
+                                    ScrollViewer.CanContentScroll="True"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding WareHouseLocationCode}"
+                                    Header="{DynamicResource WareHouseLocationCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding WareHouseLocationStatus, Converter={StaticResource enumConverter} }"
+                                    Header="{DynamicResource WareHouseLocationStatus}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding PalletName }"
+                                    Header="{DynamicResource PalletName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialName}"
+                                    Header="{DynamicResource MaterialName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding MaterialCode}"
+                                    Header="{DynamicResource MaterialCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding BatchCode}"
+                                    Header="{DynamicResource MaterialBatchBatchCode}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+
+                    <DataGridTextColumn Binding="{Binding Quantity}"
+                                    Header="{DynamicResource MaterialBatchQuantity}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                       TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                            Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                            Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                            Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+            <!--<DataGrid Grid.Row="1"
+                      Grid.Column="2"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      HeadersVisibility="All"
+                      GridLinesVisibility="All"
+                      RowHeaderWidth="20"
+                      ItemsSource="{Binding Path=AlarmInfoList}"
+                      SelectedItem="{Binding AlarmInfo}"
+                      HorizontalContentAlignment="Center"
+                      SelectionUnit="FullRow"
+                      VirtualizingStackPanel.IsVirtualizing="True"
+                      mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    -->
+            <!--<DataGridCheckBoxColumn Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=IsSelected, Mode=OneWay}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        ElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        Header="Row Selected" />-->
+            <!--
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding AlarmCode}"
+                                        Header="{DynamicResource AlarmCode}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding AgvName}"
+                                        Header="{DynamicResource AgvName}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CarPosition_Name}"
+                                        Header="{DynamicResource CarPosition_Name}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                        Header="{DynamicResource CreatedTime}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Remark, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Header="{DynamicResource Remark}"
+                                        Width="*"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>-->
+            <!--<DataGrid  Grid.Row="2"
+                       Grid.Column="2"
+                       AutoGenerateColumns="False"
+                       IsReadOnly="True"
+                       SelectionMode="Single"
+                       HeadersVisibility="All"
+                       GridLinesVisibility="All"
+                       RowHeaderWidth="20"
+                       ItemsSource="{Binding Path=AlarmInfoList}"
+                       SelectedItem="{Binding AlarmInfo}"
+                       HorizontalContentAlignment="Center"
+                       SelectionUnit="FullRow"
+                       VirtualizingStackPanel.IsVirtualizing="True"
+                       mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding AlarmCode}"
+                                        Header="{DynamicResource AlarmCode}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding AgvName}"
+                                        Header="{DynamicResource AgvName}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CarPosition_Name}"
+                                        Header="{DynamicResource CarPosition_Name}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                        Header="{DynamicResource CreatedTime}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Remark, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Header="{DynamicResource Remark}"
+                                        Width="*"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>-->
+            <DataGrid  Grid.Row="2"
+                       Grid.Column="2"
+                       AutoGenerateColumns="False"
+                       IsReadOnly="True"
+                       SelectionMode="Single"
+                       HeadersVisibility="All"
+                       GridLinesVisibility="All"
+                       RowHeaderWidth="20"
+                       ItemsSource="{Binding Path=ClientDataEntities}"
+                       SelectedItem="{Binding AlarmInfo}"
+                       HorizontalContentAlignment="Center"
+                       SelectionUnit="FullRow"
+                       VirtualizingStackPanel.IsVirtualizing="True"
+                       mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Visibility="Hidden"
+                                        Header="Id"
+                                        ScrollViewer.CanContentScroll="True"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding NodeId}"
+                                        Header="{DynamicResource DeviceNodeName}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Value}"
+                                        Header="{DynamicResource OpcUaHistoryValue}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding OldVaule}"
+                                        Header="{DynamicResource OpcUaHistoryOldValue}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding StatusCode}"
+                                        Header="{DynamicResource ValueQuality}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding ValueType}"
+                                        Header="{DynamicResource ValueType}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <!--<DataGridTextColumn Binding="{Binding Remark, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Header="{DynamicResource Remark}"
+                                        Width="*"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />-->
+                </DataGrid.Columns>
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                           TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                                Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+        </Grid>
+        <!--<Canvas>-->
+        <!--<Canvas Width="20"
+                    Height="20"
+                    Canvas.Left=" 20"
+                    Canvas.Top=" 20"></Canvas>-->
+        <!--</Canvas>-->
+        <!--<DataGrid AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  HeadersVisibility="All"
+                  GridLinesVisibility="All"
+                  RowHeaderWidth="20"
+                  ItemsSource="{Binding Path=CommOpcUaBusinessInfoList}"
+                  SelectedItem="{Binding CommOpcUaBusinessInfo}"
+                  HorizontalContentAlignment="Center"
+                  SelectionUnit="FullRow"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True"
+                  Grid.Row="1">
+            <DataGrid.Columns>
+                -->
+        <!--<DataGridCheckBoxColumn Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=IsSelected, Mode=OneWay}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        ElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        Header="Row Selected" />-->
+        <!--
+                <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Visibility="Hidden"
+                                    Header="Id"
+                                    ScrollViewer.CanContentScroll="True"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding BusinessId}"
+                                    Header="{DynamicResource OpcUaBusinessId}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding BusinessName}"
+                                    Header="{DynamicResource OpcUaBusinessName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding NodeName}"
+                                    Header="{DynamicResource OpcUaBusinessNodeName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding Value}"
+                                    Header="{DynamicResource OpcUaBusinessValue}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding Description}"
+                                    Header="{DynamicResource OpcUaBusinessDescription}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridCheckBoxColumn Selector.IsSelected="{Binding IsLocked}"
+                                        Header="{DynamicResource IsLocked}"></DataGridCheckBoxColumn>
+                <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                    Header="{DynamicResource CreatedTime}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding EnterpriseRemark, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Header="{DynamicResource Remark}"
+                                    Width="*"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+
+            </DataGrid.Columns>
+            <DataGrid.Style>
+                <Style BasedOn="{StaticResource MetroDataGrid}"
+                       TargetType="{x:Type DataGrid}">
+                    <Setter Property="AlternatingRowBackground"
+                            Value="{DynamicResource GrayBrush10}" />
+                    <Setter Property="BorderBrush"
+                            Value="{StaticResource AccentColorBrush}" />
+                    <Setter Property="BorderThickness"
+                            Value="1" />
+                </Style>
+            </DataGrid.Style>
+        </DataGrid>
+        <StackPanel  Grid.Row="2"
+                     Orientation="Horizontal">
+            <dp:DataPager x:Name="dataPager"
+                          TotalCount="{Binding TotalCounts}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PageChanged">
+                        <i:InvokeCommandAction Command="{Binding Path=PageChangedCommand}"
+                                               CommandParameter="{Binding Path=PageChangedEventArgs, ElementName=dataPager}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </dp:DataPager>
+        </StackPanel>-->
+    </Grid>
+</core:UserControlBase>

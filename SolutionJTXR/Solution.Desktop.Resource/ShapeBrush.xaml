@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--  树叶的星图案 【*】 原始颜色的图标  -->
+    <ImageBrush x:Key="Logo"
+                Stretch="Uniform"
+                ImageSource="pack://application:,,,/Solution.Desktop.Resource;component/Images/Logo.png" />
+
+    <ImageBrush x:Key="Logo-cn"
+                Stretch="Uniform"
+                ImageSource="pack://application:,,,/Solution.Desktop.Resource;component/Images/Logo-cn.png" />
+    <BitmapImage x:Key="Folder_32x32"
+                 UriSource="pack://application:,,,/Solution.Desktop.Resource;component/Images/Folder_32x32.png">
+    </BitmapImage>
+
+
+    <ImageBrush x:Key="LoginBackground"
+                Stretch="Fill"
+                ImageSource="pack://application:,,,/Solution.Desktop.Resource;component/Images/LoginBackground.png" />
+
+
+
+    <ImageBrush x:Key="DesktopBackground"
+                Stretch="Fill"
+                ImageSource="pack://application:,,,/Solution.Desktop.Resource;component/Images/Desktop.jpg" />
+    
+</ResourceDictionary>

@@ -1,0 +1,321 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.EquMaintenancePlanInfo.View.EquMaintenancePlanInfoEditView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:ch="clr-namespace:Solution.Desktop.View.ControlHelper;assembly=Solution.Desktop.View"
+                      xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      mc:Ignorable="d"
+                      d:DesignHeight="450"
+                      d:DesignWidth="600"
+                      Width="{DynamicResource  PopupWinodwsWidth2}"
+                      Height="{DynamicResource PopupWinodwsHeight}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" 
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <!--行数更具业务字段多少需要添加或者减少-->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!--列数固定，字段较多时，可每行放两个字段-->
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+            <TextBox Name="firstIC"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource EquipmentName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.EquipmentName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+            <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaintenanceCode}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.MaintenanceCode, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <ComboBox Grid.Row="2"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="3"
+                  ItemsSource="{Binding MaintenanceTypeEnums}"
+                  DisplayMemberPath="Value"
+                  SelectedValuePath="Key"
+                  SelectedValue="{Binding EquMaintenancePlanInfo.MaintenanceType, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource MaintenanceType}"
+                  Style="{DynamicResource VirtualisedMetroComboBox}" />
+
+            <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource Maker}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.Maker, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <Controls:NumericUpDown 
+                     Grid.Row="4"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="3"
+                     VerticalAlignment="Center"
+                     Margin="{StaticResource ControlMargin}"
+                     Controls:TextBoxHelper.UseFloatingWatermark="True"
+                     Controls:TextBoxHelper.Watermark="{DynamicResource PlanStopDuration}"
+                     Controls:TextBoxHelper.WatermarkAlignment="Left"
+                     TextAlignment="Left"
+                     StringFormat="0,000.00"
+                     Maximum="1000000"
+                     Minimum="0"
+                     Value="{Binding EquMaintenancePlanInfo.PlanStopDuration, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"/>
+            <Controls:DateTimePicker Grid.Row="5"
+                              Grid.Column="1"
+                              Grid.ColumnSpan="3"
+                              VerticalAlignment="Center"
+                              Culture="{Binding CurrentCulture}"
+                              Metro:TextBoxHelper.UseFloatingWatermark="True"
+                              Metro:TextBoxHelper.Watermark="{DynamicResource PlanStartTime}"
+                              HandVisibility="All"
+                              IsClockVisible="True"
+                              Orientation="Horizontal"
+                              PickerVisibility="All"
+                              SelectedDateFormat="Long"
+                              SelectedDate="{Binding EquMaintenancePlanInfo.PlanStartTime, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Controls:DateTimePicker Grid.Row="6"
+                              Grid.Column="1"
+                              Grid.ColumnSpan="3"
+                              VerticalAlignment="Center"
+                              Culture="{Binding CurrentCulture}"
+                              Metro:TextBoxHelper.UseFloatingWatermark="True"
+                              Metro:TextBoxHelper.Watermark="{DynamicResource PlanFinishTime}"
+                              HandVisibility="All"
+                              IsClockVisible="True"
+                              Orientation="Horizontal"
+                              PickerVisibility="All"
+                              SelectedDateFormat="Long"
+                              SelectedDate="{Binding EquMaintenancePlanInfo.PlanFinishTime, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Controls:DateTimePicker Grid.Row="7"
+                              Grid.Column="1"
+                              Grid.ColumnSpan="3"
+                              VerticalAlignment="Center"
+                              Culture="{Binding CurrentCulture}"
+                              Metro:TextBoxHelper.UseFloatingWatermark="True"
+                              Metro:TextBoxHelper.Watermark="{DynamicResource ActualStartTime}"
+                              HandVisibility="All"
+                              IsClockVisible="True"
+                              Orientation="Horizontal"
+                              PickerVisibility="All"
+                              SelectedDateFormat="Long"
+                              SelectedDate="{Binding EquMaintenancePlanInfo.ActualStartTime, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        </Grid>
+
+        <Grid Grid.Row="0" 
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <!--行数更具业务字段多少需要添加或者减少-->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!--列数固定，字段较多时，可每行放两个字段-->
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+            <Controls:DateTimePicker Grid.Row="0"
+                              Grid.Column="1"
+                              Grid.ColumnSpan="3"
+                              VerticalAlignment="Center"
+                              Culture="{Binding CurrentCulture}"
+                              Metro:TextBoxHelper.UseFloatingWatermark="True"
+                              Metro:TextBoxHelper.Watermark="{DynamicResource ActualFinishTime}"
+                              HandVisibility="All"
+                              IsClockVisible="True"
+                              Orientation="Horizontal"
+                              PickerVisibility="All"
+                              SelectedDateFormat="Long"
+                              SelectedDate="{Binding EquMaintenancePlanInfo.ActualFinishTime, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="100"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaintenanceContent}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.MaintenanceContent, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource UndertakeTeamID}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.UndertakeTeamID, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="100"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource Result}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.Result, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <TextBox Grid.Row="4"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource CheckDepartmentID}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.CheckDepartmentID, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <TextBox Grid.Row="5"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaintenancePerson}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.MaintenancePerson, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaintenancePlanState}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.MaintenancePlanStateEnums, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+            <TextBox Grid.Row="7"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource Remark}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EquMaintenancePlanInfo.Remark, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+
+        </Grid>
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource UiMessageTextBlockStyle}"
+                   Text="{Binding UiMessage}"/>
+
+        <Grid  Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <res:ImageButton   Grid.Row="0"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Command="{Binding ConfirmCommand}"
+                               Content="{DynamicResource Confirm}"
+                               Width="{DynamicResource ViewButtonWidth}"
+                               FontSize="{DynamicResource ContentFontSize}"
+                               IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Confirm_32x32.png" />
+            <res:ImageButton  Grid.Row="0"
+                              Grid.Column="1"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Command="{Binding CancelCommand}"
+                              Content="{DynamicResource Cancel}"
+                              Width="{DynamicResource ViewButtonWidth}"
+                              FontSize="{DynamicResource ContentFontSize}"
+                              IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Cancel_32x32.png" />
+        </Grid>
+    </Grid>
+
+
+</core:UserControlBase>

@@ -1,0 +1,246 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.MatWareHouseLocationInfo.View.MatWareHouseLocationInfoEditView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      mc:Ignorable="d"
+                      d:DesignHeight="450"
+                      d:DesignWidth="600"
+                      Width="{StaticResource PopupWinodwsWidth}"
+                      Height="{StaticResource PopupWinodwsHeight}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--行数根据业务字段多少需要添加或者减少-->
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!--列数固定，字段较多时，可每行放两个字段-->
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+        </Grid.ColumnDefinitions>
+
+        <ComboBox Name="MatWareHouse_Id" 
+                  Grid.Row="0" 
+                  Grid.Column="1"                  
+                  Grid.ColumnSpan="3"
+                  IsEnabled="False"
+                  DisplayMemberPath="WareHouseName"
+                  SelectedValuePath="Id"
+                  ItemsSource="{Binding MatWareHouseInfoList}"
+                  SelectedValue="{Binding MatWareHouseLocationInfo.MatWareHouse_Id, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationWareHouse}"/>
+
+        <ComboBox Name="MatWareHouseArea_Id" 
+                  Grid.Row="1" 
+                  Grid.Column="1"                  
+                  Grid.ColumnSpan="3"
+                  IsEnabled="False"
+                  DisplayMemberPath="WareHouseAreaName"
+                  SelectedValuePath="Id"
+                  ItemsSource="{Binding MatWareHouseAreaInfoList}"
+                  SelectedValue="{Binding MatWareHouseLocationInfo.MatWareHouseArea_Id, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationWareHouseArea}"/>
+
+        <TextBox 
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 IsEnabled="False"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationCode}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.WareHouseLocationCode, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 IsEnabled="False"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.WareHouseLocationName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <ComboBox Grid.Row="4"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="3"
+                  IsEnabled="False"
+                  ItemsSource="{Binding WareHouseLocationTypes}"
+                  DisplayMemberPath="Value"
+                  SelectedValuePath="Key"
+                  SelectedValue="{Binding MatWareHouseLocationInfo.WareHouseLocationType, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationType}" />
+
+        <!--<ComboBox Grid.Row="5"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="3"
+                  ItemsSource="{Binding WareHouseLocationStatus}"
+                  SelectedValue="{Binding MatWareHouseLocationInfo.WareHouseLocationStatus, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationStatus}" />-->
+
+        <!--<TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationPalletID}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.PalletName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <TextBox Grid.Row="7"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationMaterialID}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.MaterialName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <TextBox Grid.Row="8"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationInStorageID}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.InStorageName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <TextBox Grid.Row="9"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseLocationMaterialBatchID}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.MaterialBatchName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />-->
+
+        <!--<TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource StorageQuantity}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.StorageQuantity, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />-->
+
+              
+        <CheckBox Name="IsUse" 
+                  Grid.Row="5"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="3"
+                  Checked="IsUse_Checked"
+                  Content="{DynamicResource IsUse}"
+                  IsChecked="{Binding Path=MatWareHouseLocationInfo.IsUse,Mode=TwoWay}" />
+
+        <TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource WareHouseAreaRemark}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.Remark, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <TextBox Name="PalletCode" 
+                 Grid.Row="7"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 TextChanged="PalletCode_TextChanged"
+                 IsEnabled="False"
+                 Visibility="Collapsed"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource PalletCode}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatWareHouseLocationInfo.PalletCode, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <Grid  Grid.Row="13"
+               Grid.Column="1"
+               Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button   Grid.Row="0"
+                      Grid.Column="0"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Command="{Binding ConfirmCommand}"
+                      Content="{DynamicResource Confirm}"
+                      Width="{DynamicResource ViewButtonWidth}"
+                      FontSize="{DynamicResource ContentFontSize}" />
+            <Button Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Command="{Binding CancelCommand}"
+                    Content="{DynamicResource Cancel}"
+                    Width="{DynamicResource ViewButtonWidth}"
+                    FontSize="{DynamicResource ContentFontSize}" />
+        </Grid>
+    </Grid>
+</core:UserControlBase>

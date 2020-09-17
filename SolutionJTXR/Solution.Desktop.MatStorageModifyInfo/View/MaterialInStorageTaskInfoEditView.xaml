@@ -1,0 +1,206 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.MaterialInStorageInfo.View.MaterialInStorageTaskInfoEditView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:ch="clr-namespace:Solution.Desktop.View.ControlHelper;assembly=Solution.Desktop.View"
+                      xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                      mc:Ignorable="d"
+                      d:DesignHeight="450"
+                      d:DesignWidth="600"
+                      Width="{DynamicResource  PopupWinodwsWidth2}"
+                      Height="{DynamicResource PopupWinodwsHeight}">
+    <UserControl.Resources>
+        <Thickness x:Key="ColumnMargin">10 5 10 5</Thickness>
+        <Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid  Width="300" HorizontalAlignment="Left"  Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="155" />
+                <ColumnDefinition Width="40" />
+
+            </Grid.ColumnDefinitions>
+
+            <TextBox Name="firstIC"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 IsReadOnly="True"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaterialInStorageInStorageBillCode}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MaterialInStorageInfo.InStorageBillCode, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+
+            <ComboBox Grid.Row="1"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2"
+                  IsReadOnly="True"
+                  ItemsSource="{Binding InStorageTypes}"
+                  SelectedValue="{Binding MaterialInStorageInfo.InStorageType, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource MaterialInStorageInStorageType}" />
+
+            <ComboBox Grid.Row="2" 
+                  Grid.Column="1"                  
+                  Grid.ColumnSpan="2"
+                  IsReadOnly="True"
+                  DisplayMemberPath="MaterialName"
+                  SelectedValuePath="Id"
+                  ItemsSource="{Binding MaterialInfoList}"
+                  SelectedValue="{Binding MaterialInStorageInfo.Material_Id, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource MaterialInStorageMaterial}"/>
+
+            <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 IsReadOnly="True"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaterialInStorageQuantity}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MaterialInStorageInfo.Quantity, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <TextBox Grid.Row="4"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 IsReadOnly="True"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaterialInStoragePalletQuantity}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MaterialInStorageInfo.PalletQuantity, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+            <res:ImageButton   Grid.Row="7"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Right"
+                               Command="{Binding ConfirmCommand}"
+                               Content="{DynamicResource Confirm}"
+                               Width="{DynamicResource ViewButtonWidth}"
+                               FontSize="{DynamicResource ContentFontSize}"
+                               IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Confirm_32x32.png" />
+            <res:ImageButton  Grid.Row="7"
+                              Grid.Column="2"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Right"
+                              Command="{Binding CancelCommand}"
+                              Content="{DynamicResource Cancel}"
+                              Width="{DynamicResource ViewButtonWidth}"
+                              FontSize="{DynamicResource ContentFontSize}"
+                              IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Cancel_32x32.png" />
+        </Grid>
+
+        <Grid Width="500" HorizontalAlignment="Right"  Grid.Row="0" Grid.Column="1" 
+              mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{DynamicResource  ViewButtonAreaHeight}"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <DataGrid 
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  HeadersVisibility="All"
+                  GridLinesVisibility="All"
+                  RowHeaderWidth="20"
+                  ItemsSource="{Binding Path=RoleInfoList}"
+                  SelectedItem="{Binding ModuleManagerModel}"
+                  HorizontalContentAlignment="Center"
+                  SelectionUnit="FullRow"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True"
+                  Grid.RowSpan="2">
+                <DataGrid.Columns>
+                    <!--<DataGridTextColumn Header="编号" 
+                                        Binding="{Binding Id}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />-->
+
+                    <!--<DataGridCheckBoxColumn Selector.IsSelected="{Binding IsChecked}"
+                                            Header="选择"
+                                            HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />-->
+                    <DataGridTemplateColumn Header="选择">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <!--<Border Width="{Binding MarginLeft}"/>-->
+                                    <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Visibility="Hidden"
+                                    Header="Id"
+                                    ScrollViewer.CanContentScroll="True"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+
+                    <DataGridTextColumn Binding="{Binding Name}"
+                                    Header="{DynamicResource WareHouseLocationName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                       TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                            Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                            Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                            Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+
+</core:UserControlBase>
+

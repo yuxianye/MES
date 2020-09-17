@@ -1,0 +1,18 @@
+﻿.x-portal-body
+        {
+            padding: 0 0 0 8px;
+        }
+        .x-portal .x-portal-column
+        {
+            padding: 8px 8px 0 0;
+        }
+        .x-portlet
+        {
+            margin-bottom: 10px;
+            padding: 1px;
+        }
+        .portlet-content
+        {
+            padding: 10px;
+            font-size: 11px;
+        }

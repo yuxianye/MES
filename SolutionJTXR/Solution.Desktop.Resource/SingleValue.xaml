@@ -1,0 +1,159 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sysWin="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!--1.在此设置之后则不用在各个区域里面重复设置相应的值。-->
+    <!--2.如果各个区域需要单独设置，则不用在此设置。-->
+    <!--3.如果都设置则区域里面的值覆盖本文件的值，-->
+
+    <sysWin:GridLength x:Key="ViewButtonAreaHeight">40</sysWin:GridLength>
+    <sysWin:GridLength x:Key="ViewButtonAreaHeight2">65</sysWin:GridLength>
+
+    <sys:Double x:Key="DataPageComboBoxWidth">75</sys:Double>
+    <sys:Double x:Key="LeftTreeAutoHideMinWidth">195</sys:Double>
+
+    <sys:Double x:Key="SearchTextBoxWidth">220</sys:Double>
+    <sys:Double x:Key="SearchTextBoxWidth2">260</sys:Double>
+
+    <BooleanToVisibilityConverter x:Key="btv" />
+    <sys:Int32 x:Key="TitlebarHeight">70</sys:Int32>
+
+    <!--主窗体最小尺寸-->
+    <!--<sys:Double x:Key="MainWindowsMinWidth">1366</sys:Double>
+    <sys:Double x:Key="MainWindowsMinHeight">739</sys:Double>-->
+    <sys:Double x:Key="MainWindowsMinWidth">1024</sys:Double>
+    <sys:Double x:Key="MainWindowsMinHeight">690</sys:Double>
+
+    <!--popup窗体尺寸-->
+    <sys:Double x:Key="PopupWinodwsWidth">600</sys:Double>
+    <sys:Double x:Key="PopupWinodwsWidth2">800</sys:Double>
+    <sys:Double x:Key="PopupWinodwsWidth3">400</sys:Double>
+    <sys:Double x:Key="PopupWinodwsWidth4">900</sys:Double>
+
+    <sys:Double x:Key="PopupWinodwsHeight">600</sys:Double>
+    <sys:Double x:Key="PopupWinodwsHeight2">170</sys:Double>
+    <sys:Double x:Key="PopupWinodwsHeight3">300</sys:Double>
+    <sys:Double x:Key="LoginWindowHeight">450</sys:Double>
+    <sys:Double x:Key="LoginWindowWidth">800</sys:Double>
+
+    <!--圆形按钮高河宽-->
+    <sys:Double x:Key="CircleButtonWidth">35</sys:Double>
+    <sys:Double x:Key="CircleButtonHeight">35</sys:Double>
+    <sys:Double x:Key="CircleButtonIconWidth">13</sys:Double>
+    <sys:Double x:Key="CircleButtonIconHeight">13</sys:Double>
+
+    <!--popup窗体中内容的总高度-->
+    <sysWin:GridLength x:Key="PopupWinodwsContentHeight">525</sysWin:GridLength>
+    <sysWin:GridLength x:Key="PopupWinodwsContentHeight2">530</sysWin:GridLength>
+    <sysWin:GridLength x:Key="PopupWinodwsContentHeight3">95</sysWin:GridLength>
+
+    <!--popup窗体中某列的宽度，一般分三列，设置首列和尾列，中间列自适应-->
+    <sysWin:GridLength x:Key="PopupWinodwsColumn1Width1">160</sysWin:GridLength>
+    <sysWin:GridLength x:Key="PopupWinodwsColumn3Width1">40</sysWin:GridLength>
+
+    <!--内容字体大小-->
+    <sys:Double x:Key="ContentFontSize">14</sys:Double>
+
+    <sys:Double x:Key="TabItemFontSize">18</sys:Double>
+
+    <!--标题字体大小-->
+    <sys:Double x:Key="HeaderFontSize">14</sys:Double>
+    <sys:Double x:Key="HeaderFontSize2">18</sys:Double>
+
+    <!--控件的边距-->
+    <Thickness x:Key="ControlDefaultMargin">0,0,0,0</Thickness>
+    <Thickness x:Key="ControlMargin">0,3,0,3</Thickness>
+    <Thickness x:Key="ControlMargin1">5,5,5,5</Thickness>
+    <Thickness x:Key="ControlMargin2">2,1,2,1</Thickness>
+    <Thickness x:Key="ControlMargin4">0 5 5 0</Thickness>
+    <Thickness x:Key="ControlMargin5">5 5 5 0</Thickness>
+    <Thickness x:Key="ControlMargin6">5 0 0 0</Thickness>
+
+    <!--<Thickness x:Key="ControlMarginLeft">5 0 0 0</Thickness>-->
+    <!--<Thickness x:Key="ControlMarginRight">0 0 5 0</Thickness>-->
+
+    <!--按钮默认的宽度，高度根据按钮内容自适应-->
+    <sys:Double x:Key="DefaultButtonWidth">100</sys:Double>
+    <sys:Double x:Key="ViewButtonWidth">65</sys:Double>
+    <sys:Double x:Key="MapViewButtonWidth">136</sys:Double>
+
+    <sys:Double x:Key="InputControlHeight">27</sys:Double>
+
+    <!--PatientHomeView-->
+    <sysWin:GridLength x:Key="PatientHomeViewRow2Height1">auto</sysWin:GridLength>
+    <sys:Double x:Key="ParameterControlHeight">203</sys:Double>
+
+    <!--图形通用-->
+    <sysWin:GridLength x:Key="LengedPanelWidth">75</sysWin:GridLength>
+    <sysWin:GridLength x:Key="AxesYPanelWidth">35</sysWin:GridLength>
+
+    <!--<sys:Double x:Key="ScrollBarWidth">27</sys:Double>-->
+    <sys:Double x:Key="ChannelHeight">150</sys:Double>
+    <sys:Double x:Key="AxisXHeight">26</sys:Double>
+
+    <!--控件Margin-->
+
+    <sys:Double x:Key="ProgressBarWidth">200</sys:Double>
+    <!--<sys:Double x:Key="PopupWinodwsHeight3">170</sys:Double>-->
+
+    <sysWin:GridLength x:Key="LeftPanelWidth">150</sysWin:GridLength>
+    <sys:Double x:Key="TabItemWidth">200</sys:Double>
+
+    <!--1000*60*60*24-->
+    <sys:Double x:Key="OneDayTotalMilliseconds">86400000</sys:Double>
+
+    <sys:Double x:Key="AgvWidth">0.8</sys:Double>
+    <sys:Double x:Key="AgvHeight">0.3</sys:Double>
+    <sys:Double x:Key="AgvLength">1.5</sys:Double>
+
+    <!--DataGrid列宽度-->
+    <!--<sys:Double x:Key="MatWareHousAreaLocationColumnWidth">72</sys:Double>-->
+
+    <!--<Thickness x:Key="ControlMargin">5 0 0 0</Thickness>
+
+    <Thickness x:Key="ControlMargin2">0 0 0 0</Thickness>
+    <Thickness x:Key="ControlMargin3">5</Thickness>
+    <Thickness x:Key="ControlMargin4">0 0 0 0</Thickness>-->
+
+    <!--<sys:Double x:Key="SearchControlWidth">140</sys:Double>-->
+
+    <!--<sys:Double x:Key="PopupWinodwsWidth">600</sys:Double>
+    <sys:Double x:Key="PopupWinodwsHeight">600</sys:Double>
+    <sys:Double x:Key="PopupWinodwsHeight3">170</sys:Double>
+    <sysWin:GridLength x:Key="PopupWinodwsColumnWidth">102</sysWin:GridLength>
+    
+    
+    <sys:Double x:Key="ContentFontSize">14</sys:Double>
+    <sys:Double x:Key="ContentFontSizeMin">11</sys:Double>
+    <Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
+    <Thickness x:Key="ControlMargin2">5 0 0 0</Thickness>
+    <Thickness x:Key="ControlMargin3">5</Thickness>
+    <Thickness x:Key="ControlMargin4">0 5 5 0</Thickness>
+    <Thickness x:Key="ControlMargin5">5 5 5 0</Thickness>
+    <Thickness x:Key="ControlMargin6">5 5 0 0</Thickness>
+    <sys:Double x:Key="ProgressBarWidth">200</sys:Double>
+    <sys:Double x:Key="DefaultButtonWidth">100</sys:Double>
+    <sys:Int32 x:Key="OneStackedColumnWidth">21</sys:Int32>
+    <sys:Double x:Key="OneStackedColumnHeight">150</sys:Double>
+    <sysWin:GridLength x:Key="LeftPanelWidth">150</sysWin:GridLength>
+    <sysWin:GridLength x:Key="LengedPanelWidth">90</sysWin:GridLength>
+    <sysWin:GridLength x:Key="AxesYPanelWidth">30</sysWin:GridLength>
+    <sys:Double x:Key="AxesXHeight">40</sys:Double>
+    <sys:Double x:Key="AxesXHeight2">26</sys:Double>
+    <sys:Double x:Key="AxesXFontSize">10</sys:Double>
+    <sys:Double x:Key="AxesXFontSize1">9.5</sys:Double>
+    <sys:Double x:Key="SearchControlWidth">140</sys:Double>
+    -->
+    <!--1000*60*60-->
+    <!--
+    <sys:Int32 x:Key="OneHourTotalMilliseconds">3600000</sys:Int32>
+    -->
+    <!--1000*60*60*24-->
+    <!--
+    <sys:Double x:Key="OneDayTotalMilliseconds">86400000</sys:Double>
+
+    <sys:Double x:Key="MenuWidth">48</sys:Double>
+    <sys:Double x:Key="MenuHeight">64</sys:Double>-->
+
+</ResourceDictionary>

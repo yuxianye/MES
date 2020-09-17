@@ -1,0 +1,101 @@
+﻿
+
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="formPanel" id="formEdit" data-options="region:'center',border:false,iconCls: 'icon-form',title:'表单信息',tools:[{iconCls:'icon-save',handler: function () { $('#btnSave').click() }},'-',{iconCls:'icon-del',handler: function () { $('#btnClose').click(); }},'-',{iconCls:'icon-reload',handler: function () { parent.show_confirm('确定放弃修改？',function(btn){if(btn=='yes')window.location.href = '<%=Request.Url.PathAndQuery %>';}); }},'-',{iconCls:'icon-info',handler: function () { parent.show_alert('本页信息：...'); }},'-',{iconCls:'icon-help',handler: function () { parent.show_alert('本页求助：...'); }},'-']">
+    <form id="mainForm" method="post">
+        <input id="Id" name="Id" type="hidden" value="@(Request.QueryString["id"])" />
+        <input id="DicParentID" name="DicParentID" type="hidden" value="@(Request.QueryString["typeid"])" />
+        <table class="table_edit" style="margin: 5px 2px 2px 10px">
+            <tr>
+                <td>
+                    字典名称
+                </td>
+                <td>
+                    <input id="DicName" name="DicName" type="text" class="easyui-textbox" missingmessage="字典名称必填" validtype="length[1,50]" invalidmessage="有效长度1-50个文字" required="true" />
+                </td>
+                <td>字典编号</td>
+                <td>
+                    <input id="DicCode" name="DicCode" type="text" class="easyui-textbox" missingmessage="字典名称必填" validtype="length[1,50]" invalidmessage="有效长度1-50个文字" required="true" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    字典类别
+                </td>
+                <td>
+                    <select id="DicType" name="DicType" class="easyui-combobox" required="true" style="width: 150px">
+                        <option value=false>明细</option>
+                        <option value=true>类别</option>
+                    </select>
+                </td>
+                <td>
+                    值
+                </td>
+                <td>
+                    <input id="DicValue" name="DicValue" type="text" class="easyui-textbox" missingmessage="" validtype="length[1,100]" invalidmessage="有效长度1-100个字母" required="true" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    设定值
+                </td>
+                <td>
+                    <input id="DicSetValue" name="DicSetValue" type="text" class="easyui-textbox" missingmessage="" validtype="length[1,200]" invalidmessage="有效长度1-200个字母" required="true" />
+                </td>
+                <td>
+                    备注
+                </td>
+                <td>
+                    <input id="Remark" name="Remark" type="text" class="easyui-textbox" missingmessage="" validtype="length[1,100]" invalidmessage="有效长度1-100个字母" required="true" />
+                </td>
+
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="easyui-panel" style="text-align: center; height: 30px; margin-bottom: 0px; background-image: url(/Res/img/icon2/light-hd.gif); background-repeat: repeat-x;" data-options="region:'south',border:false">
+    <a id="btnSave" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保  存</a>
+    <a id="btnClose" href="#" class="easyui-linkbutton" onclick="$.messager.confirm('确认','确定放弃修改关闭页面？', function (btn) { if (btn) parent.hideMessageDialog('取消修改');  });" data-options="iconCls:'icon-del'">取  消</a>
+</div>
+
+@section Content{
+    <script type="text/javascript">
+        $(function () {
+            InitPage();
+            $("#btnSave").click(function () {
+                Save();
+            });
+        });
+
+        function InitPage() {
+            var id = $("#Id").val();
+            if (id == "") { return; }
+            $.post("/Admin/Dicinfo/GetDic", { id: id }, function (data) {
+                $("#mainForm").form("load", data);
+            });
+        }
+
+        function Save() {
+            if (window.isload) { return; }
+            $('#mainForm').form('submit', {
+                url: "/Admin/Dicinfo/SaveDic",
+                success: function (data) { data = $.parseJSON(data); ajaxLoadEnd(); parent.hideMessageDialog(data.success ? "保存成功！" : "保存失败！"); },
+                onSubmit: function () {
+                    //...此处验证
+                    ajaxLoading();
+                }
+            });
+        }
+
+        function OpenFile() {
+
+        }
+    </script>
+}
+
+

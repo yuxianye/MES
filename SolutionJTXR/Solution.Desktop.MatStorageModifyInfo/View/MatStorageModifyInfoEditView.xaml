@@ -1,0 +1,230 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.MatStorageModifyInfo.View.MatStorageModifyInfoEditView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                      xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+                      mc:Ignorable="d"
+                      d:DesignHeight="450"
+                      d:DesignWidth="600"
+                      Width="{StaticResource PopupWinodwsWidth}"
+                      Height="{StaticResource PopupWinodwsHeight}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--行数根据业务字段多少需要添加或者减少-->
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!--列数固定，字段较多时，可每行放两个字段-->
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="StorageModifyCode"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 IsEnabled="False"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MatStorageModifyInfoStorageModifyCode}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.StorageModifyCode, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <ComboBox Name="MaterialBatch_Id"
+                  Grid.Row="1" 
+                  Grid.Column="1"                  
+                  Grid.ColumnSpan="3"
+                  DisplayMemberPath="BatchCode"
+                  SelectedValuePath="Id"
+                  ItemsSource="{Binding MaterialBatchInfoList}"
+                  SelectedValue="{Binding MatStorageModifyInfo.MaterialBatch_Id, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource MatStorageModifyInfoCurrentMaterialBatchID}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding materialbatchSelectionChangedCommand}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+
+        <TextBox Name="WareHouseLocationName"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 IsEnabled="False"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MatStorageModifyInfoMatWareHouseLocation}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.WareHouseLocationName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <TextBox Name="MaterialCode"
+                 Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 IsEnabled="False"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaterialCode}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.MaterialCode, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <TextBox Name="MaterialName"
+                 Grid.Row="4"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 IsEnabled="False"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaterialName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.MaterialName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        
+        <TextBox Name="OriginalAmount"
+                 Grid.Row="5"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 IsEnabled="False"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MatStorageModifyInfoOriginalAmount}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.OriginalAmount, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TextChanged">
+                    <i:InvokeCommandAction Command="{Binding OriginalAmountTextChangedCommand}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBox>
+
+        <TextBox Name="CurrentAmount"
+                 Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 PreviewTextInput="CurrentAmount_PreviewTextInput"
+                 TextChanged="CurrentAmount_TextChanged"
+                 input:InputMethod.IsInputMethodEnabled="False"
+                 MaxLength="3"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MatStorageModifyInfoCurrentAmount}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.CurrentAmount, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TextChanged">
+                    <i:InvokeCommandAction Command="{Binding CurrentAmountTextChangedCommand}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBox>
+        
+        <!--<TextBox Name="Operator"
+                 Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MatStorageModifyInfoOperator}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.Operator, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />-->
+
+        <ComboBox Name="StorageModifyState"
+                  Grid.Row="7"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="3"
+                  ItemsSource="{Binding StorageModifyStates}"
+                  DisplayMemberPath="Value"
+                  SelectedValuePath="Key"
+                  SelectedValue="{Binding MatStorageModifyInfo.StorageModifyState, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                  VerticalAlignment="Center"
+                  IsEnabled="False"
+                  Metro:TextBoxHelper.UseFloatingWatermark="True"
+                  Metro:TextBoxHelper.Watermark="{DynamicResource MatStorageModifyInfoStorageModifyState}" />
+        
+        <TextBox Name="Remark"
+                 Grid.Row="8"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="200"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource MaterialInStorageRemark}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding MatStorageModifyInfo.Remark, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+
+        <Grid  Grid.Row="11"
+               Grid.Column="1"
+               Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button   Grid.Row="0"
+                      Grid.Column="0"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Command="{Binding ConfirmCommand}"
+                      Content="{DynamicResource Confirm}"
+                      Width="{DynamicResource ViewButtonWidth}"
+                      FontSize="{DynamicResource ContentFontSize}" />
+            <Button Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Command="{Binding CancelCommand}"
+                    Content="{DynamicResource Cancel}"
+                    Width="{DynamicResource ViewButtonWidth}"
+                    FontSize="{DynamicResource ContentFontSize}" />
+        </Grid>
+    </Grid>
+</core:UserControlBase>

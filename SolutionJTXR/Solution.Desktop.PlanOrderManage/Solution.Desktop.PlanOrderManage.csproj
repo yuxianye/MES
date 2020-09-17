@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A4D8BC2-53A9-4454-978D-BF8C835A63CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solution.Desktop.PlanOrderManage</RootNamespace>
+    <AssemblyName>Solution.Desktop.PlanOrderManage</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.2\lib\net46\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\PlanEnumModel.cs" />
+    <Compile Include="Model\PlanOrderInfoModel.cs" />
+    <Compile Include="Model\PlanOrderItemInfoModel.cs" />
+    <Compile Include="ViewModel\PlanOrderInfoEditViewModel.cs" />
+    <Compile Include="ViewModel\PlanOrderInfoAddViewModel.cs" />
+    <Compile Include="ViewModel\PlanOrderInfoViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\PlanOrderItemInfoAddViewModel.cs" />
+    <Compile Include="ViewModel\PlanOrderItemInfoEditViewModel.cs" />
+    <Compile Include="ViewModel\PlanOrderItemInfoViewModel.cs" />
+    <Compile Include="View\PlanOrderInfoEditView.xaml.cs">
+      <DependentUpon>PlanOrderInfoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlanOrderInfoAddView.xaml.cs">
+      <DependentUpon>PlanOrderInfoAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlanOrderInfoView.xaml.cs">
+      <DependentUpon>PlanOrderInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlanOrderItemInfoAddView.xaml.cs">
+      <DependentUpon>PlanOrderItemInfoAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlanOrderItemInfoEditView.xaml.cs">
+      <DependentUpon>PlanOrderItemInfoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlanOrderItemInfoView.xaml.cs">
+      <DependentUpon>PlanOrderItemInfoView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Solution.Desktop.Core\Solution.Desktop.Core.csproj">
+      <Project>{6E13FDD6-737B-489C-92E2-C4F14EA75BD0}</Project>
+      <Name>Solution.Desktop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.Model\Solution.Desktop.Model.csproj">
+      <Project>{12956228-919a-4f42-862a-5c280aa7a7a7}</Project>
+      <Name>Solution.Desktop.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.ProductInfo\Solution.Desktop.ProductInfo.csproj">
+      <Project>{7850734e-eeed-4e84-aa23-414fcddd50d1}</Project>
+      <Name>Solution.Desktop.ProductInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.ProductTypeInfo\Solution.Desktop.ProductTypeInfo.csproj">
+      <Project>{5c25332b-2902-459e-9ed2-2ac3f3123b0c}</Project>
+      <Name>Solution.Desktop.ProductTypeInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.Resource\Solution.Desktop.Resource.csproj">
+      <Project>{80bec418-31ab-43bf-8207-8ff41643d7a0}</Project>
+      <Name>Solution.Desktop.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.ViewModel\Solution.Desktop.ViewModel.csproj">
+      <Project>{2CF56ACE-DB73-4045-8B3D-C70B9264F91B}</Project>
+      <Name>Solution.Desktop.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.View\Solution.Desktop.View.csproj">
+      <Project>{c7f38acd-b523-4db1-b76c-e3ce2aa1e9b9}</Project>
+      <Name>Solution.Desktop.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Utility\Solution.Utility.csproj">
+      <Project>{fc73e0a6-07c4-4e10-a31e-de924c2bf78c}</Project>
+      <Name>Solution.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="View\PlanOrderInfoEditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PlanOrderInfoAddView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PlanOrderInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PlanOrderItemInfoAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlanOrderItemInfoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlanOrderItemInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

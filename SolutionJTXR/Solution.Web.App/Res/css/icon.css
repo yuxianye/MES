@@ -1,0 +1,216 @@
+.x-mask-loading{
+    background-image: url(/Res/img/icon1/loading.gif) no-repeat bottom left !important;
+}
+
+.icon-nav {
+	background-image: url(/Res/img/icon1/nav.png) !important;
+}
+
+.icon-tree {
+	background-image: url(/Res/img/icon1/tree.png) !important;
+}
+
+.icon-activity {
+	background-image: url(/Res/img/icon1/activity.png) !important;
+}
+
+.icon-hr {
+	background-image: url(/Res/img/icon1/hr.png) !important;
+}
+
+.icon-system {
+	background-image: url(/Res/img/icon1/system.png) !important;
+}
+
+.icon-user {
+	background-image: url(/Res/img/icon1/man.gif) !important;
+}
+.icon-file {
+	background-image: url(/Res/img/icon1/download-file.png) !important;
+}
+
+.icon-add {
+	background-image: url(/Res/img/icon1/new.gif) !important;
+}
+.icon-del {
+	background-image: url(/Res/img/icon1/del.gif) !important;
+}
+
+.icon-edit {
+	background-image: url(/Res/img/icon1/edit.gif) !important;
+}
+
+.icon-refresh {
+	background-image: url(/Res/img/icon1/refresh.gif) !important;
+}
+
+.icon-grid-list {
+	background-image:url(/Res/img/icon1/grid_list.png) !important;
+}
+
+.icon-search-form{
+	background-image: url(/Res/img/icon1/search_form.png) !important;
+}
+.icon-form{
+	background-image: url(/Res/img/icon1/form.png) !important;
+}
+.icon-search {
+	background-image: url(/Res/img/icon1/search.png) !important;
+}
+.icon-save {
+	background-image: url(/Res/img/icon1/save.png) !important;
+}
+.icon-reset{
+	background-image:url(/Res/img/icon1/reset.png) !important;
+}
+.icon-chart {
+	background-image: url(/Res/img/icon1/chart.gif) !important;
+}
+
+.icon-upload {
+	background-image: url(/Res/img/icon1/adminFile/upload-file.png) !important;
+}
+
+.icon-unupload {
+	background-image: url(/Res/img/icon1/del-file.png) !important;
+}
+
+.icon-download {
+	background-image: url(/Res/img/icon1/download-file.png) !important;
+}
+
+.icon-word {
+	background-image: url(/Res/img/icon1/word.png) !important;
+}
+
+.icon-pdf {
+	background-image: url(/Res/img/icon1/pdf.png) !important;
+}
+
+.icon-excel {
+	background-image: url(/Res/img/icon1/excel.png) !important;
+}
+.icon-info {
+	background-image: url(/Res/img/icon1/info.gif) !important;
+}
+.icon-logout {
+	background-image: url(/Res/img/icon1/logout.png) !important;
+}
+.icon-style {
+	background-image: url(/Res/img/icon1/style.png) !important;
+}
+.icon-person-info {
+	background-image: url(/Res/img/icon1/person_info.png) !important;
+}
+.icon-person-info-edit{
+	background-image: url(/Res/img/icon1/person_info_edit.png) !important;
+}
+.icon-key-edit{
+	background-image: url(/Res/img/icon1/key_edit.png) !important;
+}
+.icon-version{
+	background-image: url(/Res/img/icon1/version.png) !important;
+}
+.icon-docs{
+	background-image: url(/Res/img/icon1/docs.gif) !important;
+}
+.icon-help{
+	background-image: url(/Res/img/icon1/help.png) !important;
+}
+.icon-layout{
+	background-image: url(/Res/img/icon1/layout.png) !important;
+}
+.icon-grant{
+	background-image: url(/Res/img/icon1/grant.png) !important;
+}
+
+.icon-collapse-all{
+	background-image: url(/Res/img/icon1/collapse-all.gif) !important;
+}
+
+.icon-expand-all{
+	background-image: url(/Res/img/icon1/expand-all.gif) !important;
+}
+
+.icon-load-r{
+	background-image: url(/Res/img/icon1/load_r.png) !important;
+}
+
+.icon-yes{
+	background-image: url(/Res/img/icon1/yes.png) !important;
+}
+
+.icon-no{
+	background-image: url(/Res/img/icon1/no.png) !important;
+}
+
+.icon-ok{
+	background-image: url(/Res/img/icon1/ok.png) !important;
+}
+
+.icon-cancel{
+	background-image: url(/Res/img/icon1/cancel.png) !important;
+}
+.icon-tip{
+	background-image: url(/Res/img/icon1/tip.png) !important;
+}
+
+.icon-logout{
+	background-image: url(/Res/img/icon1/logout.png) !important;
+}
+.icon-sys-config{
+	background-image: url(/Res/img/icon1/sys_config.png) !important;
+}
+.icon-status-away{
+	background-image: url(/Res/img/icon1/status_away.png) !important;
+}
+.icon-status-busy{
+	background-image: url(/Res/img/icon1/status_busy.png) !important;
+}
+.icon-status-offline{
+	background-image: url(/Res/img/icon1/status_offline.png) !important;
+}
+.icon-status-online{
+	background-image: url(/Res/img/icon1/status_online.png) !important;
+}
+.icon-user-info{
+	background-image: url(/Res/img/icon1/user_info.png) !important;
+}
+.icon-email{
+	background-image: url(/Res/img/icon1/email.png) !important;
+}
+.icon-email-list{
+	background-image: url(/Res/img/icon1/email_list.png) !important;
+}
+.icon-im{
+	background-image: url(/Res/img/icon1/im.png) !important;
+}
+.icon-note{
+	background-image: url(/Res/img/icon1/note.png) !important;
+}
+.icon-link{
+	background-image: url(/Res/img/icon1/link.png) !important;
+}
+.icon-notice{
+	background-image: url(/Res/img/icon1/notice.png) !important;
+}
+.icon-news{
+	background-image: url(/Res/img/icon1/news.png) !important;
+}
+.icon-user-set{
+	background-image: url(/Res/img/icon1/user_set.png) !important;
+}
+.icon-accordion{
+	background-image: url(/Res/img/icon1/accordion.gif) !important;
+}.icon-accordion{
+	background-image: url(/Res/img/icon1/open_menu.png) !important;
+}
+
+.icon-workflow{
+	background-image: url(/Res/img/icon1/workflow.png) !important;
+}
+
+.x-message-box .icon-saving {
+    background:transparent url(/Res/img/icon1/download.gif) no-repeat bottom left;
+    height:46px;
+}

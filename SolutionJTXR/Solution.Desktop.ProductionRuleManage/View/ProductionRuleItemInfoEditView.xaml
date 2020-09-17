@@ -1,0 +1,291 @@
+﻿<core:UserControlBase  x:Class="Solution.Desktop.ProductionRuleManage.View.ProductionRuleItemInfoEditView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                       xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                       xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+                      mc:Ignorable="d"
+                      d:DesignHeight="450"
+                      d:DesignWidth="600"
+                      Width="{DynamicResource  PopupWinodwsWidth}"
+                      Height="{DynamicResource PopupWinodwsHeight}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+        </Grid.ColumnDefinitions>
+        <TextBox Name="enterpriseName"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource EnterpriseName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EntProductionLineInfo.EnterpriseName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Text="企业："
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Text="{Binding EntProductionLineInfo.EnterpriseName}"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />-->
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource SiteName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EntProductionLineInfo.SiteName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Grid.Row="0"
+                   Grid.Column="3"
+                   Text="厂区："
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Grid.Row="0"
+                   Grid.Column="4"
+                   Text="{Binding EntProductionLineInfo.SiteName}"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource AreaName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding EntProductionLineInfo.AreaName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Text="区域："
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{Binding EntProductionLineInfo.AreaName}"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />-->
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource ProductionLineName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding ProductionProcessInfo.ProductionLineName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Grid.Row="1"
+                   Grid.Column="3"
+                   Text="生产线："
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Grid.Row="1"
+                   Grid.Column="4"
+                   Text="{Binding ProductionProcessInfo.ProductionLineName}"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />-->
+        <TextBox Grid.Row="4"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource ProductionProcessName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding ProductionRuleItemInfo.ProductionProcessName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Text="工序："
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Text="{Binding ProductionRuleItemInfo.ProductionProcessName}"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />-->
+        <TextBox Grid.Row="5"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="9"
+                 PreviewTextInput="tb_PreviewTextInput"
+                 input:InputMethod.IsInputMethodEnabled="False"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource ProductionProcessOrder}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding ProductionRuleItemInfo.ProductionProcessOrder, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Grid.Column="3"
+                   Text="工序排序："
+                   Grid.Row="2"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBox  Grid.Column="4"
+                 Grid.Row="2"
+                 TextWrapping="Wrap"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 VerticalAlignment="Center"
+                 Text="{Binding ProductionRuleItemInfo.ProductionProcessOrder, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />-->
+        <TextBox Grid.Row="6"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 MaxLength="16"
+                 PreviewTextInput="tb_PreviewTextInput"
+                 input:InputMethod.IsInputMethodEnabled="False"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource ProductionProcessDuration}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding ProductionRuleItemInfo.Duration, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   TextWrapping="Wrap"
+                   Text="工序时长："
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBox Grid.Column="1"
+                 Grid.Row="3"
+                 TextWrapping="Wrap"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 VerticalAlignment="Center"
+                 Text="{Binding ProductionRuleItemInfo.Duration, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />-->
+        <TextBlock Grid.Column="3"
+                   HorizontalAlignment="Left"
+                   Grid.Row="6"
+                   TextWrapping="Wrap"
+                   Text="秒"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBox Grid.Row="7"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource Remark}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding ProductionRuleItemInfo.Remark, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+        <!--<TextBlock HorizontalAlignment="Right"
+                   Grid.Row="4"
+                   TextWrapping="Wrap"
+                   Text="备注信息："
+                   FontSize="{DynamicResource ContentFontSize}"
+                   VerticalAlignment="Center" />
+        <TextBox Grid.Column="1"
+                 Grid.Row="4"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 Grid.ColumnSpan="4"
+                 Text="{Binding ProductionRuleItemInfo.Remark}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True" />-->
+        <Grid  Grid.Row="8"
+               Grid.Column="1"
+               Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <res:ImageButton   Grid.Row="0"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Command="{Binding ConfirmCommand}"
+                               Content="{DynamicResource Confirm}"
+                               Width="{DynamicResource ViewButtonWidth}"
+                               FontSize="{DynamicResource ContentFontSize}"
+                               IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Confirm_32x32.png" />
+            <res:ImageButton  Grid.Row="0"
+                              Grid.Column="1"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Command="{Binding CancelCommand}"
+                              Content="{DynamicResource Cancel}"
+                              Width="{DynamicResource ViewButtonWidth}"
+                              FontSize="{DynamicResource ContentFontSize}"
+                              IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Cancel_32x32.png" />
+        </Grid>
+    </Grid>
+    </core:UserControlBase>
+

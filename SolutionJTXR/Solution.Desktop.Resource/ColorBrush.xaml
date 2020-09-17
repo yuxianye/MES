@@ -1,0 +1,213 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    mc:Ignorable="options">
+    <!--江铜蓝-->
+    <!--<Color x:Key="AccentColor">#0A2A3B</Color>-->
+    <!--<Color x:Key="AccentColor2"  >#0A2A3B</Color>-->
+
+    <SolidColorBrush x:Key="NonActiveWindowTitleColorBrush"
+                     Color="{DynamicResource  AccentColor}"
+                     Opacity="1"
+                     options:Freeze="True" />
+    <LinearGradientBrush x:Key="HeaderColorBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="{DynamicResource  AccentColor}" />
+        <!--<GradientStop Offset="0.3"
+                      Color="{DynamicResource  AccentColor2}" />
+        <GradientStop Offset="0.6"
+                      Color="{DynamicResource  AccentColor3}" />
+        <GradientStop Offset="0.9"
+                      Color="{DynamicResource  AccentColor4}" />-->
+        <GradientStop Offset="0.4"
+                      Color="{DynamicResource  AccentColor}" />
+        <!--<GradientStop Offset="1"
+                      Color="{DynamicResource  AccentColor}" />-->
+        <GradientStop Offset="1"
+                      Color="{DynamicResource  AccentColor}" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="AgvCarColorBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="Orange" />
+        <!--<GradientStop Offset="0.3"
+                      Color="{DynamicResource  AccentColor2}" />
+        <GradientStop Offset="0.6"
+                      Color="{DynamicResource  AccentColor3}" />
+        <GradientStop Offset="0.9"
+                      Color="{DynamicResource  AccentColor4}" />-->
+        <GradientStop Offset="0.4"
+                      Color="Orange" />
+        <!--<GradientStop Offset="1"
+                      Color="{DynamicResource  AccentColor}" />-->
+        <GradientStop Offset="1"
+                      Color="Orange" />
+    </LinearGradientBrush>
+    <!--AGV状态的颜色 0：正常-->
+    <LinearGradientBrush x:Key="AgvStatusBrush0"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="Orange" />
+        <GradientStop Offset="0.4"
+                      Color="Orange" />
+        <GradientStop Offset="1"
+                      Color="Orange" />
+    </LinearGradientBrush>
+    <!--AGV状态的颜色 0：急停-->
+    <LinearGradientBrush x:Key="AgvStatusBrush1"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="Red" />
+        <GradientStop Offset="0.4"
+                      Color="Red" />
+        <GradientStop Offset="1"
+                      Color="Red" />
+    </LinearGradientBrush>
+    <!--Agv路线0状态颜色 -->
+    <LinearGradientBrush x:Key="AgvRoadStatusBrush0"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="LightGreen" />
+        <GradientStop Offset="0.4"
+                      Color="LightGreen" />
+        <GradientStop Offset="1"
+                      Color="LightGreen" />
+    </LinearGradientBrush>
+    <!--Agv路线1状态颜色 正常 -->
+    <LinearGradientBrush x:Key="AgvRoadStatusBrush1"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="Green" />
+        <GradientStop Offset="0.4"
+                      Color="Green" />
+        <GradientStop Offset="1"
+                      Color="Green" />
+    </LinearGradientBrush>
+    <!--Agv路线2状态颜色 -->
+    <LinearGradientBrush x:Key="AgvRoadStatusBrush2"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="Red" />
+        <GradientStop Offset="0.4"
+                      Color="Red" />
+        <GradientStop Offset="1"
+                      Color="Red" />
+    </LinearGradientBrush>
+
+    <!--Agv路线3状态颜色 -->
+    <LinearGradientBrush x:Key="AgvRoadStatusBrush3"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="Red" />
+        <GradientStop Offset="0.4"
+                      Color="Red" />
+        <GradientStop Offset="1"
+                      Color="Red" />
+    </LinearGradientBrush>
+
+    <!--路段颜色-->
+    <Color x:Key="RoadColor">Lime</Color>
+    <Color x:Key="RoadColor1">Black</Color>
+    <Color x:Key="RoadColor2">Black</Color>
+    <!--地标点颜色-->
+    <SolidColorBrush x:Key="MarkPointBrush"
+                     Color="Blue"
+                     Opacity="1"
+                     options:Freeze="True" />
+    <LinearGradientBrush x:Key="WorkshopBackBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="Yellow" />
+        <!--<GradientStop Offset="0.3"
+                      Color="{DynamicResource  AccentColor2}" />
+        <GradientStop Offset="0.6"
+                      Color="{DynamicResource  AccentColor3}" />
+        <GradientStop Offset="0.9"
+                      Color="{DynamicResource  AccentColor4}" />-->
+        <GradientStop Offset="0.4"
+                      Color="LightGray" />
+        <!--<GradientStop Offset="1"
+                      Color="{DynamicResource  AccentColor}" />-->
+        <GradientStop Offset="1"
+                      Color="LightGray" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PopupWindowsTitleColorBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="#6919E6" />
+        <GradientStop Offset="0.4"
+                      Color="#6919E6" />
+        <GradientStop Offset="1"
+                      Color="#6919E6" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PopupWindowsBackgroundColorBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         Opacity="01"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color=" WhiteSmoke" />
+        <!--<GradientStop Offset="0.4"
+                      Color="{DynamicResource AccentColor3}" />-->
+        <!--<GradientStop Offset="1"
+                      Color=" #A9DFFB" />-->
+        <GradientStop Offset="1"
+                      Color="WhiteSmoke" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PopupWindowsGlowBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="#6919E6" />
+        <!--<GradientStop Offset="0.4"
+                      Color="{DynamicResource AccentColor3}" />-->
+        <!--<GradientStop Offset="1"
+                      Color=" #A9DFFB" />-->
+        <GradientStop Offset="1"
+                      Color="#6919E6" />
+    </LinearGradientBrush>
+
+    <!--ViewPort3D背景色-->
+    <LinearGradientBrush x:Key="V3DBackgroundBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1"
+                         options:Freeze="True">
+        <GradientStop Offset="0"
+                      Color="SkyBlue" />
+        <!--<GradientStop Offset="0.3"
+                      Color="{DynamicResource  AccentColor2}" />
+        <GradientStop Offset="0.6"
+                      Color="{DynamicResource  AccentColor3}" />
+        <GradientStop Offset="0.9"
+                      Color="{DynamicResource  AccentColor4}" />-->
+        <GradientStop Offset="0.4"
+                      Color="LightGray" />
+        <!--<GradientStop Offset="1"
+                      Color="{DynamicResource  AccentColor}" />-->
+        <GradientStop Offset="1"
+                      Color="LightGray" />
+    </LinearGradientBrush>
+</ResourceDictionary>

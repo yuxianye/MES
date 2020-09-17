@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div data-options="region:'west',split:true,border:false,iconCls:'icon-tree-title'" title="字典类别" style="width: 180px; margin: 2px 0px 0px 10px">
+    <ul id="maintree" class="easyui-tree" data-options="url:'/Admin/Dicinfo/GetNode',method:'post',animate:true,lines:true"></ul>
+</div>
+<div class="listPanel" id="listPanel" data-options="region:'center',border:false,iconCls: 'icon-grid-title',title:'列表信息',tools:[{iconCls:'icon-setting',handler: function () { parent.show_alert('个性化本页设置：...'); }},'-',{iconCls:'icon-reload',handler: function () { parent.show_confirm('确定重置本页？',function(btn){if(btn=='yes')window.location.href = '<%=Request.Url.PathAndQuery %>';}); }},'-',{iconCls:'icon-info',handler: function () { parent.show_alert('本页信息：...'); }},'-',{iconCls:'icon-help',handler: function () { parent.show_alert('本页求助：...'); }},'-']">
+    <table id="mainGrid"></table>
+</div>
+@section Content{
+    <script>
+        function add() {
+            showMessageDialog("/Admin/Dicinfo/Form?id=&typeid=" + window.typeid, "新建明细", 800, 600);
+        }
+
+        function edit() {
+            var select = $("#mainGrid").datagrid("getSelected");
+            if (!select) { parent.showMessage("请先选择一行记录。"); return; }
+            var id = select["Id"];
+            showMessageDialog("/Admin/Dicinfo/Form?id=" + id + "& typeid=" + window.typeid, "更新字典", 800, 600)
+        }
+
+        function del() {
+            var select = $("#mainGrid").datagrid("getSelected");
+            if (!select) { parent.showMessage("请选择要删除的数据。"); return; }
+            $.messager.confirm('确认', '确定要删除选定的数据吗？', function (btn) {
+                if (!btn) {
+                    return;
+                }
+                var select = $("#mainGrid").datagrid("getSelected");
+                $.post("/Admin/Dicinfo/DelDic", { id: select["Id"] }, function (data) { showMessage(data.success ? "删除成功！" : "删除失败！"); $('#mainGrid').datagrid('reload'); $("#maintree").tree('reload'); });
+            });
+        }
+
+        function query() {
+
+        }
+
+        var InitGird = function () {
+            var frozenColumns = [{ field: 'cbx', checkbox: true }, { field: 'RoleID', hidden: true }, { title: '字典名称', field: 'DicName', width: '120px' }]
+            var columns = [{ title: '字典类型', field: 'DicType', width: '80px' }, { title: '字典编号', field: 'DicCode', width: '150px' }, { title: '值', field: 'DicValue', width: '150px' }, { title: '设定值', field: 'DicSetValue', width: '80px' }, { title: '备注', field: 'Remark', width: '200px', fit: true }]
+            this.toolbar = ['-', { text: '增  加', iconCls: 'icon-add', handler: add },
+                '-', { text: '修  改', iconCls: 'icon-edit', handler: edit },
+                '-', { text: '删  除', iconCls: 'icon-del', handler: del },
+                '-', { text: '查  询', iconCls: 'icon-search', handler: query },
+                '-', { text: '重  置', iconCls: 'icon-reload', handler: function () { window.queryParams = null; $('#mainGrid').datagrid('reload'); } }];
+
+            $('#mainGrid').datagrid({
+                //title: obj.title ? obj.title + "列表" : "", //表格标题
+                url: "/Admin/Dicinfo/GetDicList", //请求数据的页面
+                iconCls: 'icon-grid-title', //标题左边的图标
+                toolbar: toolbar,
+                region: 'center',
+                border: false, fit: true,
+                nowrap: false,
+                striped: true,
+                collapsible: false,
+                remoteSort: true, pageList: [10, 30, 50, 80, 100],
+                singleSelect: true,
+                fitColumns: true,
+                frozenColumns: [frozenColumns],
+                columns: [columns],
+                pagination: true, //是否开启分页
+                pageNumber: 1, //默认索引页
+                pageSize: 10, //默认一页数据条数
+                rownumbers: true, //行号
+                onDblClickRow: edit,
+                onBeforeLoad: function (param) {
+                    param["params"] = window.queryParams;
+                    param["typeid"] = window.typeid;
+                }
+            });
+        }
+
+        $(function () {
+            InitGird();
+
+            $('#maintree').tree({
+                onSelect: function (node) {
+                    window.typeid = node.id;
+                    $('#mainGrid').datagrid('reload');
+                }
+            });
+        })
+    </script>
+}

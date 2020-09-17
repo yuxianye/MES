@@ -1,0 +1,187 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.ModuleManager.View.ModuleManagerEditView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                      mc:Ignorable="d"
+                      d:DesignHeight="450"
+                      d:DesignWidth="600"
+                      Width="{DynamicResource  PopupWinodwsWidth2}"
+                      Height="{DynamicResource PopupWinodwsHeight}">
+    <UserControl.Resources>
+        <Thickness x:Key="ColumnMargin">10 5 10 5</Thickness>
+        <Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Width="300" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="40"  />
+            </Grid.ColumnDefinitions>
+            <TextBox Name="firstIC"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource ModuleName}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding ModuleManagerModel.Name, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+            <TextBox 
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Center"
+                 FontSize="{DynamicResource ContentFontSize}"
+                 Metro:TextBoxHelper.SelectAllOnFocus="True"
+                 Metro:TextBoxHelper.UseFloatingWatermark="True"
+                 Metro:TextBoxHelper.Watermark="{DynamicResource Remark}"
+                 Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                 Text="{Binding ModuleManagerModel.Remark, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}" />
+            <ComboBox 
+                Grid.Column="1" 
+                Grid.Row="2" 
+                Grid.ColumnSpan="2"
+                VerticalAlignment="Center" 
+                Controls:TextBoxHelper.UseFloatingWatermark="True"
+                Controls:TextBoxHelper.Watermark="{DynamicResource ModuleParentSelect}"
+                SelectedItem="{Binding Path= ParentComboxInfo , Mode=TwoWay, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"
+                DisplayMemberPath="Name"
+                SelectedValuePath="ParentId"
+                IsEditable="True"
+                ItemsSource="{Binding Path=ParentComboxInfoList,Mode=TwoWay}"
+                Style="{DynamicResource VirtualisedMetroComboBox}" 
+                />
+
+            <res:ImageButton   Grid.Row="3"
+                               Grid.Column="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Right"
+                               Command="{Binding ConfirmCommand}"
+                               Content="{DynamicResource Confirm}"
+                               Width="{DynamicResource ViewButtonWidth}"
+                               FontSize="{DynamicResource ContentFontSize}"
+                               IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Confirm_32x32.png" />
+            <res:ImageButton  Grid.Row="3"
+                              Grid.Column="2"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Right"
+                              Command="{Binding CancelCommand}"
+                              Content="{DynamicResource Cancel}"
+                              Width="{DynamicResource ViewButtonWidth}"
+                              FontSize="{DynamicResource ContentFontSize}"
+                              IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Cancel_32x32.png" />
+        </Grid>
+        <Grid Width="500" HorizontalAlignment="Right"  Grid.Row="0" Grid.Column="1" 
+              mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{DynamicResource  ViewButtonAreaHeight}"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel VerticalAlignment="Center"
+                    Orientation="Horizontal" Grid.Row="0">
+                <TextBox x:Name="txtSearch"
+                     Grid.Column="1"
+                     Style="{DynamicResource SearchMetroTextBox}"
+                     Margin="{DynamicResource ControlMargin6}"
+                     Metro:TextBoxHelper.ButtonCommand="{Binding SearchCommand, Mode=OneWay}"
+                     Metro:TextBoxHelper.ButtonCommandParameter="{Binding ElementName=txtSearch, Path=Text}"
+                     Metro:TextBoxHelper.SelectAllOnFocus="True"
+                     Metro:TextBoxHelper.Watermark="{DynamicResource ModuleFunctionInfoSearchTextBoxWatermark}"
+                     Width="{DynamicResource SearchTextBoxWidth}">
+                    <TextBox.InputBindings>
+                        <KeyBinding Key="Enter"
+                                Command="{Binding SearchCommand, Mode=OneWay}"
+                                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=TextBox}, Path=Text, Mode=OneWay}" />
+                    </TextBox.InputBindings>
+                </TextBox>
+            </StackPanel>
+
+            <DataGrid 
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  HeadersVisibility="All"
+                  GridLinesVisibility="All"
+                  RowHeaderWidth="20"
+                  ItemsSource="{Binding Path=FunctionInfoList}"
+                  SelectedItem="{Binding FunctionInfo}"
+                  HorizontalContentAlignment="Center"
+                  SelectionUnit="FullRow"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True"
+                  Margin="0,0,0,50"
+                  Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="选择" HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTextColumn Binding="{Binding Name}"
+                                    Header="{DynamicResource FunctionName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Controller}"
+                                    Header="{DynamicResource FunctionController}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                    <DataGridTextColumn Binding="{Binding Action}"
+                                    Header="{DynamicResource FunctionAction}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                </DataGrid.Columns>
+
+
+
+                <DataGrid.Style>
+                    <Style BasedOn="{StaticResource MetroDataGrid}"
+                       TargetType="{x:Type DataGrid}">
+                        <Setter Property="AlternatingRowBackground"
+                            Value="{DynamicResource GrayBrush10}" />
+                        <Setter Property="BorderBrush"
+                            Value="{StaticResource AccentColorBrush}" />
+                        <Setter Property="BorderThickness"
+                            Value="1" />
+                    </Style>
+                </DataGrid.Style>
+            </DataGrid>
+
+        </Grid>
+
+    </Grid>
+</core:UserControlBase>
+
+

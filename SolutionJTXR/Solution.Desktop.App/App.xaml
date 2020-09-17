@@ -1,0 +1,21 @@
+﻿<Application x:Class="Solution.Desktop.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Solution.Desktop.App"
+             xmlns:vm="clr-namespace:Solution.Desktop.ViewModel;assembly=Solution.Desktop.ViewModel"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Solution.Desktop.Resource;component/DefaultResources.xaml"></ResourceDictionary>
+                <ResourceDictionary>
+                    <vm:ViewModelLocator  x:Key="Locator"
+                                          d:IsDataSource="True" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

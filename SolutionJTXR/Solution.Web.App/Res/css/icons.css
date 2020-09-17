@@ -1,0 +1,49 @@
+﻿.icon-blank{
+	background:url('/Res/img/icon2/blank.gif') no-repeat center center;
+}.icon-add{
+	background:url('/Res/img/icon2/new.gif') no-repeat center center;
+}.icon-edit{
+	background:url('/Res/img/icon2/edit.gif') no-repeat center center;
+}.icon-remove{
+	background:url('/Res/img/icon2/edit_remove.png') no-repeat center center;
+}.icon-save{
+	background:url('/Res/img/icon2/filesave.png') no-repeat center center;
+}.icon-reload{
+	background:url('/Res/img/icon2/refresh.gif') no-repeat center center;
+}.icon-grid-title{
+    background:url('/Res/img/icon2/grid_list.png') no-repeat center center;
+}.icon-tree-title{
+    background:url('/Res/img/icon2/tree.png') no-repeat center center;
+}.icon-del{
+	background:url('/Res/img/icon2/del.gif') no-repeat center center;
+}.icon-search{
+	background:url('/Res/img/icon2/search.png') no-repeat center center;
+}.icon-chart{
+	background:url('/Res/img/icon2/chart.gif') no-repeat center center;
+}.icon-note{
+	background:url('/Res/img/icon2/note.png') no-repeat center center;
+}.icon-form{
+	background:url('/Res/img/icon2/form.png') no-repeat center center;
+}.icon-search-form{
+	background:url('/Res/img/icon2/search_form.png') no-repeat center center;
+}.icon-open-menu{
+	background:url('/Res/img/icon2/open_menu.png') no-repeat center center;
+}.icon-collapse-all{
+	background:url('/Res/img/icon2/collapse-all.gif') no-repeat center center;
+}.icon-expand-all{
+	background:url('/Res/img/icon2/expand-all.gif') no-repeat center center;
+}.icon-accordion{
+	background:url('/Res/img/icon2/accordion.gif') no-repeat center center;
+}.icon-status-busy{
+	background:url('/Res/img/icon2/status_busy.png') no-repeat center center;
+}.icon-yes{
+	background:url('/Res/img/icon2/yes.png') no-repeat center center;
+}.icon-cancel{
+	background:url('/Res/img/icon2/cancel.png') no-repeat center center;
+}.icon-help{
+	background:url('/Res/img/icon2/docs.gif') no-repeat center center;
+}.icon-info{
+	background:url('/Res/img/icon2/info.gif') no-repeat center center;
+}.icon-setting{
+	background:url('/Res/img/icon2/setting.gif') no-repeat center center;
+}

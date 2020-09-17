@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6492B397-9A6E-4B41-9C30-780FEE1FE559}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solution.Desktop.Agv</RootNamespace>
+    <AssemblyName>Solution.Desktop.Agv</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit, Version=2.5.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.2.5.0\lib\netstandard1.1\HelixToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2.5.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.Wpf.2.5.0\lib\net45\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.2\lib\net46\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=2.2.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.2.2.0\lib\net46\MahApps.Metro.IconPacks.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnumType\EnumType.cs" />
+    <Compile Include="Model\DataType.cs" />
+    <Compile Include="Model\ProductionProcessEquipmentBusinessNodeMapModel.cs" />
+    <Compile Include="Model\ClientDataEntity.cs" />
+    <Compile Include="Model\TaskInfoModel.cs" />
+    <Compile Include="Model\RouteInfoModel.cs" />
+    <Compile Include="Model\RoadInfoModel.cs" />
+    <Compile Include="Model\MarkPointInfoModel.cs" />
+    <Compile Include="Model\AlarmInfoModel.cs" />
+    <Compile Include="Model\PathModel.cs" />
+    <Compile Include="Model\AgvInfoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Agv3D.cs" />
+    <Compile Include="UserControls\AgvCar.xaml.cs">
+      <DependentUpon>AgvCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Algorithms.cs" />
+    <Compile Include="UserControls\Road3D.cs" />
+    <Compile Include="UserControls\MarkPoint3D.cs" />
+    <Compile Include="ViewModel\Agv3DAnimationViewModel_RoadInfo.cs" />
+    <Compile Include="ViewModel\Agv3DAnimationViewModel_MarkPoint.cs" />
+    <Compile Include="ViewModel\Agv3DAnimationViewModel_AgvInfo.cs" />
+    <Compile Include="ViewModel\All3DViewModel.cs" />
+    <Compile Include="ViewModel\Agv3DAnimationViewModel.cs" />
+    <Compile Include="ViewModel\AgvAnimationViewModel.cs" />
+    <Compile Include="ViewModel\MarkPointInfoEditViewModel.cs" />
+    <Compile Include="ViewModel\TaskInfoAddViewModel.cs" />
+    <Compile Include="ViewModel\TaskInfoEditViewModel.cs" />
+    <Compile Include="ViewModel\TaskInfoViewModel.cs" />
+    <Compile Include="ViewModel\RouteInfoAddViewModel.cs" />
+    <Compile Include="ViewModel\RoadInfoEditViewModel.cs" />
+    <Compile Include="ViewModel\RoadInfoAddViewModel.cs" />
+    <Compile Include="ViewModel\MarkPointInfoAddViewModel.cs" />
+    <Compile Include="ViewModel\AgvInfoAddViewModel.cs" />
+    <Compile Include="ViewModel\AgvInfoEditViewModel.cs" />
+    <Compile Include="ViewModel\RouteInfoEditViewModel.cs" />
+    <Compile Include="ViewModel\RouteInfoViewModel.cs" />
+    <Compile Include="ViewModel\RoadInfoViewModel.cs" />
+    <Compile Include="ViewModel\AlarmInfoViewModel.cs" />
+    <Compile Include="ViewModel\MarkPointInfoViewModel.cs" />
+    <Compile Include="ViewModel\AgvInfoViewModel.cs" />
+    <Compile Include="View\All3DView.xaml.cs">
+      <DependentUpon>All3DView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Agv3DAnimationView.xaml.cs">
+      <DependentUpon>Agv3DAnimationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AgvAnimationView.xaml.cs">
+      <DependentUpon>AgvAnimationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MarkPointInfoEditView.xaml.cs">
+      <DependentUpon>MarkPointInfoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskInfoAddView.xaml.cs">
+      <DependentUpon>TaskInfoAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskInfoEditView.xaml.cs">
+      <DependentUpon>TaskInfoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskInfoView.xaml.cs">
+      <DependentUpon>TaskInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RouteInfoAddView.xaml.cs">
+      <DependentUpon>RouteInfoAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoadInfoEditView.xaml.cs">
+      <DependentUpon>RoadInfoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoadInfoAddView.xaml.cs">
+      <DependentUpon>RoadInfoAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MarkPointInfoAddView.xaml.cs">
+      <DependentUpon>MarkPointInfoAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AgvInfoAddView.xaml.cs">
+      <DependentUpon>AgvInfoAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AgvInfoEditView.xaml.cs">
+      <DependentUpon>AgvInfoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RouteInfoEditView.xaml.cs">
+      <DependentUpon>RouteInfoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RouteInfoView.xaml.cs">
+      <DependentUpon>RouteInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoadInfoView.xaml.cs">
+      <DependentUpon>RoadInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AlarmInfoView.xaml.cs">
+      <DependentUpon>AlarmInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MarkPointInfoView.xaml.cs">
+      <DependentUpon>MarkPointInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AgvInfoView.xaml.cs">
+      <DependentUpon>AgvInfoView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Solution.Desktop.Core\Solution.Desktop.Core.csproj">
+      <Project>{6E13FDD6-737B-489C-92E2-C4F14EA75BD0}</Project>
+      <Name>Solution.Desktop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.Model\Solution.Desktop.Model.csproj">
+      <Project>{12956228-919a-4f42-862a-5c280aa7a7a7}</Project>
+      <Name>Solution.Desktop.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.Resource\Solution.Desktop.Resource.csproj">
+      <Project>{80bec418-31ab-43bf-8207-8ff41643d7a0}</Project>
+      <Name>Solution.Desktop.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.ViewModel\Solution.Desktop.ViewModel.csproj">
+      <Project>{2CF56ACE-DB73-4045-8B3D-C70B9264F91B}</Project>
+      <Name>Solution.Desktop.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Desktop.View\Solution.Desktop.View.csproj">
+      <Project>{c7f38acd-b523-4db1-b76c-e3ce2aa1e9b9}</Project>
+      <Name>Solution.Desktop.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Utility\Solution.Utility.csproj">
+      <Project>{fc73e0a6-07c4-4e10-a31e-de924c2bf78c}</Project>
+      <Name>Solution.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="UserControls\AgvCar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\All3DView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Agv3DAnimationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AgvAnimationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MarkPointInfoEditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TaskInfoAddView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TaskInfoEditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TaskInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RouteInfoAddView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RoadInfoEditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RoadInfoAddView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MarkPointInfoAddView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AgvInfoAddView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AgvInfoEditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RouteInfoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\RouteInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RoadInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AlarmInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MarkPointInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AgvInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

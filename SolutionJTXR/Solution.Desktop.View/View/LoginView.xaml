@@ -1,0 +1,204 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.View.LoginView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:ch="clr-namespace:Solution.Desktop.View.ControlHelper"
+                      mc:Ignorable="d"
+                      FontSize="{DynamicResource HeaderFontSize2}"
+                      Height="{DynamicResource LoginWindowHeight}"
+                      Width="{DynamicResource LoginWindowWidth}">
+    <Grid Background="{DynamicResource LoginBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="143" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="6"
+                   Grid.ColumnSpan="7"
+                   VerticalAlignment="Center"
+                   FontSize="16"
+                   HorizontalAlignment="Center"
+                   Text="{DynamicResource IMES}"
+                   Foreground="{DynamicResource GrayBrush7}"></TextBlock>
+        <TextBlock Grid.Row="6"
+                   Margin=" 0 0 0 5"
+                   Grid.ColumnSpan="7"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   FontSize="16"
+                   Text="{DynamicResource Copyright}"
+                   Foreground="{DynamicResource GrayBrush4}"></TextBlock>
+        <Label Content="{DynamicResource LoginTitle1}"
+               Margin="0"
+               Grid.Row="1"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               VerticalAlignment="Center"
+               FontSize="20"
+               HorizontalAlignment="Right"
+               FontFamily="Arial Black"
+               Foreground="{DynamicResource WhiteBrush}" />
+        <Label Content="{DynamicResource LoginTitle2}"
+               Margin="0"
+               Grid.Row="1"
+               Grid.Column="4"
+               Grid.ColumnSpan="1"
+               FontSize="14"
+               FontFamily="Arial Black"
+               Foreground="{DynamicResource WhiteBrush}"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" />
+        <Grid  Grid.Row="2"
+               Grid.Column="2"
+               Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="LblUser"
+                   Content="{DynamicResource LoginUser}"
+                   HorizontalAlignment="Right"
+                   Margin="0"
+                   VerticalAlignment="Center"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   Height="{DynamicResource InputControlHeight}" />
+            <TextBox x:Name="loginUser"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="3"
+                     Margin="0"
+                     VerticalAlignment="Center"
+                     FontSize="{DynamicResource ContentFontSize}"
+                     Text="{Binding LoginUser.UserName,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Metro:TextBoxHelper.Watermark="{DynamicResource LoginUserValidation}"
+                     Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                     Metro:TextBoxHelper.SelectAllOnFocus="True"></TextBox>
+        </Grid>
+        <Grid  Grid.Row="3"
+               Grid.Column="2"
+               Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="LblPassWord"
+                   Content="{DynamicResource LoginPassWord}"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"
+                   FontSize="{DynamicResource ContentFontSize}"
+                   Height="{DynamicResource InputControlHeight}"
+                   HorizontalAlignment="Right" />
+            <PasswordBox x:Name="PassWordBox"
+                         VerticalAlignment="Center"
+                         Margin="0"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="3"
+                         Metro:PasswordBoxHelper.CapsLockWarningToolTip="{DynamicResource LoginPassWordCapsWarning}"
+                         Metro:TextBoxHelper.Watermark="{DynamicResource LoginPassWordValidation}"
+                         ch:PasswordBoxHelper.Attach="True"
+                         ch:PasswordBoxHelper.Password="{Binding LoginUser.PassWord, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                         Metro:TextBoxHelper.ClearTextButton="{Binding RelativeSource={RelativeSource Self}, Path=(Metro:TextBoxHelper.HasText), Mode=OneWay}"
+                         Metro:TextBoxHelper.SelectAllOnFocus="True"
+                         Metro:TextBoxHelper.IsWaitingForData="True">
+                <PasswordBox.InputBindings>
+                    <KeyBinding Command="{Binding LoginCommand}"
+                                Key="Enter" />
+                </PasswordBox.InputBindings>
+            </PasswordBox>
+        </Grid>
+        <Grid Grid.Row="4"
+              Grid.RowSpan="2"
+              Grid.Column="2"
+              Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox  Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Content="{DynamicResource RemberUserName}"
+                       IsChecked="{Binding IsRemberUserName}"
+                       HorizontalAlignment="Left"></CheckBox>
+            <CheckBox  Grid.Column="2"
+                       Grid.ColumnSpan="2"
+                       Content="{DynamicResource RemberUserPassword}"
+                       IsChecked="{Binding IsRemberUserPassword}"
+                       HorizontalAlignment="Right"></CheckBox>
+            <Button x:Name="BtnLogin"
+                    Content="{DynamicResource Login}"
+                    Width="{DynamicResource ViewButtonWidth}"
+                    Margin="0"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontSize="{DynamicResource HeaderFontSize2}"
+                    Command="{Binding LoginCommand}" />
+            <Button x:Name="BtnExit"
+                    Content="{DynamicResource Exit}"
+                    Width="{DynamicResource ViewButtonWidth}"
+                    Margin="0"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    FontSize="{DynamicResource HeaderFontSize2}"
+                    Command="{Binding ExitCommand}" />
+        </Grid>
+        <Label Content="{Binding Message}"
+               Margin="0 23 0 0"
+               Grid.Row="5"
+               Grid.Column="0"
+               Grid.RowSpan="2"
+               Grid.ColumnSpan="7"
+               VerticalAlignment="Top"
+               FontSize="{DynamicResource ContentFontSize}"
+               HorizontalAlignment="Center"
+               Height="{DynamicResource InputControlHeight}"
+               Foreground="Red" />
+        <Button Grid.Column=" 6"
+                Grid.Row="6"
+                Visibility="Collapsed"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                ContextMenu="{Binding SettingContextMenu}"
+                Style="{DynamicResource CircleButtonStyle}"
+                ToolTip="{DynamicResource Setting}"
+                Command="{Binding SettingCommand }">
+            <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                        Height="{DynamicResource CircleButtonIconHeight}"
+                                        Kind="Settings" />
+        </Button>
+    </Grid>
+</core:UserControlBase>

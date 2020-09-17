@@ -1,0 +1,167 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.RoleManager.View.RoleView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:Metro="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      xmlns:dp="clr-namespace:Solution.Desktop.View.UserControls;assembly=Solution.Desktop.View"
+                      xmlns:res="clr-namespace:Solution.Desktop.Resource;assembly=Solution.Desktop.Resource"
+                      mc:Ignorable="d"
+                      Margin="0,-10,0,-7">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource ViewButtonAreaHeight}" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <res:ImageButton Content="{DynamicResource New}"
+                             ToolTip="{DynamicResource New}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding AddCommand}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Add_32x32.png" />
+            <res:ImageButton Content="{DynamicResource Edit}"
+                             ToolTip="{DynamicResource Edit}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding EditCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Edit_32x32.png" />
+            <res:ImageButton Content="{DynamicResource PhysicalDelete}"
+                             ToolTip="{DynamicResource PhysicalDelete}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding PhysicalDeleteCommand }"
+                             Margin="{DynamicResource ControlMargin6}"
+                             Visibility="{Binding IsAdmin , Mode=OneWay,Converter={StaticResource btv}}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Del_32x32.png" />
+            <res:ImageButton Content="{DynamicResource Refresh}"
+                             ToolTip="{DynamicResource Refresh}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding RefreshCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Refresh_32x32.png" />
+            <res:ImageButton Content="{DynamicResource Import}"
+                             Visibility="Collapsed"
+                             ToolTip="{DynamicResource Import}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding ImportCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Import_32x32.png" />
+            <res:ImageButton Content="{DynamicResource Export}"
+                             Visibility="Collapsed"
+                             ToolTip="{DynamicResource Export}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding ExportCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Export_32x32.png" />
+            <res:ImageButton Content="{DynamicResource Print}"
+                             Visibility="Collapsed"
+                             ToolTip="{DynamicResource Print}"
+                             Width="{DynamicResource ViewButtonWidth}"
+                             Command="{Binding PrintCommand}"
+                             Margin="{DynamicResource ControlMargin6}"
+                             IconPath="pack://application:,,,/Solution.Desktop.Resource;component/Images/Print_32x32.png" />
+            <TextBox x:Name="txtSearch"
+                     Grid.Column="1"
+                     Style="{DynamicResource SearchMetroTextBox}"
+                     Margin="{DynamicResource ControlMargin6}"
+                     Metro:TextBoxHelper.ButtonCommand="{Binding SearchCommand, Mode=OneWay}"
+                     Metro:TextBoxHelper.ButtonCommandParameter="{Binding ElementName=txtSearch, Path=Text}"
+                     Metro:TextBoxHelper.SelectAllOnFocus="True"
+                     Metro:TextBoxHelper.Watermark="{DynamicResource RoleSearchTextBoxWatermark}"
+                     Width="{DynamicResource SearchTextBoxWidth}">
+                <TextBox.InputBindings>
+                    <KeyBinding Key="Enter"
+                                Command="{Binding SearchCommand, Mode=OneWay}"
+                                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=TextBox}, Path=Text, Mode=OneWay}" />
+                </TextBox.InputBindings>
+            </TextBox>
+        </StackPanel>
+        <DataGrid AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  HeadersVisibility="All"
+                  GridLinesVisibility="All"
+                  RowHeaderWidth="20"
+                  ItemsSource="{Binding Path=RoleInfoList}"
+                  SelectedItem="{Binding RoleInfo}"
+                  HorizontalContentAlignment="Center"
+                  SelectionUnit="FullRow"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True"
+                  Grid.Row="1">
+            <!--《增加右键快捷菜单和双击打开编辑页面命令》-->
+            <DataGrid.ContextMenu>
+                <ContextMenu ItemsSource="{Binding MenuItems}"></ContextMenu>
+            </DataGrid.ContextMenu>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding Path=EditCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <!--《增加右键快捷菜单和双击打开编辑页面命令》-->
+            <DataGrid.Columns>
+                <!--<DataGridCheckBoxColumn Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=IsSelected, Mode=OneWay}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        ElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        Header="Row Selected" />-->
+                <DataGridTextColumn Binding="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Visibility="Hidden"
+                                    Header="Id"
+                                    ScrollViewer.CanContentScroll="True"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding Name}"
+                                    Header="{DynamicResource RoleName}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+
+                <DataGridCheckBoxColumn Binding="{Binding IsAdmin}"
+                                        Header="{DynamicResource RoleIsAdmin}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridCheckBoxColumn Binding="{Binding IsDefault}"
+                                        Header="{DynamicResource RoleIsDefault}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridCheckBoxColumn Binding="{Binding IsSystem}"
+                                        Header="{DynamicResource RoleIsSystem}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridCheckBoxColumn Binding="{Binding IsLocked}"
+                                        Header="{DynamicResource IsLocked}"
+                                        HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding CreatedTime, StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                                    Header="{DynamicResource CreatedTime}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" />
+                <DataGridTextColumn Binding="{Binding Remark}"
+                                    Header="{DynamicResource RoleRemark}"
+                                    HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}"
+                                    Width="*" />
+
+            </DataGrid.Columns>
+            <DataGrid.Style>
+                <Style BasedOn="{StaticResource MetroDataGrid}"
+                       TargetType="{x:Type DataGrid}">
+                    <Setter Property="AlternatingRowBackground"
+                            Value="{DynamicResource GrayBrush10}" />
+                    <Setter Property="BorderBrush"
+                            Value="{StaticResource AccentColorBrush}" />
+                    <Setter Property="BorderThickness"
+                            Value="1" />
+                </Style>
+            </DataGrid.Style>
+        </DataGrid>
+        <StackPanel  Grid.Row="2"
+                     Orientation="Horizontal">
+            <dp:DataPager x:Name="dataPager"
+                          TotalCount="{Binding TotalCounts}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PageChanged">
+                        <i:InvokeCommandAction Command="{Binding Path=PageChangedCommand}"
+                                               CommandParameter="{Binding Path=PageChangedEventArgs, ElementName=dataPager}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </dp:DataPager>
+        </StackPanel>
+    </Grid>
+
+</core:UserControlBase>

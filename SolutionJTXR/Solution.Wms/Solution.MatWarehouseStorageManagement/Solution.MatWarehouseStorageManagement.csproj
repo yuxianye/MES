@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E145F2E6-214F-4D59-86EF-A6A6B1327AFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solution.MatWarehouseStorageManagement</RootNamespace>
+    <AssemblyName>Solution.MatWarehouseStorageManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Solution.Web.App\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Solution.Web.App\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OSharp.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e7429fb96767d50d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OSharp.Core.4.1.32.1\lib\net45\OSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="OSharp.Data.Entity, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e7429fb96767d50d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OSharp.Data.Entity.4.1.32\lib\net45\OSharp.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="OSharp.Logging.Log4Net, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e7429fb96767d50d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OSharp.Logging.Log4Net.4.1.32\lib\net45\OSharp.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OSharp.Permissions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e7429fb96767d50d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OSharp.Permissions.4.1.32\lib\net45\OSharp.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="OSharp.Permissions.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e7429fb96767d50d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OSharp.Permissions.OAuth.4.1.32\lib\net45\OSharp.Permissions.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="OSharp.Utility, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e7429fb96767d50d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OSharp.Utility.4.1.32.1\lib\net40\OSharp.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\IMaterialInfoContract.cs" />
+    <Compile Include="Contracts\IMatPalletInfoContract.cs" />
+    <Compile Include="Contracts\IMatWareHouseAreaInfoContract.cs" />
+    <Compile Include="Contracts\IMatWareHouseLocationInfoContract.cs" />
+    <Compile Include="Contracts\IMatSupplierInfoContract.cs" />
+    <Compile Include="Contracts\IMatWareHouseTypeInfoContract.cs" />
+    <Compile Include="Contracts\IMatWareHouseInfoContract.cs" />
+    <Compile Include="Dtos\MatSupplierInfoInputDto.cs" />
+    <Compile Include="EnumModel\InStorageStatusEnumModel.cs" />
+    <Compile Include="EnumModel\InStorageTypeEnumModel.cs" />
+    <Compile Include="Dtos\MaterialInfoInputDto.cs" />
+    <Compile Include="Dtos\MatPalletInfoInputDto.cs" />
+    <Compile Include="Dtos\MatWareHouseAreaInfoInputDto.cs" />
+    <Compile Include="Dtos\MatWareHouseLocationInfoInputDto.cs" />
+    <Compile Include="Dtos\MatWareHouseTypeInfoInputDto.cs" />
+    <Compile Include="Dtos\MatWareHouseInfoInputDto.cs" />
+    <Compile Include="EnumModel\InventoryStateEnumModel.cs" />
+    <Compile Include="EnumModel\OutStorageStatusEnumModel.cs" />
+    <Compile Include="EnumModel\OutStorageTypeEnumModel.cs" />
+    <Compile Include="EnumModel\StorageChangeTypeEnumModel.cs" />
+    <Compile Include="EnumModel\StorageModifyStateEnumModel.cs" />
+    <Compile Include="EnumModel\StorageMoveStateEnumModel.cs" />
+    <Compile Include="ModelConfigurations\MaterialInfoConfigration.cs" />
+    <Compile Include="ModelConfigurations\MatPalletInfoConfigration.cs" />
+    <Compile Include="ModelConfigurations\MatSupplierInfoConfigration.cs" />
+    <Compile Include="ModelConfigurations\MatWareHouseAreaInfoConfigration.cs" />
+    <Compile Include="ModelConfigurations\MatWareHouseLocationInfoConfigration.cs" />
+    <Compile Include="ModelConfigurations\MatWareHouseTypeInfoConfigration.cs" />
+    <Compile Include="ModelConfigurations\MatWareHouseInfoConfigration.cs" />
+    <Compile Include="Models\MaterialInfo.cs" />
+    <Compile Include="Models\MatPalletInfo.cs" />
+    <Compile Include="Models\MatSupplierInfo.cs" />
+    <Compile Include="Models\MatWareHouseAreaInfo.cs" />
+    <Compile Include="Models\MatWareHouseLocationInfo.cs" />
+    <Compile Include="Models\MatWareHouseTypeInfo.cs" />
+    <Compile Include="Models\MatWareHouseInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MaterialInfoService.cs" />
+    <Compile Include="Services\MatPalletInfoService.cs" />
+    <Compile Include="Services\MatWareHouseAreaInfoService.cs" />
+    <Compile Include="Services\MatWareHouseLocationInfoService.cs" />
+    <Compile Include="Services\MatSupplierInfoService.cs" />
+    <Compile Include="Services\MatWareHouseTypeInfoService.cs" />
+    <Compile Include="Services\MatWareHouseInfoService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Solution.Mes\Solution.EnterpriseInformation\Solution.EnterpriseInformation.csproj">
+      <Project>{4ED757CD-0B34-421C-A873-01736805176D}</Project>
+      <Name>Solution.EnterpriseInformation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

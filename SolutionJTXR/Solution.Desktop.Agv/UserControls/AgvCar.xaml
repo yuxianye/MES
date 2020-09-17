@@ -1,0 +1,114 @@
+﻿<core:UserControlBase x:Class="Solution.Desktop.Agv.UserControls.AgvCar"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:conv="clr-namespace:Solution.Desktop.Agv.UserControls"
+                      xmlns:core="clr-namespace:Solution.Desktop.Core;assembly=Solution.Desktop.Core"
+                      mc:Ignorable="d"
+                      Width="40"
+                      Height="40"
+                      MouseDown="agvCar_MouseDown"
+                      x:Name="agvCar">
+    <core:UserControlBase.Effect>
+        <DropShadowEffect Color="{DynamicResource  Gray5}"
+                          BlurRadius="3"
+                          ShadowDepth="3"
+                          Opacity="0.8" />
+    </core:UserControlBase.Effect>
+    <core:UserControlBase.ContextMenu>
+        <ContextMenu x:Name="menu">
+            <!--<MenuItem x:Name="menuCarName"
+                      Header="{Binding ElementName=carName, Path=Text}"></MenuItem>
+            <Separator />-->
+            <MenuItem Header="{DynamicResource New}"></MenuItem>
+            <MenuItem Header="停止"></MenuItem>
+            <MenuItem Header="uc"></MenuItem>
+        </ContextMenu>
+    </core:UserControlBase.ContextMenu>
+    <Grid>
+
+        <!--<Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="启动"></MenuItem>
+                <MenuItem Header="停止"></MenuItem>
+                <MenuItem Header="grid"></MenuItem>
+            </ContextMenu>
+        </Grid.ContextMenu>-->
+
+        <TextBlock x:Name="carName"
+                   Text="AGV"
+                   ToolTip="{Binding ElementName=carName, Path=Text}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+            <!--<TextBlock.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="启动"></MenuItem>
+                    <MenuItem Header="停止"></MenuItem>
+                    <MenuItem Header="txt"></MenuItem>
+                </ContextMenu>
+            </TextBlock.ContextMenu>-->
+
+
+        </TextBlock>
+    </Grid>
+
+    <!--<StackPanel Orientation="Horizontal">
+        <TextBlock Text="{DynamicResource Total}"
+                   Style="{DynamicResource TextBlockStyle}" />
+        <TextBlock Text="{Binding TotalCount, ElementName=dataPager}"
+                   Style="{DynamicResource TextBlockStyle}" />
+        <TextBlock Text="{DynamicResource ItemRecored}"
+                   Style="{DynamicResource TextBlockStyle}" />
+        <TextBlock Text="{DynamicResource EveryPage}"
+                   Style="{DynamicResource TextBlockStyle}" />
+        <ComboBox  Style="{DynamicResource DataPageComboBoxStyle}"
+                   SelectedItem="{Binding PageSize , ElementName=dataPager}"
+                   ItemsSource="{Binding PageSizeItems, ElementName=dataPager}">
+        </ComboBox>
+        <TextBlock Text="{DynamicResource ItemRecored}"
+                   Style="{DynamicResource TextBlockStyle}"></TextBlock>
+        <TextBlock Text="{DynamicResource At}"
+                   Style="{DynamicResource TextBlockStyle}"></TextBlock>
+        <ComboBox Style="{DynamicResource DataPageComboBoxStyle}"
+                  SelectedItem="{Binding PageIndex , ElementName=dataPager}"
+                  ItemsSource="{Binding PageIndexItems, ElementName=dataPager}">
+        </ComboBox>
+        <TextBlock Text="/"
+                   Style="{DynamicResource TextBlockStyle}" />
+        <TextBlock Text="{Binding TotalPageCount , ElementName=dataPager}"
+                   Style="{DynamicResource TextBlockStyle}" />
+        <TextBlock Text="{DynamicResource Page}"
+                   Style="{DynamicResource TextBlockStyle}" />
+        <Button ToolTip="{DynamicResource FirstPage}"
+                Style="{DynamicResource DataPageCircleButtonStyle}"
+                Command="{Binding FirstPageCommand , ElementName=dataPager}">
+            <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                        Height="{DynamicResource CircleButtonIconHeight}"
+                                        Kind="PageFirst" />
+        </Button>
+        <Button ToolTip="{DynamicResource PreviousPage}"
+                Style="{DynamicResource DataPageCircleButtonStyle}"
+                Command="{Binding PreviousPageCommand, ElementName=dataPager}">
+            <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                        Height="{DynamicResource CircleButtonIconHeight}"
+                                        Kind="ChevronLeft" />
+        </Button>
+        <Button ToolTip="{DynamicResource NextPage}"
+                Style="{DynamicResource DataPageCircleButtonStyle}"
+                Command="{Binding NextPageCommand, ElementName=dataPager}">
+            <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                        Height="{DynamicResource CircleButtonIconHeight}"
+                                        Kind="ChevronRight" />
+        </Button>
+        <Button ToolTip="{DynamicResource LastPage}"
+                Style="{DynamicResource DataPageCircleButtonStyle}"
+                Command="{Binding LastPageCommand, ElementName=dataPager}">
+            <iconPacks:PackIconMaterial Width="{DynamicResource CircleButtonIconWidth}"
+                                        Height="{DynamicResource CircleButtonIconHeight}"
+                                        Kind="PageLast" />
+        </Button>
+    </StackPanel>-->
+
+</core:UserControlBase>
